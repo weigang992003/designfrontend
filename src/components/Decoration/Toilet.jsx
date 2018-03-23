@@ -106,52 +106,7 @@ class Dashboard extends React.Component {
               }
             />
           </ItemGrid>
-          <ItemGrid xs={12} sm={12} md={6}>
-            <RegularCard
-              headerColor="blue"
-              cardTitle="当代雅致(基础版)"
-              cardSubtitle="xxxxx元/平米"
-              content={
-                <img src={YazhiBaseImg} className={classes.gridImg} />
-              }
-              cardAction={
-                <RadioGroup
-                  aria-label=""
-                  name="huxing"
-                  value={this.state.selectedValue}
-                  onChange={this.handleChange}
-                >
-                  <FormControlLabel value="yazhiBase" control={<Radio classes={{ checked: classes.checked, default: classes.unchecked }} />} label="" />
-
-                </RadioGroup>
-              }
-            />
-          </ItemGrid>
-          <ItemGrid xs={12} sm={12} md={6}>
-            <RegularCard
-              headerColor="blue"
-              cardTitle="当代雅致(升级版)"
-              cardSubtitle="xxxxx元/平米"
-              content={
-                <img src={YazhiUpgradeImg} className={classes.gridImg} />
-              }
-              cardAction={
-                <RadioGroup
-                  aria-label=""
-                  name="huxing"
-                  value={this.state.selectedValue}
-                  onChange={this.handleChange}
-                >
-                  <FormControlLabel value="yazhiUpgrade" control={<Radio classes={{ checked: classes.checked, default: classes.unchecked }} />} label="" />
-
-                </RadioGroup>
-              }
-            />
-          </ItemGrid>
         </Grid>
-        <Button className={classes.button} variant="raised" component={Link} to={`/rooms/${ this.props.match.params.houseType }/${ this.state.selectedValue }`}>
-          下一步
-        </Button>
       </div>
     );
   }

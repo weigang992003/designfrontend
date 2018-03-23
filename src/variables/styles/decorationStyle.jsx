@@ -24,6 +24,20 @@ const decorationStyle = {
   gridImg: {
     width: '100%'
   },
+  button: {
+    color: '#FFFFFF',
+    background: '#00acc1'
+  },
+  root: {
+    width: '90%',
+  },
+  button: {
+    marginRight: '5px',
+  },
+  instructions: {
+    marginTop: '5px',
+    marginBottom: '5px',
+  },
 };
 
 export default decorationStyle;

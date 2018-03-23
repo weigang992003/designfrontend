@@ -1,5 +1,6 @@
 import HomePage from "views/Home/Home.jsx";
 import DecorationStyle from "views/Decoration/Style.jsx";
+import DecorationRoom from "views/Decoration/Room.jsx";
 import DashboardPage from "views/Dashboard/Dashboard.jsx";
 import UserProfile from "views/UserProfile/UserProfile.jsx";
 import TableList from "views/TableList/TableList.jsx";
@@ -28,59 +29,17 @@ const appRoutes = [
   },
   {
     path: "/style/:houseType",
-    sidebarName: "风格",
+    sidebarName: "风格选择",
     navbarName: "Decoration Style",
-    icon: Dashboard,
+    icon: BubbleChart,
     component: DecorationStyle
   },
   {
-    path: "/dashboard",
-    sidebarName: "Dashboard",
-    navbarName: "Material Dashboard",
-    icon: Dashboard,
-    component: DashboardPage
-  },
-  {
-    path: "/user",
-    sidebarName: "User Profile",
-    navbarName: "Profile",
-    icon: Person,
-    component: UserProfile
-  },
-  {
-    path: "/table",
-    sidebarName: "Table List",
-    navbarName: "Table List",
-    icon: ContentPaste,
-    component: TableList
-  },
-  {
-    path: "/typography",
-    sidebarName: "Typography",
-    navbarName: "Typography",
+    path: "/rooms/:houseType/:houseStyle",
+    sidebarName: "定制详情",
+    navbarName: "Decoration Rooms",
     icon: LibraryBooks,
-    component: Typography
-  },
-  {
-    path: "/icons",
-    sidebarName: "Icons",
-    navbarName: "Icons",
-    icon: BubbleChart,
-    component: Icons
-  },
-  {
-    path: "/maps",
-    sidebarName: "Maps",
-    navbarName: "Map",
-    icon: LocationOn,
-    component: Maps
-  },
-  {
-    path: "/notifications",
-    sidebarName: "Notifications",
-    navbarName: "Notifications",
-    icon: Notifications,
-    component: NotificationsPage
+    component: DecorationRoom
   },
   { redirect: true, path: "/", to: "/home", navbarName: "Redirect" }
 ];
