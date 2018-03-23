@@ -20,13 +20,14 @@ import Tooltip from 'material-ui/Tooltip';
 import DeleteIcon from 'material-ui-icons/Delete';
 import FilterListIcon from 'material-ui-icons/FilterList';
 import { lighten } from 'material-ui/styles/colorManipulator';
-import green from 'material-ui/colors/green';
-import { FormLabel, FormControl, FormControlLabel, FormHelperText } from 'material-ui/Form';
+import { FormControlLabel } from 'material-ui/Form';
+import Button from 'material-ui/Button';
+import { Link } from 'react-router-dom'
 
 let counter = 0;
-function createData(name, calories, fat, carbs, protein, book, toilet, jianshen, yingyin, yimao, entertainment) {
+function createData(name, calories, fat, carbs, protein, book, toilet, jianshen, yingyin, yimao, entertainment, value) {
   counter += 1;
-  return { id: counter, name, calories, fat, carbs, protein, book, toilet, jianshen, yingyin, yimao, entertainment };
+  return { id: counter, name, calories, fat, carbs, protein, book, toilet, jianshen, yingyin, yimao, entertainment, value };
 }
 
 const columnData = [
@@ -44,21 +45,16 @@ const columnData = [
 ];
 
 class EnhancedTableHead extends React.Component {
-  createSortHandler = property => event => {
-    this.props.onRequestSort(event, property);
-  };
 
   render() {
-    const { onSelectAllClick, order, orderBy, numSelected, rowCount } = this.props;
+    const { numSelected, rowCount } = this.props;
 
     return (
       <TableHead>
         <TableRow>
           <TableCell padding="checkbox">
             <div
-              indeterminate={numSelected > 0 && numSelected < rowCount}
               checked={numSelected === rowCount}
-              onChange={onSelectAllClick}
             />
           </TableCell>
           {columnData.map(column => {
@@ -67,18 +63,13 @@ class EnhancedTableHead extends React.Component {
                 key={column.id}
                 numeric={column.numeric}
                 padding={column.disablePadding ? 'none' : 'default'}
-                sortDirection={orderBy === column.id ? order : false}
               >
                 <Tooltip
                   title="Sort"
                   placement={column.numeric ? 'bottom-end' : 'bottom-start'}
                   enterDelay={300}
                 >
-                  <TableSortLabel
-                    active={orderBy === column.id}
-                    direction={order}
-                    onClick={this.createSortHandler(column.id)}
-                  >
+                  <TableSortLabel>
                     {column.label}
                   </TableSortLabel>
                 </Tooltip>
@@ -93,10 +84,6 @@ class EnhancedTableHead extends React.Component {
 
 EnhancedTableHead.propTypes = {
   numSelected: PropTypes.number.isRequired,
-  onRequestSort: PropTypes.func.isRequired,
-  onSelectAllClick: PropTypes.func.isRequired,
-  order: PropTypes.string.isRequired,
-  orderBy: PropTypes.string.isRequired,
   rowCount: PropTypes.number.isRequired,
 };
 
@@ -182,7 +169,15 @@ const styles = theme => ({
     overflowX: 'auto',
   },
   checked: {
-    color: green[500],
+    color: '#00acc1',
+  },
+  button: {
+    margin: theme.spacing.unit,
+    color: '#FFFFFF',
+    background: '#00acc1'
+  },
+  rightIcon: {
+    marginLeft: theme.spacing.unit,
   },
 });
 
@@ -193,14 +188,14 @@ class EnhancedTable extends React.Component {
     this.state = {
       selected: [],
       data: [
-        createData("四世同堂", 1, 1, 1, 6, 1, 8, null, 1, 3, null),
-        createData('三代和睦', 1, 2, 1, 5, 1, 7, null, 1, 3, null),
-        createData('二胎时代', 1, 2, 1, 4, 1, 7, null, 1, 4, null),
-        createData('一生一世', 1, 3, 1, 3, 1, 5, 1, 1, 4, 1)
+        createData("四世同堂", 1, 1, 1, 6, 1, 8, null, 1, 3, null, "four"),
+        createData('三代和睦', 1, 2, 1, 5, 1, 7, null, 1, 3, null, "three"),
+        createData('二胎时代', 1, 2, 1, 4, 1, 7, null, 1, 4, null, "two"),
+        createData('一生一世', 1, 3, 1, 3, 1, 5, 1, 1, 4, 1, "one")
       ],
       page: 0,
       rowsPerPage: 5,
-      selectedValue: "四世同堂",
+      selectedValue: "four",
     };
   }
 
@@ -241,7 +236,7 @@ class EnhancedTable extends React.Component {
 
   render() {
     const { classes } = this.props;
-    const { data, order, orderBy, selected, rowsPerPage, page } = this.state;
+    const { data, selected, rowsPerPage, page } = this.state;
     const emptyRows = rowsPerPage - Math.min(rowsPerPage, data.length - page * rowsPerPage);
 
     return (
@@ -250,7 +245,6 @@ class EnhancedTable extends React.Component {
           <Table className={classes.table}>
             <EnhancedTableHead
               numSelected={selected.length}
-              onSelectAllClick={this.handleSelectAllClick}
               rowCount={data.length}
             />
             <TableBody>
@@ -274,7 +268,7 @@ class EnhancedTable extends React.Component {
                         value={this.state.selectedValue}
                         onChange={this.handleChange}
                       >
-                        <FormControlLabel value={ n.name } control={<Radio classes={{ checked: classes.checked, }} />} label="" />
+                        <FormControlLabel value={ n.value } control={<Radio classes={{ checked: classes.checked, }} />} label="" />
                       </RadioGroup>
                     </TableCell>
                     <TableCell padding="none">{n.name}</TableCell>
@@ -297,6 +291,11 @@ class EnhancedTable extends React.Component {
                 </TableRow>
               )}
             </TableBody>
+            <TableFooter>
+              <Button className={classes.button} variant="raised" component={Link} to={`/style/${ this.state.selectedValue }`}>
+                下一步
+              </Button>
+            </TableFooter>
           </Table>
         </div>
       </Paper>

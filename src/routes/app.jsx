@@ -1,4 +1,5 @@
 import HomePage from "views/Home/Home.jsx";
+import DecorationStyle from "views/Decoration/Style.jsx";
 import DashboardPage from "views/Dashboard/Dashboard.jsx";
 import UserProfile from "views/UserProfile/UserProfile.jsx";
 import TableList from "views/TableList/TableList.jsx";
@@ -24,6 +25,13 @@ const appRoutes = [
     navbarName: "Home Page",
     icon: Dashboard,
     component: HomePage
+  },
+  {
+    path: "/style/:houseType",
+    sidebarName: "风格",
+    navbarName: "Decoration Style",
+    icon: Dashboard,
+    component: DecorationStyle
   },
   {
     path: "/dashboard",
@@ -74,7 +82,7 @@ const appRoutes = [
     icon: Notifications,
     component: NotificationsPage
   },
-  { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
+  { redirect: true, path: "/", to: "/home", navbarName: "Redirect" }
 ];
 
 export default appRoutes;
