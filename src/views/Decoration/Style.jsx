@@ -31,157 +31,124 @@ import {
   completedTasksChart
 } from "variables/charts";
 
-import dashboardStyle from "variables/styles/dashboardStyle";
+import DecorationStyle from "variables/styles/decorationStyle";
+import Radio, { RadioGroup } from 'material-ui/Radio';
+import { FormControlLabel } from 'material-ui/Form';
+import QingSheBaseImg from "assets/img/styles/qingshebase.jpg";
+import QingSheUpgradeImg from "assets/img/styles/qingsheupgrade.jpg";
+import YazhiBaseImg from "assets/img/styles/yazhibase.jpg";
+import YazhiUpgradeImg from "assets/img/styles/yazhiupgrade.jpg";
+import Button from 'material-ui/Button';
 
 class Dashboard extends React.Component {
   state = {
-    value: 0
+    value: 0,
+    selectedValue: "qingsheBase",
   };
-  handleChange = (event, value) => {
-    this.setState({ value });
-  };
+
+  handleChange = event => {
+    this.setState({ selectedValue: event.target.value })
+  }
 
   handleChangeIndex = index => {
     this.setState({ value: index });
   };
   render() {
+    const { classes } = this.props;
+
     return (
       <div>
         <Grid container>
-          <ItemGrid xs={12} sm={6} md={3}>
-            <StatsCard
-              icon={ContentCopy}
-              iconColor="orange"
-              title="Used Space"
-              description="49/50"
-              small="GB"
-              statIcon={Warning}
-              statIconColor="danger"
-              statLink={{ text: "Get More Space...", href: "#pablo" }}
-            />
-          </ItemGrid>
-          <ItemGrid xs={12} sm={6} md={3}>
-            <StatsCard
-              icon={Store}
-              iconColor="green"
-              title="Revenue"
-              description="$34,245"
-              statIcon={DateRange}
-              statText="Last 24 Hours"
-            />
-          </ItemGrid>
-          <ItemGrid xs={12} sm={6} md={3}>
-            <StatsCard
-              icon={InfoOutline}
-              iconColor="red"
-              title="Fixed Issues"
-              description="75"
-              statIcon={LocalOffer}
-              statText="Tracked from Github"
-            />
-          </ItemGrid>
-          <ItemGrid xs={12} sm={6} md={3}>
-            <StatsCard
-              icon={Accessibility}
-              iconColor="blue"
-              title="Followers"
-              description="+245"
-              statIcon={Update}
-              statText="Just Updated"
-            />
-          </ItemGrid>
-        </Grid>
-        <Grid container>
-          <ItemGrid xs={12} sm={12} md={4}>
-            <ChartCard
-              chart={
-                <ChartistGraph
-                  className="ct-chart"
-                  data={dailySalesChart.data}
-                  type="Line"
-                  options={dailySalesChart.options}
-                  listener={dailySalesChart.animation}
-                />
-              }
-              chartColor="green"
-              title="Daily Sales"
-              text={
-                <span>
-                  <span className={this.props.classes.successText}>
-                    <ArrowUpward
-                      className={this.props.classes.upArrowCardCategory}
-                    />{" "}
-                    55%
-                  </span>{" "}
-                  increase in today sales.
-                </span>
-              }
-              statIcon={AccessTime}
-              statText="updated 4 minutes ago"
-            />
-          </ItemGrid>
-          <ItemGrid xs={12} sm={12} md={4}>
-            <ChartCard
-              chart={
-                <ChartistGraph
-                  className="ct-chart"
-                  data={emailsSubscriptionChart.data}
-                  type="Bar"
-                  options={emailsSubscriptionChart.options}
-                  responsiveOptions={emailsSubscriptionChart.responsiveOptions}
-                  listener={emailsSubscriptionChart.animation}
-                />
-              }
-              chartColor="orange"
-              title="Email Subscriptions"
-              text="Last Campaign Performance"
-              statIcon={AccessTime}
-              statText="campaign sent 2 days ago"
-            />
-          </ItemGrid>
-          <ItemGrid xs={12} sm={12} md={4}>
-            <ChartCard
-              chart={
-                <ChartistGraph
-                  className="ct-chart"
-                  data={completedTasksChart.data}
-                  type="Line"
-                  options={completedTasksChart.options}
-                  listener={completedTasksChart.animation}
-                />
-              }
-              chartColor="red"
-              title="Completed Tasks"
-              text="Last Campaign Performance"
-              statIcon={AccessTime}
-              statText="campaign sent 2 days ago"
-            />
-          </ItemGrid>
-        </Grid>
-        <Grid container>
           <ItemGrid xs={12} sm={12} md={6}>
-            <TasksCard />
+            <RegularCard
+              headerColor="red"
+              cardTitle="当代轻奢(基础版)"
+              cardSubtitle="xxxxx元/平米"
+              content={
+                <img src={QingSheBaseImg} className={classes.gridImg} />
+              }
+              classes={ classes }
+              cardAction={
+                <RadioGroup
+                  aria-label=""
+                  name="huxing"
+                  value={this.state.selectedValue}
+                  onChange={this.handleChange}
+                >
+                  <FormControlLabel
+                    value="qingsheBase"
+                    control={<Radio classes={{ checked: classes.checked, default: classes.unchecked }} />}
+                    classes={{ label: classes.uncheckedddd }}
+                    label="" />
+                </RadioGroup>
+              }
+            />
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
             <RegularCard
-              headerColor="orange"
-              cardTitle="Employees Stats"
-              cardSubtitle="New employees on 15th September, 2016"
+              headerColor="red"
+              cardTitle="当代轻奢(升级版)"
+              cardSubtitle="xxxxx元/平米"
               content={
-                <Table
-                  tableHeaderColor="warning"
-                  tableHead={["ID", "Name", "Salary", "Country"]}
-                  tableData={[
-                    ["1", "Dakota Rice", "$36,738", "Niger"],
-                    ["2", "Minerva Hooper", "$23,789", "Curaçao"],
-                    ["3", "Sage Rodriguez", "$56,142", "Netherlands"],
-                    ["4", "Philip Chaney", "$38,735", "Korea, South"]
-                  ]}
-                />
+                <img src={QingSheUpgradeImg} className={classes.gridImg} />
+              }
+              cardAction={
+                <RadioGroup
+                  aria-label=""
+                  name="huxing"
+                  value={this.state.selectedValue}
+                  onChange={this.handleChange}
+                >
+                  <FormControlLabel value="qingsheUpgrade" control={<Radio classes={{ checked: classes.checked, default: classes.unchecked }} />} label="" />
+
+                </RadioGroup>
+              }
+            />
+          </ItemGrid>
+          <ItemGrid xs={12} sm={12} md={6}>
+            <RegularCard
+              headerColor="blue"
+              cardTitle="当代雅致(基础版)"
+              cardSubtitle="xxxxx元/平米"
+              content={
+                <img src={YazhiBaseImg} className={classes.gridImg} />
+              }
+              cardAction={
+                <RadioGroup
+                  aria-label=""
+                  name="huxing"
+                  value={this.state.selectedValue}
+                  onChange={this.handleChange}
+                >
+                  <FormControlLabel value="yazhiBase" control={<Radio classes={{ checked: classes.checked, default: classes.unchecked }} />} label="" />
+
+                </RadioGroup>
+              }
+            />
+          </ItemGrid>
+          <ItemGrid xs={12} sm={12} md={6}>
+            <RegularCard
+              headerColor="blue"
+              cardTitle="当代雅致(升级版)"
+              cardSubtitle="xxxxx元/平米"
+              content={
+                <img src={YazhiUpgradeImg} className={classes.gridImg} />
+              }
+              cardAction={
+                <RadioGroup
+                  aria-label=""
+                  name="huxing"
+                  value={this.state.selectedValue}
+                  onChange={this.handleChange}
+                >
+                  <FormControlLabel value="yazhiUpgrade" control={<Radio classes={{ checked: classes.checked, default: classes.unchecked }} />} label="" />
+
+                </RadioGroup>
               }
             />
           </ItemGrid>
         </Grid>
+
       </div>
     );
   }
@@ -191,4 +158,4 @@ Dashboard.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(dashboardStyle)(Dashboard);
+export default withStyles(DecorationStyle)(Dashboard);

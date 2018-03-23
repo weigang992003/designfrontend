@@ -16,10 +16,12 @@ function RegularCard({ ...props }) {
     classes,
     headerColor,
     plainCard,
+    cardAction,
     cardTitle,
     cardSubtitle,
     content,
-    footer
+    footer,
+    handleOnMouseOver
   } = props;
   const plainCardClasses = cx({
     [" " + classes.cardPlain]: plainCard
@@ -28,7 +30,7 @@ function RegularCard({ ...props }) {
     [" " + classes.cardPlainHeader]: plainCard
   });
   return (
-    <Card className={classes.card + plainCardClasses}>
+    <Card className={classes.card + plainCardClasses} onMouseOver={handleOnMouseOver}>
       <CardHeader
         classes={{
           root:
@@ -41,8 +43,9 @@ function RegularCard({ ...props }) {
         }}
         title={cardTitle}
         subheader={cardSubtitle}
+        action={cardAction}
       />
-      <CardContent>{content}</CardContent>
+      <CardContent classes={classes.CardContent}>{content}</CardContent>
       {footer !== undefined ? (
         <CardActions className={classes.cardActions}>{footer}</CardActions>
       ) : null}
@@ -59,6 +62,7 @@ RegularCard.propTypes = {
   classes: PropTypes.object.isRequired,
   headerColor: PropTypes.oneOf(["orange", "green", "red", "blue", "purple"]),
   cardTitle: PropTypes.node,
+  cardAction: PropTypes.node,
   cardSubtitle: PropTypes.node,
   content: PropTypes.node,
   footer: PropTypes.node

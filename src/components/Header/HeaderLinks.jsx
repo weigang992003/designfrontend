@@ -38,7 +38,7 @@ class HeaderLinks extends React.Component {
             className: classes.top + " " + classes.search
           }}
           inputProps={{
-            placeholder: "Search",
+            placeholder: "演示版",
             inputProps: {
               "aria-label": "Search"
             }
