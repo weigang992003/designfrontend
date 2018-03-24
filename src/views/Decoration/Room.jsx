@@ -147,7 +147,7 @@ class Dashboard extends React.Component {
               <Typography className={classes.instructions}>
                 <Summary />
               </Typography>
-              <Button onClick={this.handleReset} className={classes.button}>
+              <Button variant="raised" color="primary" onClick={this.handleReset} className={classes.button}>
                 重新选择
               </Button>
             </div>
