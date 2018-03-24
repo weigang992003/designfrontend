@@ -38,7 +38,7 @@ function SimpleTable(props) {
         <TableHead>
           <TableRow>
             <TableCell>项目</TableCell>
-            <TableCell numeric>Calories</TableCell>
+            <TableCell numeric></TableCell>
             <TableCell numeric>Fat (g)</TableCell>
             <TableCell numeric>Carbs (g)</TableCell>
             <TableCell numeric>Protein (g)</TableCell>

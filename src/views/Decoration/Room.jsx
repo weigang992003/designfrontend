@@ -33,6 +33,7 @@ import {
 
 import Huike from "components/Decoration/Huike";
 import Toilet from "components/Decoration/Toilet";
+import Bed from "components/Decoration/Bed";
 import Summary from "components/Decoration/Summary";
 import DecorationStyle from "variables/styles/decorationStyle";
 import Radio, { RadioGroup } from 'material-ui/Radio';
@@ -47,22 +48,22 @@ import Stepper, { Step, StepLabel } from 'material-ui/Stepper';
 import Typography from 'material-ui/Typography';
 
 function getSteps() {
-  return ['会客厅', '卫生间', '最终方案'];
+  return ['会客厅', '卧室', '卫生间...'];
 }
 
 function getStepContent(step) {
   switch (step) {
     case 0:
       return(
-        <Huike></Huike>
+        <Huike />
       );
     case 1:
       return(
-        <Toilet></Toilet>
+        <Bed />
       );
     case 2:
       return(
-        <Summary></Summary>
+        <Toilet />
       );
     default:
       return 'Unknown step';
@@ -79,10 +80,6 @@ class Dashboard extends React.Component {
     skipped: new Set(),
     value: 0,
     selectedValue: "qingsheBase",
-  };
-
-  isStepOptional = step => {
-    return step === 1;
   };
 
   isStepSkipped(step) {
@@ -134,9 +131,6 @@ class Dashboard extends React.Component {
           {steps.map((label, index) => {
             const props = {};
             const labelProps = {};
-            if (this.isStepOptional(index)) {
-              labelProps.optional = <Typography variant="caption">Optional</Typography>;
-            }
             if (this.isStepSkipped(index)) {
               props.completed = false;
             }
@@ -147,14 +141,14 @@ class Dashboard extends React.Component {
             );
           })}
         </Stepper>
-        <div>
+        <div className={classes.rooms}>
           {activeStep === steps.length ? (
             <div>
               <Typography className={classes.instructions}>
-                All steps completed - you&quot;re finished
+                <Summary />
               </Typography>
               <Button onClick={this.handleReset} className={classes.button}>
-                Reset
+                重新选择
               </Button>
             </div>
           ) : (

@@ -23,21 +23,21 @@ const appRoutes = [
   {
     path: "/home",
     sidebarName: "首页",
-    navbarName: "Home Page",
+    navbarName: "户型选择",
     icon: Dashboard,
     component: HomePage
   },
   {
     path: "/style/:houseType",
     sidebarName: "风格选择",
-    navbarName: "Decoration Style",
+    navbarName: "风格选择",
     icon: BubbleChart,
     component: DecorationStyle
   },
   {
     path: "/rooms/:houseType/:houseStyle",
     sidebarName: "定制详情",
-    navbarName: "Decoration Rooms",
+    navbarName: "房间定制",
     icon: LibraryBooks,
     component: DecorationRoom
   },

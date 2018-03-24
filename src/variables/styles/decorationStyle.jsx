@@ -38,6 +38,10 @@ const decorationStyle = {
     marginTop: '5px',
     marginBottom: '5px',
   },
+  rooms: {
+    marginTop: '20px',
+    marginBottom: '10px',
+  }
 };
 
 export default decorationStyle;

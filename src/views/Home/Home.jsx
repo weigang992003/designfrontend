@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
+import { withStyles, Grid } from "material-ui";
 import Table, {
   TableBody,
   TableCell,
@@ -23,6 +23,19 @@ import { lighten } from 'material-ui/styles/colorManipulator';
 import { FormControlLabel } from 'material-ui/Form';
 import Button from 'material-ui/Button';
 import { Link } from 'react-router-dom'
+
+import {
+  RegularCard,
+  ItemGrid
+} from "components";
+import HuXingYi from "views/Home/HuXingYi";
+import HuXingEr from "views/Home/HuXingEr";
+import HuXingSan from "views/Home/HuXingSan";
+import HuXingSi from "views/Home/HuXingSi";
+import YiImg from "assets/img/styles/yi.png";
+import ErImg from "assets/img/styles/er.png";
+import SanImg from "assets/img/styles/san.png";
+import SiImg from "assets/img/styles/si.png";
 
 let counter = 0;
 function createData(name, calories, fat, carbs, protein, book, toilet, jianshen, yingyin, yimao, entertainment, value) {
@@ -160,7 +173,7 @@ EnhancedTableToolbar = withStyles(toolbarStyles)(EnhancedTableToolbar);
 const styles = theme => ({
   root: {
     width: '100%',
-    marginTop: theme.spacing.unit * 3,
+    marginTop: theme.spacing.unit,
   },
   table: {
     minWidth: 800,
@@ -179,6 +192,9 @@ const styles = theme => ({
   rightIcon: {
     marginLeft: theme.spacing.unit,
   },
+  gridImg: {
+    width: '100%'
+  },
 });
 
 class EnhancedTable extends React.Component {
@@ -196,6 +212,7 @@ class EnhancedTable extends React.Component {
       page: 0,
       rowsPerPage: 5,
       selectedValue: "four",
+      expanded: false
     };
   }
 
@@ -234,6 +251,11 @@ class EnhancedTable extends React.Component {
 
   isSelected = id => this.state.selected.indexOf(id) !== -1;
 
+  handleExpandClick = () => {
+    this.setState({ expanded: !this.state.expanded });
+    console.log(this.state.expanded)
+  };
+
   render() {
     const { classes } = this.props;
     const { data, selected, rowsPerPage, page } = this.state;
@@ -241,6 +263,80 @@ class EnhancedTable extends React.Component {
 
     return (
       <Paper className={classes.root}>
+        <Grid container>
+          {this.state.selectedValue == "four" ? (
+            <ItemGrid xs={12} sm={12} md={12}>
+              <RegularCard
+                headerColor="red"
+                cardTitle="四世同堂"
+                cardSubtitle="四世同堂，其乐融融，此户型为了满足家庭成员的需要，设置了两间老人房、儿童房、主卧等。"
+                content={
+                  <img src={SiImg} className={classes.gridImg} />
+                }
+                collapse={
+                  <HuXingSi />
+                }
+                classes={ classes }
+                expanded={ this.state.expanded }
+                handleExpandClick={ this.handleExpandClick }
+              />
+            </ItemGrid>
+          ) : null}
+          {this.state.selectedValue == "three" ? (
+            <ItemGrid xs={12} sm={12} md={12}>
+              <RegularCard
+                headerColor="red"
+                cardTitle="三代和睦"
+                cardSubtitle="老少同乐。考虑到老人照看孩子的缘故，可将老人房设置在一层，儿童房在二层。方便照看孩 子。"
+                content={
+                  <img src={SanImg} className={classes.gridImg} />
+                }
+                collapse={
+                  <HuXingSan />
+                }
+                classes={ classes }
+                expanded={ this.state.expanded }
+                handleExpandClick={ this.handleExpandClick }
+              />
+            </ItemGrid>
+          ) : null}
+          {this.state.selectedValue == "two" ? (
+            <ItemGrid xs={12} sm={12} md={12}>
+              <RegularCard
+                headerColor="red"
+                cardTitle="二胎时代"
+                cardSubtitle="欢乐一家人。设置了主卧、儿童房、儿童娱乐室等。"
+                content={
+                  <img src={ErImg} className={classes.gridImg} />
+                }
+                collapse={
+                  <HuXingEr />
+                }
+                classes={ classes }
+                expanded={ this.state.expanded }
+                handleExpandClick={ this.handleExpandClick }
+              />
+            </ItemGrid>
+          ) : null}
+          {this.state.selectedValue == "one" ? (
+            <ItemGrid xs={12} sm={12} md={12}>
+              <RegularCard
+                headerColor="red"
+                cardTitle="一生一世"
+                cardSubtitle="过着甜蜜的二人世界。除了主卧，还配备次卧和客卧等。"
+                content={
+                  <img src={YiImg} className={classes.gridImg} />
+                }
+                collapse={
+                  <HuXingYi />
+                }
+                classes={ classes }
+                expanded={ this.state.expanded }
+                handleExpandClick={ this.handleExpandClick }
+              />
+            </ItemGrid>
+          ) : null}
+        </Grid>
         <div className={classes.tableWrapper}>
           <Table className={classes.table}>
             <EnhancedTableHead

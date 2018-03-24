@@ -34,8 +34,8 @@ import {
 import DecorationStyle from "variables/styles/decorationStyle";
 import Radio, { RadioGroup } from 'material-ui/Radio';
 import { FormControlLabel } from 'material-ui/Form';
-import QingSheBaseImg from "assets/img/styles/qingshebase.jpg";
-import QingSheUpgradeImg from "assets/img/styles/qingsheupgrade.jpg";
+import QingSheBaseImg from "assets/img/styles/qshuikejichu.jpg";
+import QingSheUpgradeImg from "assets/img/styles/qshuikeshengji.jpg";
 import YazhiBaseImg from "assets/img/styles/yazhibase.jpg";
 import YazhiUpgradeImg from "assets/img/styles/yazhiupgrade.jpg";
 import Button from 'material-ui/Button';
@@ -62,7 +62,7 @@ class Dashboard extends React.Component {
         <Grid container>
           <ItemGrid xs={12} sm={12} md={6}>
             <RegularCard
-              headerColor="red"
+              headerColor="blue"
               cardTitle="当代轻奢(基础版)"
               cardSubtitle="xxxxx元/平米"
               content={
