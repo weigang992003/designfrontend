@@ -12,17 +12,17 @@ function Footer({ ...props }) {
         <div className={classes.left}>
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
-              <a href="/load" className={classes.block}>
+              <a href="#" className={classes.block}>
                 首页
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a href="/contactus" className={classes.block}>
+              <a href="#" className={classes.block}>
                 关于我们
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a href="/contactus" className={classes.block}>
+              <a href="#" className={classes.block}>
                 联系我们
               </a>
             </ListItem>
