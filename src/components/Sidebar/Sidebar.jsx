@@ -12,8 +12,6 @@ import {
   ListItemText
 } from "material-ui";
 
-import { HeaderLinks } from "components";
-
 import sidebarStyle from "variables/styles/sidebarStyle.jsx";
 
 const Sidebar = ({ ...props }) => {
@@ -78,7 +76,6 @@ const Sidebar = ({ ...props }) => {
         >
           {brand}
           <div className={classes.sidebarWrapper}>
-            <HeaderLinks />
             {links}
           </div>
           {image !== undefined ? (

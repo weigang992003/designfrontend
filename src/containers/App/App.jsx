@@ -57,7 +57,7 @@ class App extends React.Component {
           {...rest}
         />
         <div className={classes.mainPanel} ref="mainPanel">
-          { this.props.location.pathname !== '/load' ? (
+          { this.props.location.pathname !== '/ld' ? (
             <Header
               routes={appRoutes}
               handleDrawerToggle={this.handleDrawerToggle}

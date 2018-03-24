@@ -58,7 +58,7 @@ class HeaderLinks extends React.Component {
         >
           <Dashboard className={classes.links} />
           <Hidden mdUp>
-            <p className={classes.linkText}>Dashboard</p>
+            <p className={classes.linkText}></p>
           </Hidden>
         </IconButton>
         <Manager style={{ display: "inline-block" }}>
@@ -74,7 +74,6 @@ class HeaderLinks extends React.Component {
               <Notifications className={classes.links} />
               <Hidden mdUp>
                 <p onClick={this.handleClick} className={classes.linkText}>
-                  Notification
                 </p>
               </Hidden>
             </IconButton>
@@ -100,31 +99,7 @@ class HeaderLinks extends React.Component {
                       onClick={this.handleClose}
                       className={classes.dropdownItem}
                     >
-                      Mike John responded to your email
-                    </MenuItem>
-                    <MenuItem
-                      onClick={this.handleClose}
-                      className={classes.dropdownItem}
-                    >
-                      You have 5 new tasks
-                    </MenuItem>
-                    <MenuItem
-                      onClick={this.handleClose}
-                      className={classes.dropdownItem}
-                    >
-                      You're now friend with Andrew
-                    </MenuItem>
-                    <MenuItem
-                      onClick={this.handleClose}
-                      className={classes.dropdownItem}
-                    >
-                      Another Notification
-                    </MenuItem>
-                    <MenuItem
-                      onClick={this.handleClose}
-                      className={classes.dropdownItem}
-                    >
-                      Another One
+                      通知
                     </MenuItem>
                   </MenuList>
                 </Paper>
@@ -139,7 +114,7 @@ class HeaderLinks extends React.Component {
         >
           <Person className={classes.links} />
           <Hidden mdUp>
-            <p className={classes.linkText}>Profile</p>
+            <p className={classes.linkText}></p>
           </Hidden>
         </IconButton>
       </div>

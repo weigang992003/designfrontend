@@ -20,7 +20,7 @@ const appRoutes = [
   {
     path: "/load",
     sidebarName: "首页",
-    navbarName: "首页",
+    navbarName: "",
     icon: AccountBalance,
     component: Load
   },
