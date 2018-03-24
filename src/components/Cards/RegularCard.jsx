@@ -59,17 +59,21 @@ function RegularCard({ ...props }) {
       />
       <CardContent classes={classes.CardContent}>{content}</CardContent>
       {collapse !== undefined ? (<div><CardActions className={classes.actions} disableActionSpacing>
-        户型图
-        <IconButton
-          className={cx(classes.expand, {
-            [classes.expandOpen]: expanded,
-          })}
-          onClick={ handleExpandClick }
-          aria-expanded={expanded}
-          aria-label="Show more"
-        >
-          <ExpandMoreIcon />
-        </IconButton>
+        {handleExpandClick !== undefined ? (
+          <div>
+            户型图
+            <IconButton
+              className={cx(classes.expand, {
+                [classes.expandOpen]: expanded,
+              })}
+              aria-expanded={expanded}
+              onClick={handleExpandClick}
+              aria-label="Show more"
+            >
+              <ExpandMoreIcon />
+            </IconButton>
+          </div>
+        ) : null}
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         {collapse}

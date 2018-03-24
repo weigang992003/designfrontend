@@ -13,7 +13,6 @@ import appRoutes from "routes/app.jsx";
 import appStyle from "variables/styles/appStyle.jsx";
 
 import image from "assets/img/sidebar-2.jpg";
-import logo from "assets/img/reactlogo.png";
 
 const switchRoutes = (
   <Switch>
@@ -50,8 +49,7 @@ class App extends React.Component {
       <div className={classes.wrapper}>
         <Sidebar
           routes={appRoutes}
-          logoText={"九和设计"}
-          logo={logo}
+          logoText={"定制化装修(演示版)"}
           image={image}
           handleDrawerToggle={this.handleDrawerToggle}
           open={this.state.mobileOpen}
@@ -59,15 +57,16 @@ class App extends React.Component {
           {...rest}
         />
         <div className={classes.mainPanel} ref="mainPanel">
-          <Header
-            routes={appRoutes}
-            handleDrawerToggle={this.handleDrawerToggle}
-            {...rest}
-          />
+          { this.props.location.pathname !== '/load' ? (
+            <Header
+              routes={appRoutes}
+              handleDrawerToggle={this.handleDrawerToggle}
+              {...rest}
+            />) : null}
           {/* On the /maps route we want the map to be on full screen - this is not possible if the content and conatiner classes are present because they have some paddings which would make the map smaller */}
           {this.getRoute() ? (
-            <div className={classes.content}>
-              <div className={classes.container}>{switchRoutes}</div>
+            <div className={this.props.location.pathname !== '/load' ? classes.content : classes.homeContent}>
+              <div className={this.props.location.pathname !== '/load' ? classes.container : classes.homeContent}>{switchRoutes}</div>
             </div>
           ) : (
             <div className={classes.map}>{switchRoutes}</div>

@@ -17,125 +17,50 @@ function UserProfile({ ...props }) {
       <Grid container>
         <ItemGrid xs={12} sm={12} md={8}>
           <RegularCard
-            cardTitle="Edit Profile"
-            cardSubtitle="Complete your profile"
+            cardTitle="请留下您的联系方式"
+            headerColor="orange"
             content={
               <div>
                 <Grid container>
-                  <ItemGrid xs={12} sm={12} md={5}>
+                  <ItemGrid xs={12} sm={12} md={12}>
                     <CustomInput
-                      labelText="Company (disabled)"
-                      id="company-disabled"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        disabled: true
-                      }}
-                    />
-                  </ItemGrid>
-                  <ItemGrid xs={12} sm={12} md={3}>
-                    <CustomInput
-                      // labelText="Username"
-                      id="username"
+                      labelText="姓名"
+                      id="name-address"
                       formControlProps={{
                         fullWidth: true
                       }}
                     />
                   </ItemGrid>
-                  <ItemGrid xs={12} sm={12} md={4}>
+                  <ItemGrid xs={12} sm={12} md={12}>
                     <CustomInput
-                      labelText="Email address"
+                      labelText="邮箱"
                       id="email-address"
                       formControlProps={{
                         fullWidth: true
                       }}
                     />
                   </ItemGrid>
-                </Grid>
-                <Grid container>
-                  <ItemGrid xs={12} sm={12} md={6}>
-                    <CustomInput
-                      labelText="First Name"
-                      id="first-name"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                    />
-                  </ItemGrid>
-                  <ItemGrid xs={12} sm={12} md={6}>
-                    <CustomInput
-                      labelText="Last Name"
-                      id="last-name"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                    />
-                  </ItemGrid>
-                </Grid>
-                <Grid container>
-                  <ItemGrid xs={12} sm={12} md={4}>
-                    <CustomInput
-                      labelText="City"
-                      id="city"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                    />
-                  </ItemGrid>
-                  <ItemGrid xs={12} sm={12} md={4}>
-                    <CustomInput
-                      labelText="Country"
-                      id="country"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                    />
-                  </ItemGrid>
-                  <ItemGrid xs={12} sm={12} md={4}>
-                    <CustomInput
-                      labelText="Postal Code"
-                      id="postal-code"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                    />
-                  </ItemGrid>
-                </Grid>
-                <Grid container>
                   <ItemGrid xs={12} sm={12} md={12}>
-                    <InputLabel style={{ color: "#AAAAAA" }}>
-                      About me
-                    </InputLabel>
                     <CustomInput
-                      labelText="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."
-                      id="about-me"
+                      labelText="手机号"
+                      id="mobile-address"
                       formControlProps={{
                         fullWidth: true
-                      }}
-                      inputProps={{
-                        multiline: true,
-                        rows: 5
                       }}
                     />
                   </ItemGrid>
                 </Grid>
               </div>
             }
-            footer={<Button color="primary">Update Profile</Button>}
+            footer={<Button color="blue">确认</Button>}
           />
         </ItemGrid>
         <ItemGrid xs={12} sm={12} md={4}>
           <ProfileCard
             avatar={avatar}
-            subtitle="CEO / CO-FOUNDER"
-            title="Alec Thompson"
-            description="Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is..."
-            footer={
-              <Button color="primary" round>
-                Follow
-              </Button>
-            }
+            subtitle="创始人"
+            title="创始人"
+            description="创创创始人创始人创始人创始人创始人创始人始人创创始人创始人创始人创始人创始人创始人始人创创始人创始人创始人创始人创始人创始人始人创创始人创始人创始人创始人创始人创始人始人创始人创始人创始人创始人创始人创始人始人"
           />
         </ItemGrid>
       </Grid>

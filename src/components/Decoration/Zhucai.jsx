@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
 import Paper from 'material-ui/Paper';
-import Toolbar from 'material-ui/Toolbar';
-import Typography from 'material-ui/Typography';
 
 const styles = theme => ({
   root: {
@@ -24,11 +22,13 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 const data = [
-  createData('会客厅', '当代轻奢升级', 'xxxx元'),
-  createData('卧室', '当代轻奢基础', 'xxxx元'),
-  createData('卫生间', '当代轻奢升级', 'xxxx元'),
-  createData('...', '...', 'xxxx元'),
-  createData('总计', null, 'xxxx元'),
+  createData('墙面', '石材', 'xxxxx元'),
+  createData('天花', '乳胶漆', 'xxxxx元'),
+  createData('地面', '木地板', 'xxxxx元'),
+  createData('橱柜', '海格&瓦伦多夫', 'xxxxx元'),
+  createData('洁具', '汉斯格雅', 'xxxxx元'),
+  createData('...', '...'),
+  createData('总计', null, 'xxxxx元'),
 ];
 
 function SimpleTable(props) {
@@ -36,18 +36,12 @@ function SimpleTable(props) {
 
   return (
     <Paper className={classes.root}>
-      <Toolbar
-      >
-        <div className={classes.title}>
-          <Typography variant="title">三代和睦 - 当代轻奢(升级版)</Typography>
-        </div>
-      </Toolbar>
       <Table className={classes.table}>
         <TableHead>
           <TableRow>
-            <TableCell>房间</TableCell>
-            <TableCell numeric>风格</TableCell>
-            <TableCell numeric>价格</TableCell>
+            <TableCell>区域</TableCell>
+            <TableCell numeric>产品</TableCell>
+            <TableCell numeric>总计</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

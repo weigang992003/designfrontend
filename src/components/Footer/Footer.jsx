@@ -9,6 +9,25 @@ function Footer({ ...props }) {
   return (
     <footer className={classes.footer}>
       <div className={classes.container}>
+        <div className={classes.left}>
+          <List className={classes.list}>
+            <ListItem className={classes.inlineBlock}>
+              <a href="/load" className={classes.block}>
+                首页
+              </a>
+            </ListItem>
+            <ListItem className={classes.inlineBlock}>
+              <a href="/contactus" className={classes.block}>
+                关于我们
+              </a>
+            </ListItem>
+            <ListItem className={classes.inlineBlock}>
+              <a href="/contactus" className={classes.block}>
+                联系我们
+              </a>
+            </ListItem>
+          </List>
+        </div>
         <p className={classes.right}>
           <span>
             北京九和设计

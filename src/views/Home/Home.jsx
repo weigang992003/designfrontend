@@ -253,7 +253,6 @@ class EnhancedTable extends React.Component {
 
   handleExpandClick = () => {
     this.setState({ expanded: !this.state.expanded });
-    console.log(this.state.expanded)
   };
 
   render() {
@@ -262,12 +261,12 @@ class EnhancedTable extends React.Component {
     const emptyRows = rowsPerPage - Math.min(rowsPerPage, data.length - page * rowsPerPage);
 
     return (
-      <Paper className={classes.root}>
+      <div>
         <Grid container>
           {this.state.selectedValue == "four" ? (
             <ItemGrid xs={12} sm={12} md={12}>
               <RegularCard
-                headerColor="red"
+                headerColor="orange"
                 cardTitle="四世同堂"
                 cardSubtitle="四世同堂，其乐融融，此户型为了满足家庭成员的需要，设置了两间老人房、儿童房、主卧等。"
                 content={
@@ -285,7 +284,7 @@ class EnhancedTable extends React.Component {
           {this.state.selectedValue == "three" ? (
             <ItemGrid xs={12} sm={12} md={12}>
               <RegularCard
-                headerColor="red"
+                headerColor="orange"
                 cardTitle="三代和睦"
                 cardSubtitle="老少同乐。考虑到老人照看孩子的缘故，可将老人房设置在一层，儿童房在二层。方便照看孩 子。"
                 content={
@@ -303,7 +302,7 @@ class EnhancedTable extends React.Component {
           {this.state.selectedValue == "two" ? (
             <ItemGrid xs={12} sm={12} md={12}>
               <RegularCard
-                headerColor="red"
+                headerColor="orange"
                 cardTitle="二胎时代"
                 cardSubtitle="欢乐一家人。设置了主卧、儿童房、儿童娱乐室等。"
                 content={
@@ -321,7 +320,7 @@ class EnhancedTable extends React.Component {
           {this.state.selectedValue == "one" ? (
             <ItemGrid xs={12} sm={12} md={12}>
               <RegularCard
-                headerColor="red"
+                headerColor="orange"
                 cardTitle="一生一世"
                 cardSubtitle="过着甜蜜的二人世界。除了主卧，还配备次卧和客卧等。"
                 content={
@@ -337,64 +336,66 @@ class EnhancedTable extends React.Component {
             </ItemGrid>
           ) : null}
         </Grid>
-        <div className={classes.tableWrapper}>
-          <Table className={classes.table}>
-            <EnhancedTableHead
-              numSelected={selected.length}
-              rowCount={data.length}
-            />
-            <TableBody>
-              {data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(n => {
-                const isSelected = this.isSelected(n.id);
-                return (
-                  <TableRow
-                    hover
-                    onClick={event => this.handleClick(event, n.id)}
-                    role="checkbox"
-                    aria-checked={isSelected}
-                    tabIndex={-1}
-                    key={n.id}
-                    selected={isSelected}
-                  >
-                    <TableCell padding="checkbox">
-                      <RadioGroup
-                        aria-label="gender"
-                        name="huxing"
-                        className={classes.group}
-                        value={this.state.selectedValue}
-                        onChange={this.handleChange}
-                      >
-                        <FormControlLabel value={ n.value } control={<Radio classes={{ checked: classes.checked, }} />} label="" />
-                      </RadioGroup>
-                    </TableCell>
-                    <TableCell padding="none">{n.name}</TableCell>
-                    <TableCell numeric>{n.calories}</TableCell>
-                    <TableCell numeric>{n.fat}</TableCell>
-                    <TableCell numeric>{n.carbs}</TableCell>
-                    <TableCell numeric>{n.protein}</TableCell>
-                    <TableCell numeric>{n.book}</TableCell>
-                    <TableCell numeric>{n.toilet}</TableCell>
-                    <TableCell numeric>{n.jianshen}</TableCell>
-                    <TableCell numeric>{n.yingyin}</TableCell>
-                    <TableCell numeric>{n.yimao}</TableCell>
-                    <TableCell numeric>{n.entertainment}</TableCell>
+        <Paper className={classes.root}>
+          <div className={classes.tableWrapper}>
+            <Table className={classes.table}>
+              <EnhancedTableHead
+                numSelected={selected.length}
+                rowCount={data.length}
+              />
+              <TableBody>
+                {data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(n => {
+                  const isSelected = this.isSelected(n.id);
+                  return (
+                    <TableRow
+                      hover
+                      onClick={event => this.handleClick(event, n.id)}
+                      role="checkbox"
+                      aria-checked={isSelected}
+                      tabIndex={-1}
+                      key={n.id}
+                      selected={isSelected}
+                    >
+                      <TableCell padding="checkbox">
+                        <RadioGroup
+                          aria-label="gender"
+                          name="huxing"
+                          className={classes.group}
+                          value={this.state.selectedValue}
+                          onChange={this.handleChange}
+                        >
+                          <FormControlLabel value={ n.value } control={<Radio classes={{ checked: classes.checked, }} />} label="" />
+                        </RadioGroup>
+                      </TableCell>
+                      <TableCell padding="none">{n.name}</TableCell>
+                      <TableCell numeric>{n.calories}</TableCell>
+                      <TableCell numeric>{n.fat}</TableCell>
+                      <TableCell numeric>{n.carbs}</TableCell>
+                      <TableCell numeric>{n.protein}</TableCell>
+                      <TableCell numeric>{n.book}</TableCell>
+                      <TableCell numeric>{n.toilet}</TableCell>
+                      <TableCell numeric>{n.jianshen}</TableCell>
+                      <TableCell numeric>{n.yingyin}</TableCell>
+                      <TableCell numeric>{n.yimao}</TableCell>
+                      <TableCell numeric>{n.entertainment}</TableCell>
+                    </TableRow>
+                  );
+                })}
+                {emptyRows > 0 && (
+                  <TableRow style={{ height: 49 * emptyRows }}>
+                    <TableCell colSpan={6} />
                   </TableRow>
-                );
-              })}
-              {emptyRows > 0 && (
-                <TableRow style={{ height: 49 * emptyRows }}>
-                  <TableCell colSpan={6} />
-                </TableRow>
-              )}
-            </TableBody>
-            <TableFooter>
-              <Button className={classes.button} variant="raised" component={Link} to={`/style/${ this.state.selectedValue }`}>
-                下一步
-              </Button>
-            </TableFooter>
-          </Table>
-        </div>
-      </Paper>
+                )}
+              </TableBody>
+              <TableFooter>
+                <Button className={classes.button} variant="raised" component={Link} to={`/style/${ this.state.selectedValue }`}>
+                  下一步
+                </Button>
+              </TableFooter>
+            </Table>
+          </div>
+        </Paper>
+      </div>
     );
   }
 }

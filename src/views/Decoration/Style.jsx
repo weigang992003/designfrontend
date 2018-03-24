@@ -62,7 +62,7 @@ class Dashboard extends React.Component {
         <Grid container>
           <ItemGrid xs={12} sm={12} md={6}>
             <RegularCard
-              headerColor="red"
+              headerColor="orange"
               cardTitle="当代轻奢(基础版)"
               cardSubtitle="xxxxx元/平米"
               content={
@@ -87,7 +87,7 @@ class Dashboard extends React.Component {
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
             <RegularCard
-              headerColor="red"
+              headerColor="orange"
               cardTitle="当代轻奢(升级版)"
               cardSubtitle="xxxxx元/平米"
               content={
@@ -108,7 +108,7 @@ class Dashboard extends React.Component {
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
             <RegularCard
-              headerColor="blue"
+              headerColor="red"
               cardTitle="当代雅致(基础版)"
               cardSubtitle="xxxxx元/平米"
               content={
@@ -129,7 +129,7 @@ class Dashboard extends React.Component {
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
             <RegularCard
-              headerColor="blue"
+              headerColor="red"
               cardTitle="当代雅致(升级版)"
               cardSubtitle="xxxxx元/平米"
               content={

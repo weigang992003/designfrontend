@@ -62,7 +62,7 @@ class Dashboard extends React.Component {
         <Grid container>
           <ItemGrid xs={12} sm={12} md={6}>
             <RegularCard
-              headerColor="blue"
+              headerColor="orange"
               cardTitle="当代轻奢(基础版)"
               cardSubtitle="xxxxx元/平米"
               content={
