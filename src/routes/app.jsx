@@ -3,12 +3,10 @@ import Load from "views/Home/Load.jsx";
 import DecorationStyle from "views/Decoration/Style.jsx";
 import DecorationRoom from "views/Decoration/Room.jsx";
 import DecorationCase from "views/Decoration/Case.jsx";
-import DashboardPage from "views/Dashboard/Dashboard.jsx";
 import ContactUs from "views/UserProfile/UserProfile.jsx";
 
 import {
   Dashboard,
-  Person,
   ContentPaste,
   LibraryBooks,
   BubbleChart,

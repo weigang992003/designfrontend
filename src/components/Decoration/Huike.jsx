@@ -1,45 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 // react plugin for creating charts
-import ChartistGraph from "react-chartist";
-import {
-  ContentCopy,
-  Store,
-  InfoOutline,
-  Warning,
-  DateRange,
-  LocalOffer,
-  Update,
-  ArrowUpward,
-  AccessTime,
-  Accessibility
-} from "material-ui-icons";
 import { withStyles, Grid } from "material-ui";
 
 import {
-  StatsCard,
-  ChartCard,
-  TasksCard,
   RegularCard,
-  Table,
   ItemGrid
 } from "components";
-
-import {
-  dailySalesChart,
-  emailsSubscriptionChart,
-  completedTasksChart
-} from "variables/charts";
 
 import DecorationStyle from "variables/styles/decorationStyle";
 import Radio, { RadioGroup } from 'material-ui/Radio';
 import { FormControlLabel } from 'material-ui/Form';
 import QingSheBaseImg from "assets/img/styles/qshuikejichu.jpg";
 import QingSheUpgradeImg from "assets/img/styles/qshuikeshengji.jpg";
-import YazhiBaseImg from "assets/img/styles/yazhibase.jpg";
-import YazhiUpgradeImg from "assets/img/styles/yazhiupgrade.jpg";
-import Button from 'material-ui/Button';
-import { Link } from 'react-router-dom'
 
 class Dashboard extends React.Component {
   state = {
@@ -66,7 +39,7 @@ class Dashboard extends React.Component {
               cardTitle="当代轻奢(基础版)"
               cardSubtitle="xxxxx元/平米"
               content={
-                <img src={QingSheBaseImg} className={classes.gridImg} />
+                <img alt='adsf' src={QingSheBaseImg} className={classes.gridImg} />
               }
               classes={ classes }
               cardAction={
@@ -91,7 +64,7 @@ class Dashboard extends React.Component {
               cardTitle="当代轻奢(升级版)"
               cardSubtitle="xxxxx元/平米"
               content={
-                <img src={QingSheUpgradeImg} className={classes.gridImg} />
+                <img alt='adsf' src={QingSheUpgradeImg} className={classes.gridImg} />
               }
               cardAction={
                 <RadioGroup

@@ -1,49 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-// react plugin for creating charts
-import ChartistGraph from "react-chartist";
-import {
-  ContentCopy,
-  Store,
-  InfoOutline,
-  Warning,
-  DateRange,
-  LocalOffer,
-  Update,
-  ArrowUpward,
-  AccessTime,
-  Accessibility
-} from "material-ui-icons";
-import { withStyles, Grid } from "material-ui";
-
-import {
-  StatsCard,
-  ChartCard,
-  TasksCard,
-  RegularCard,
-  Table,
-  ItemGrid
-} from "components";
-
-import {
-  dailySalesChart,
-  emailsSubscriptionChart,
-  completedTasksChart
-} from "variables/charts";
+import { withStyles } from "material-ui";
 
 import Huike from "components/Decoration/Huike";
 import Toilet from "components/Decoration/Toilet";
 import Bed from "components/Decoration/Bed";
 import Summary from "components/Decoration/Summary";
 import DecorationStyle from "variables/styles/decorationStyle";
-import Radio, { RadioGroup } from 'material-ui/Radio';
-import { FormControlLabel } from 'material-ui/Form';
-import QingSheBaseImg from "assets/img/styles/qingshebase.jpg";
-import QingSheUpgradeImg from "assets/img/styles/qingsheupgrade.jpg";
-import YazhiBaseImg from "assets/img/styles/yazhibase.jpg";
-import YazhiUpgradeImg from "assets/img/styles/yazhiupgrade.jpg";
 import Button from 'material-ui/Button';
-import { Link } from 'react-router-dom'
 import Stepper, { Step, StepLabel } from 'material-ui/Stepper';
 import Typography from 'material-ui/Typography';
 

@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import { Grid } from "material-ui";
-import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
-import Button from 'material-ui/Button';
-import Typography from 'material-ui/Typography';
+import Card, { CardContent, CardMedia } from 'material-ui/Card';
 import BannerImg from "assets/img/home.png";
 import {
   RegularCard,
@@ -47,6 +45,7 @@ function SimpleMediaCard(props) {
           <img
             src={ BannerImg }
             className={classes.media}
+            alt="定制化装修方案"
           />
         </CardMedia>
         <div>

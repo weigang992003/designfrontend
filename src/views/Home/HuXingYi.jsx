@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import HomeStyle from "variables/styles/homeStyle";
 import GridList, { GridListTile, GridListTileBar } from 'material-ui/GridList';
-import IconButton from 'material-ui/IconButton';
-import StarBorderIcon from 'material-ui-icons/StarBorder';
-import SiYiLouImg from "assets/img/huxing/si/yilou.png";
 
 import Yi from "assets/img/huxing/yi/yi.png";
 import Er from "assets/img/huxing/yi/er.png";

@@ -10,8 +10,6 @@ import {
   RegularCard,
   ItemGrid
 } from "components";
-import Radio, { RadioGroup } from 'material-ui/Radio';
-import { FormControlLabel } from 'material-ui/Form';
 import SanImg from "assets/img/styles/san.png";
 import QingSheUpgradeImg from "assets/img/styles/qingsheupgrade.jpg";
 import HuXingSan from "views/Home/HuXingSan";
@@ -56,7 +54,7 @@ function getStepContent(step, classes) {
               headerColor="orange"
               cardSubtitle="老少同乐。考虑到老人照看孩子的缘故，可将老人房设置在一层，儿童房在二层。方便照看孩 子。"
               content={
-                <img src={SanImg} className={classes.gridImg} />
+                <img alt="a" src={SanImg} className={classes.gridImg} />
               }
               collapse={
                 <HuXingSan />
@@ -76,7 +74,7 @@ function getStepContent(step, classes) {
               cardTitle="当代轻奢(升级版)"
               cardSubtitle="xxxxx元/平米"
               content={
-                <img src={QingSheUpgradeImg} className={classes.gridImg} />
+                <img alt="a" src={QingSheUpgradeImg} className={classes.gridImg} />
               }
             />
           </ItemGrid>
@@ -91,7 +89,7 @@ function getStepContent(step, classes) {
               cardTitle="当代轻奢(升级版)"
               cardSubtitle="xxxxx元/平米"
               content={
-                <img src={QingSheUpgradeImg} className={classes.gridImg} />
+                <img alt="a" src={QingSheUpgradeImg} className={classes.gridImg} />
               }
             />
           </ItemGrid>
@@ -106,7 +104,7 @@ function getStepContent(step, classes) {
               cardTitle="卧室(基础版)"
               cardSubtitle="xxxxx元/平米"
               content={
-                <img src={QingSheBaseImg} className={classes.gridImg} />
+                <img alt="a" src={QingSheBaseImg} className={classes.gridImg} />
               }
               classes={ classes }
             />
@@ -122,7 +120,7 @@ function getStepContent(step, classes) {
               cardTitle="当代轻奢(升级版)"
               cardSubtitle="xxxxx元/平米"
               content={
-                <img src={WeiImg} className={classes.gridImg} />
+                <img alt="a" src={WeiImg} className={classes.gridImg} />
               }
             />
           </ItemGrid>

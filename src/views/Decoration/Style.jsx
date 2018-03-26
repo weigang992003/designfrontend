@@ -1,35 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-// react plugin for creating charts
-import ChartistGraph from "react-chartist";
-import {
-  ContentCopy,
-  Store,
-  InfoOutline,
-  Warning,
-  DateRange,
-  LocalOffer,
-  Update,
-  ArrowUpward,
-  AccessTime,
-  Accessibility
-} from "material-ui-icons";
 import { withStyles, Grid } from "material-ui";
 
 import {
-  StatsCard,
-  ChartCard,
-  TasksCard,
   RegularCard,
-  Table,
   ItemGrid
 } from "components";
-
-import {
-  dailySalesChart,
-  emailsSubscriptionChart,
-  completedTasksChart
-} from "variables/charts";
 
 import DecorationStyle from "variables/styles/decorationStyle";
 import Radio, { RadioGroup } from 'material-ui/Radio';
@@ -66,7 +42,7 @@ class Dashboard extends React.Component {
               cardTitle="当代轻奢(基础版)"
               cardSubtitle="xxxxx元/平米"
               content={
-                <img src={QingSheBaseImg} className={classes.gridImg} />
+                <img alt="a" src={QingSheBaseImg} className={classes.gridImg} />
               }
               classes={ classes }
               cardAction={
@@ -91,7 +67,7 @@ class Dashboard extends React.Component {
               cardTitle="当代轻奢(升级版)"
               cardSubtitle="xxxxx元/平米"
               content={
-                <img src={QingSheUpgradeImg} className={classes.gridImg} />
+                <img alt="a" src={QingSheUpgradeImg} className={classes.gridImg} />
               }
               cardAction={
                 <RadioGroup
@@ -112,7 +88,7 @@ class Dashboard extends React.Component {
               cardTitle="当代雅致(基础版)"
               cardSubtitle="xxxxx元/平米"
               content={
-                <img src={YazhiBaseImg} className={classes.gridImg} />
+                <img alt="a" src={YazhiBaseImg} className={classes.gridImg} />
               }
               cardAction={
                 <RadioGroup
@@ -133,7 +109,7 @@ class Dashboard extends React.Component {
               cardTitle="当代雅致(升级版)"
               cardSubtitle="xxxxx元/平米"
               content={
-                <img src={YazhiUpgradeImg} className={classes.gridImg} />
+                <img alt="a" src={YazhiUpgradeImg} className={classes.gridImg} />
               }
               cardAction={
                 <RadioGroup

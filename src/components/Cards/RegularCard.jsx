@@ -9,14 +9,8 @@ import {
 } from "material-ui";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import Avatar from 'material-ui/Avatar';
 import IconButton from 'material-ui/IconButton';
-import Typography from 'material-ui/Typography';
-import red from 'material-ui/colors/red';
-import FavoriteIcon from 'material-ui-icons/Favorite';
-import ShareIcon from 'material-ui-icons/Share';
 import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
-import MoreVertIcon from 'material-ui-icons/MoreVert';
 
 import regularCardStyle from "variables/styles/regularCardStyle";
 

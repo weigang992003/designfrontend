@@ -7,7 +7,6 @@ import Table, {
   TableCell,
   TableFooter,
   TableHead,
-  TablePagination,
   TableRow,
   TableSortLabel,
 } from 'material-ui/Table';
@@ -263,14 +262,14 @@ class EnhancedTable extends React.Component {
     return (
       <div>
         <Grid container>
-          {this.state.selectedValue == "four" ? (
+          {this.state.selectedValue === "four" ? (
             <ItemGrid xs={12} sm={12} md={12}>
               <RegularCard
                 headerColor="orange"
                 cardTitle="四世同堂"
                 cardSubtitle="四世同堂，其乐融融，此户型为了满足家庭成员的需要，设置了两间老人房、儿童房、主卧等。"
                 content={
-                  <img src={SiImg} className={classes.gridImg} />
+                  <img alt="a" src={SiImg} className={classes.gridImg} />
                 }
                 collapse={
                   <HuXingSi />
@@ -281,14 +280,14 @@ class EnhancedTable extends React.Component {
               />
             </ItemGrid>
           ) : null}
-          {this.state.selectedValue == "three" ? (
+          {this.state.selectedValue === "three" ? (
             <ItemGrid xs={12} sm={12} md={12}>
               <RegularCard
                 headerColor="orange"
                 cardTitle="三代和睦"
                 cardSubtitle="老少同乐。考虑到老人照看孩子的缘故，可将老人房设置在一层，儿童房在二层。方便照看孩 子。"
                 content={
-                  <img src={SanImg} className={classes.gridImg} />
+                  <img alt="a" src={SanImg} className={classes.gridImg} />
                 }
                 collapse={
                   <HuXingSan />
@@ -299,14 +298,14 @@ class EnhancedTable extends React.Component {
               />
             </ItemGrid>
           ) : null}
-          {this.state.selectedValue == "two" ? (
+          {this.state.selectedValue === "two" ? (
             <ItemGrid xs={12} sm={12} md={12}>
               <RegularCard
                 headerColor="orange"
                 cardTitle="二胎时代"
                 cardSubtitle="欢乐一家人。设置了主卧、儿童房、儿童娱乐室等。"
                 content={
-                  <img src={ErImg} className={classes.gridImg} />
+                  <img alt="a" src={ErImg} className={classes.gridImg} />
                 }
                 collapse={
                   <HuXingEr />
@@ -317,14 +316,14 @@ class EnhancedTable extends React.Component {
               />
             </ItemGrid>
           ) : null}
-          {this.state.selectedValue == "one" ? (
+          {this.state.selectedValue === "one" ? (
             <ItemGrid xs={12} sm={12} md={12}>
               <RegularCard
                 headerColor="orange"
                 cardTitle="一生一世"
                 cardSubtitle="过着甜蜜的二人世界。除了主卧，还配备次卧和客卧等。"
                 content={
-                  <img src={YiImg} className={classes.gridImg} />
+                  <img alt="a" src={YiImg} className={classes.gridImg} />
                 }
                 collapse={
                   <HuXingYi />

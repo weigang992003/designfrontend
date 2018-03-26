@@ -2,8 +2,6 @@
 // // // Dashboard styles
 // #############################
 
-import { successColor } from "variables/styles";
-
 const homeStyle = theme => ({
   root: {
     display: 'flex',

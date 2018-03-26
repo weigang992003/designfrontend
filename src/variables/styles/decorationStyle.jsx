@@ -26,13 +26,11 @@ const decorationStyle = {
   },
   button: {
     color: '#FFFFFF',
-    background: '#00acc1'
+    background: '#00acc1',
+    marginRight: '5px',
   },
   root: {
     width: '90%',
-  },
-  button: {
-    marginRight: '5px',
   },
   instructions: {
     marginTop: '5px',
