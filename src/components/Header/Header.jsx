@@ -12,7 +12,7 @@ import {
 import cx from "classnames";
 
 import headerStyle from "variables/styles/headerStyle.jsx";
-
+import { Link } from 'react-router-dom'
 import HeaderLinks from "./HeaderLinks";
 
 function Header({ ...props }) {
@@ -34,10 +34,16 @@ function Header({ ...props }) {
     <AppBar className={classes.appBar + appBarClasses}>
       <Toolbar className={classes.container}>
         <div className={classes.flex}>
-          {/* Here we create navbar brand, based on route name */}
-          <Button href="#" className={classes.title}>
-            {makeBrand()}
-          </Button>
+          { document.location.pathname !== '/load' ? (
+            <div>
+              <Button className={classes.title} component={Link} to="/load">
+                首页 >>
+              </Button>
+              <Button className={classes.title}>
+                {makeBrand()}
+              </Button>
+            </div>
+          ) : null}
         </div>
         <Hidden smDown implementation="css">
           <HeaderLinks />

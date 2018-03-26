@@ -4,6 +4,7 @@ import { withStyles } from 'material-ui/styles';
 import { Grid } from "material-ui";
 import Card, { CardContent, CardMedia } from 'material-ui/Card';
 import BannerImg from "assets/img/home.png";
+import { Link } from 'react-router-dom'
 import {
   RegularCard,
   ItemGrid
@@ -29,6 +30,9 @@ const styles = {
   desc: {
     fontSize: '14px',
     padding: '0px 250px',
+  },
+  link: {
+    color: '#ffffff',
   }
 };
 
@@ -40,7 +44,7 @@ function SimpleMediaCard(props) {
         <CardMedia
           className={classes.media}
           image={ BannerImg }
-          title="Contemplative Reptile"
+          title="定制化装修方案"
         >
           <img
             src={ BannerImg }
@@ -59,28 +63,30 @@ function SimpleMediaCard(props) {
             <ItemGrid xs={12} sm={12} md={4}>
               <RegularCard
                 headerColor="orange"
-                cardTitle="平面布置方案"
+                cardTitle={
+                  <Link to="/home" className={classes.link}>平面布置方案</Link>
+                }
                 content={
                   <List component="nav">
-                    <ListItem button>
+                    <ListItem button component={Link} to="/home">
                       <ListItemIcon>
                         <DonutSmall />
                       </ListItemIcon>
                       <ListItemText inset primary="四世同堂" />
                     </ListItem>
-                    <ListItem button>
+                    <ListItem button component={Link} to="/home">
                       <ListItemIcon>
                         <DonutSmall />
                       </ListItemIcon>
                       <ListItemText inset primary="三代和睦" />
                     </ListItem>
-                    <ListItem button>
+                    <ListItem button component={Link} to="/home">
                       <ListItemIcon>
                         <DonutSmall />
                       </ListItemIcon>
                       <ListItemText inset primary="二胎时代" />
                     </ListItem>
-                    <ListItem button>
+                    <ListItem button component={Link} to="/home">
                       <ListItemIcon>
                         <DonutSmall />
                       </ListItemIcon>
@@ -94,28 +100,30 @@ function SimpleMediaCard(props) {
             <ItemGrid xs={12} sm={12} md={4}>
               <RegularCard
                 headerColor="orange"
-                cardTitle="精装风格定位"
+                cardTitle={
+                  <Link to="/style/four" className={classes.link}>精装风格定位</Link>
+                }
                 content={
                   <List component="nav">
-                    <ListItem button>
+                    <ListItem button component={Link} to="/style/four">
                       <ListItemIcon>
                         <BubbleChart />
                       </ListItemIcon>
                       <ListItemText inset primary="当代轻奢(基础版)" />
                     </ListItem>
-                    <ListItem button>
+                    <ListItem button component={Link} to="/style/four">
                       <ListItemIcon>
                         <BubbleChart />
                       </ListItemIcon>
                       <ListItemText inset primary="当代轻奢(升级版)" />
                     </ListItem>
-                    <ListItem button>
+                    <ListItem button component={Link} to="/style/four">
                       <ListItemIcon>
                         <BubbleChart />
                       </ListItemIcon>
                       <ListItemText inset primary="当代雅致(基础版)" />
                     </ListItem>
-                    <ListItem button>
+                    <ListItem button component={Link} to="/style/four">
                       <ListItemIcon>
                         <BubbleChart />
                       </ListItemIcon>

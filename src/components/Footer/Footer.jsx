@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { List, ListItem, withStyles } from "material-ui";
+import { Link } from 'react-router-dom'
 
 import footerStyle from "variables/styles/footerStyle";
 
@@ -12,19 +13,13 @@ function Footer({ ...props }) {
         <div className={classes.left}>
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
-              <a href="#" className={classes.block}>
-                首页
-              </a>
+              <Link to="/load">首页</Link>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a href="#" className={classes.block}>
-                关于我们
-              </a>
+              <Link to="/home">户型选择</Link>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a href="#" className={classes.block}>
-                联系我们
-              </a>
+              <Link to="/contactus">联系我们</Link>
             </ListItem>
           </List>
         </div>

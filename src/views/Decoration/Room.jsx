@@ -15,19 +15,19 @@ function getSteps() {
   return ['会客厅', '卧室', '卫生间...'];
 }
 
-function getStepContent(step) {
+function getStepContent(step, handleNext) {
   switch (step) {
     case 0:
       return(
-        <Huike />
+        <Huike onClick={handleNext}/>
       );
     case 1:
       return(
-        <Bed />
+        <Bed onClick={handleNext}/>
       );
     case 2:
       return(
-        <Toilet />
+        <Toilet onClick={handleNext}/>
       );
     default:
       return 'Unknown step';
@@ -111,29 +111,11 @@ class Dashboard extends React.Component {
               <Typography className={classes.instructions}>
                 <Summary />
               </Typography>
-              <Button variant="raised" color="primary" onClick={this.handleReset} className={classes.button}>
-                重新选择
-              </Button>
             </div>
           ) : (
             <div>
-              <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
+              <Typography className={classes.instructions}>{getStepContent(activeStep, this.handleNext)}</Typography>
               <div>
-                <Button
-                  disabled={activeStep === 0}
-                  onClick={this.handleBack}
-                  className={classes.button}
-                >
-                  后退
-                </Button>
-                <Button
-                  variant="raised"
-                  color="primary"
-                  onClick={this.handleNext}
-                  className={classes.button}
-                >
-                  {activeStep === steps.length - 1 ? '完成' : '下一步'}
-                </Button>
               </div>
             </div>
           )}

@@ -40,9 +40,10 @@ class Dashboard extends React.Component {
             <RegularCard
               headerColor="orange"
               cardTitle="当代轻奢(基础版)"
-              cardSubtitle="xxxxx元/平米"
               content={
-                <img alt="a" src={QingSheBaseImg} className={classes.gridImg} />
+                <Link to="/rooms/four/qingsheBase">
+                  <img alt="a" src={QingSheBaseImg} className={classes.gridImg}/>
+                </Link>
               }
               classes={ classes }
               cardAction={
@@ -65,9 +66,10 @@ class Dashboard extends React.Component {
             <RegularCard
               headerColor="orange"
               cardTitle="当代轻奢(升级版)"
-              cardSubtitle="xxxxx元/平米"
               content={
-                <img alt="a" src={QingSheUpgradeImg} className={classes.gridImg} />
+                <Link to="/rooms/four/qingsheBase">
+                  <img alt="a" src={QingSheUpgradeImg} className={classes.gridImg} />
+                </Link>
               }
               cardAction={
                 <RadioGroup
@@ -86,9 +88,10 @@ class Dashboard extends React.Component {
             <RegularCard
               headerColor="red"
               cardTitle="当代雅致(基础版)"
-              cardSubtitle="xxxxx元/平米"
               content={
-                <img alt="a" src={YazhiBaseImg} className={classes.gridImg} />
+                <Link to="/rooms/four/qingsheBase">
+                  <img alt="a" src={YazhiBaseImg} className={classes.gridImg} />
+                </Link>
               }
               cardAction={
                 <RadioGroup
@@ -107,9 +110,10 @@ class Dashboard extends React.Component {
             <RegularCard
               headerColor="red"
               cardTitle="当代雅致(升级版)"
-              cardSubtitle="xxxxx元/平米"
               content={
-                <img alt="a" src={YazhiUpgradeImg} className={classes.gridImg} />
+                <Link to="/rooms/four/qingsheBase">
+                  <img alt="a" src={YazhiUpgradeImg} className={classes.gridImg} />
+                </Link>
               }
               cardAction={
                 <RadioGroup

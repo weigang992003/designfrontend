@@ -37,9 +37,9 @@ class Dashboard extends React.Component {
             <RegularCard
               headerColor="orange"
               cardTitle="当代轻奢(基础版)"
-              cardSubtitle="xxxxx元/平米"
+              cardSubtitle="天花：石膏板吊顶，200元，墙面：乳胶漆+木饰面，2000元，地面：石材，1200元"
               content={
-                <img alt='adsf' src={QingSheBaseImg} className={classes.gridImg} />
+                <img alt='adsf' src={QingSheBaseImg} className={classes.gridImg} onClick={this.props.onClick}/>
               }
               classes={ classes }
               cardAction={
@@ -62,9 +62,9 @@ class Dashboard extends React.Component {
             <RegularCard
               headerColor="red"
               cardTitle="当代轻奢(升级版)"
-              cardSubtitle="xxxxx元/平米"
+              cardSubtitle="天花：石膏板吊顶，200元，墙面：乳胶漆+木饰面，2000元，地面：石材，1200元"
               content={
-                <img alt='adsf' src={QingSheUpgradeImg} className={classes.gridImg} />
+                <img alt='adsf' src={QingSheUpgradeImg} className={classes.gridImg} onClick={this.props.onClick}/>
               }
               cardAction={
                 <RadioGroup
