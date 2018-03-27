@@ -2,7 +2,8 @@ import HomePage from "views/Home/Home.jsx";
 import Load from "views/Home/Load.jsx";
 import DecorationStyle from "views/Decoration/Style.jsx";
 import DecorationRoom from "views/Decoration/Room.jsx";
-import DecorationCase from "views/Decoration/Case.jsx";
+import ZuiZhong from "views/Decoration/ZuiZhong.jsx";
+import Zhucai from "views/Decoration/Zhucai.jsx";
 import ContactUs from "views/UserProfile/UserProfile.jsx";
 
 import {
@@ -44,11 +45,18 @@ const appRoutes = [
     component: DecorationRoom
   },
   {
+    path: "/zhucai",
+    sidebarName: "主材选择",
+    navbarName: "主材选择",
+    icon: ContentPaste,
+    component: Zhucai
+  },
+  {
     path: "/case",
     sidebarName: "最终方案",
     navbarName: "最终方案",
     icon: ContentPaste,
-    component: DecorationCase
+    component: ZuiZhong
   },
   {
     path: "/contactus",

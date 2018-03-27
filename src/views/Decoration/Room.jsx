@@ -10,6 +10,7 @@ import DecorationStyle from "variables/styles/decorationStyle";
 import Button from 'material-ui/Button';
 import Stepper, { Step, StepLabel } from 'material-ui/Stepper';
 import Typography from 'material-ui/Typography';
+import { Link } from 'react-router-dom'
 
 function getSteps() {
   return ['会客厅', '卧室', '卫生间...'];
@@ -111,6 +112,9 @@ class Dashboard extends React.Component {
               <Typography className={classes.instructions}>
                 <Summary />
               </Typography>
+              <div>
+                <Button className={classes.button} variant="raised" component={Link} to="/zhucai">确认</Button>
+              </div>
             </div>
           ) : (
             <div>

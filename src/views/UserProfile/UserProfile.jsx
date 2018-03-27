@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid } from "material-ui";
+import { Link } from 'react-router-dom'
 
 import {
   ProfileCard,
@@ -52,7 +53,7 @@ function UserProfile({ ...props }) {
                 </Grid>
               </div>
             }
-            footer={<Button color="blue">确认</Button>}
+            footer={<Button color="blue" component={Link} to='/load'>确认</Button>}
           />
         </ItemGrid>
         <ItemGrid xs={12} sm={12} md={4}>
