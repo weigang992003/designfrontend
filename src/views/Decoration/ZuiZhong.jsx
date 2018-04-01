@@ -7,12 +7,6 @@ import Button from 'material-ui/Button';
 import { Link } from 'react-router-dom'
 import DecorationStyle from "variables/styles/decorationStyle";
 
-let id = 0;
-function createData(name, calories, fat, carbs, protein) {
-  id += 1;
-  return { id, name, calories, fat, carbs, protein };
-}
-
 class SimpleTable extends React.Component {
   state = {
     qiangmian: '布艺',
