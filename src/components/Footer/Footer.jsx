@@ -4,6 +4,9 @@ import { List, ListItem, withStyles } from "material-ui";
 import { Link } from 'react-router-dom'
 
 import footerStyle from "variables/styles/footerStyle";
+import {
+  FiberManualRecord,
+} from "material-ui-icons";
 
 function Footer({ ...props }) {
   const { classes } = props;
@@ -25,7 +28,7 @@ function Footer({ ...props }) {
         </div>
         <p className={classes.right}>
           <span>
-            北京九和设计
+            九和空间 <FiberManualRecord className={classes.pointer} /> 远洋 <FiberManualRecord  className={classes.pointer}/> 天著春秋
           </span>
         </p>
       </div>

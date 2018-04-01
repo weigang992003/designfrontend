@@ -48,6 +48,10 @@ const footerStyle = {
     display: "inline-block",
     paddingTop: "0px",
     width: 'auto'
+  },
+  pointer: {
+    width: '5px',
+    height: '10px'
   }
 };
 export default footerStyle;
