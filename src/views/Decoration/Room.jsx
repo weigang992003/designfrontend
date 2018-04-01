@@ -5,6 +5,8 @@ import { withStyles } from "material-ui";
 import Huike from "components/Decoration/Huike";
 import Toilet from "components/Decoration/Toilet";
 import Bed from "components/Decoration/Bed";
+import Fuyi from "components/Decoration/Fuyi";
+import Fuer from "components/Decoration/Fuer";
 import Summary from "components/Decoration/Summary";
 import DecorationStyle from "variables/styles/decorationStyle";
 import Button from 'material-ui/Button';
@@ -13,7 +15,7 @@ import Typography from 'material-ui/Typography';
 import { Link } from 'react-router-dom'
 
 function getSteps() {
-  return ['会客厅', '卧室', '卫生间...'];
+  return ['会客厅', '卧室', '卫生间', '餐厅', '家庭式', '娱乐室', '书房'];
 }
 
 function getStepContent(step, handleNext, handleExpandClick, expanded) {
@@ -29,6 +31,22 @@ function getStepContent(step, handleNext, handleExpandClick, expanded) {
     case 2:
       return(
         <Toilet onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick}/>
+      );
+    case 3:
+      return(
+        <Fuyi onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick}/>
+      );
+    case 4:
+      return(
+        <Fuer onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick}/>
+      );
+    case 5:
+      return(
+        <Huike onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick}/>
+      );
+    case 6:
+      return(
+        <Fuyi onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick}/>
       );
     default:
       return 'Unknown step';

@@ -32,7 +32,7 @@ function UserProfile({ ...props }) {
                 <TableBody>
                   <TableRow key='kk'>
                     <TableCell key='adf'>平面布局 :</TableCell>
-                    <TableCell key='kdf'>四世同堂</TableCell>
+                    <TableCell key='kdf'>三代和睦</TableCell>
                   </TableRow>
                   <TableRow key='2kk'>
                     <TableCell key='2adf'>风格定位 :</TableCell>
