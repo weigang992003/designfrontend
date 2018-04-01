@@ -16,9 +16,9 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 const data = [
-  createData('橱柜升级模块', ['海格&瓦伦多夫', '欧派'], 'xxxxx元', 'chugui'),
-  createData('洁具升级模块', ['汉斯格雅&杜拉', '维特&唯宝', 'TOTO'], 'xxxxx元', 'jieju'),
-  createData('... ...', ['...', '...', '...'], 'xxxxx元', 'jieju'),
+  createData('墙面', ['石材', '乳胶漆', '布艺', '壁纸'], 'xxxxx元', 'qiangmian'),
+  createData('天花', ['乳胶漆'], 'xxxxx元', 'tianhua'),
+  createData('地面', ['木地板', '瓷砖', '石材'], 'xxxxx元', 'dimian'),
   createData('总计', [], 'xxxxx元'),
 ];
 
@@ -75,11 +75,6 @@ class SimpleTable extends React.Component {
               );
             })}
           </TableBody>
-          <TableFooter>
-            <Button className={classes.button} variant="raised" component={Link} to='/case'>
-              下一步
-            </Button>
-          </TableFooter>
         </Table>
       </Paper>
     );

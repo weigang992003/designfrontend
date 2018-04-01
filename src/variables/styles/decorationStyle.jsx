@@ -39,6 +39,9 @@ const decorationStyle = {
   rooms: {
     marginTop: '20px',
     marginBottom: '10px',
+  },
+  table: {
+    minWidth: '300px'
   }
 };
 

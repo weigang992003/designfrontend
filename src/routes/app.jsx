@@ -54,8 +54,8 @@ const appRoutes = [
   },
   {
     path: "/zhucai",
-    sidebarName: "主材选择",
-    navbarName: "主材选择",
+    sidebarName: "升级模块选择",
+    navbarName: "升级模块选择",
     icon: ContentPaste,
     component: Zhucai
   },
@@ -68,8 +68,8 @@ const appRoutes = [
   },
   {
     path: "/contactus",
-    sidebarName: "联系我们",
-    navbarName: "联系我们",
+    sidebarName: "确认方案",
+    navbarName: "确认方案",
     icon: AccountCircle,
     component: ContactUs
   },

@@ -43,6 +43,10 @@ class SimpleTable extends React.Component {
               <TableCell key='2adf'>主材总价</TableCell>
               <TableCell key='2kdf'>xxxxxx 元</TableCell>
             </TableRow>
+            <TableRow key='2kk'>
+              <TableCell key='2adf'>加载升级包</TableCell>
+              <TableCell key='2kdf'>xxxxxx 元</TableCell>
+            </TableRow>
             <TableRow key='3kk'>
               <TableCell key='2adsf'>整体装修报价</TableCell>
               <TableCell key='2kdfs'>xxxxxxxx 元</TableCell>

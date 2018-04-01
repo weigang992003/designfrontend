@@ -274,6 +274,7 @@ class EnhancedTable extends React.Component {
                 collapse={
                   <HuXingSi />
                 }
+                expandText="户型图"
                 classes={ classes }
                 expanded={ this.state.expanded }
                 handleExpandClick={ this.handleExpandClick }
@@ -292,6 +293,7 @@ class EnhancedTable extends React.Component {
                 collapse={
                   <HuXingSan />
                 }
+                expandText="户型图"
                 classes={ classes }
                 expanded={ this.state.expanded }
                 handleExpandClick={ this.handleExpandClick }
@@ -310,6 +312,7 @@ class EnhancedTable extends React.Component {
                 collapse={
                   <HuXingEr />
                 }
+                expandText="户型图"
                 classes={ classes }
                 expanded={ this.state.expanded }
                 handleExpandClick={ this.handleExpandClick }
@@ -328,6 +331,7 @@ class EnhancedTable extends React.Component {
                 collapse={
                   <HuXingYi />
                 }
+                expandText="户型图"
                 classes={ classes }
                 expanded={ this.state.expanded }
                 handleExpandClick={ this.handleExpandClick }

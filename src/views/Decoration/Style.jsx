@@ -4,7 +4,7 @@ import { withStyles, Grid } from "material-ui";
 
 import {
   RegularCard,
-  ItemGrid
+  ItemGrid,
 } from "components";
 
 import DecorationStyle from "variables/styles/decorationStyle";

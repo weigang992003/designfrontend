@@ -16,19 +16,19 @@ function getSteps() {
   return ['会客厅', '卧室', '卫生间...'];
 }
 
-function getStepContent(step, handleNext) {
+function getStepContent(step, handleNext, handleExpandClick, expanded) {
   switch (step) {
     case 0:
       return(
-        <Huike onClick={handleNext}/>
+        <Huike onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick}/>
       );
     case 1:
       return(
-        <Bed onClick={handleNext}/>
+        <Bed onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick}/>
       );
     case 2:
       return(
-        <Toilet onClick={handleNext}/>
+        <Toilet onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick}/>
       );
     default:
       return 'Unknown step';
@@ -38,6 +38,11 @@ function getStepContent(step, handleNext) {
 class Dashboard extends React.Component {
   static propTypes = {
     classes: PropTypes.object,
+    expanded: false,
+  };
+
+  handleExpandClick = () => {
+    this.setState({ expanded: !this.state.expanded });
   };
 
   state = {
@@ -118,7 +123,7 @@ class Dashboard extends React.Component {
             </div>
           ) : (
             <div>
-              <Typography className={classes.instructions}>{getStepContent(activeStep, this.handleNext)}</Typography>
+              <Typography className={classes.instructions}>{getStepContent(activeStep, this.handleNext, this.handleExpandClick, this.state.expanded)}</Typography>
               <div>
               </div>
             </div>

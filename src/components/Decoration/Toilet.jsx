@@ -5,7 +5,8 @@ import { withStyles, Grid } from "material-ui";
 
 import {
   RegularCard,
-  ItemGrid
+  ItemGrid,
+  RoomZhucai
 } from "components";
 
 import DecorationStyle from "variables/styles/decorationStyle";
@@ -28,7 +29,7 @@ class Dashboard extends React.Component {
     this.setState({ value: index });
   };
   render() {
-    const { classes } = this.props;
+    const { classes, expanded, handleExpandClick } = this.props;
 
     return (
       <div>
@@ -41,7 +42,13 @@ class Dashboard extends React.Component {
               content={
                 <img alt="a" src={QingSheBaseImg} className={classes.gridImg} onClick={this.props.onClick}/>
               }
+              collapse={
+                <RoomZhucai />
+              }
               classes={ classes }
+              expandText="主材明细"
+              expanded={ expanded }
+              handleExpandClick={ handleExpandClick }
               cardAction={
                 <RadioGroup
                   aria-label=""
@@ -66,6 +73,13 @@ class Dashboard extends React.Component {
               content={
                 <img alt="a" src={QingSheUpgradeImg} className={classes.gridImg} onClick={this.props.onClick}/>
               }
+              collapse={
+                <RoomZhucai />
+              }
+              classes={ classes }
+              expandText="主材明细"
+              expanded={ expanded }
+              handleExpandClick={ handleExpandClick }
               cardAction={
                 <RadioGroup
                   aria-label=""

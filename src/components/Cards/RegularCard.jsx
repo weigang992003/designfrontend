@@ -27,7 +27,8 @@ function RegularCard({ ...props }) {
     footer,
     expanded,
     handleExpandClick,
-    handleOnMouseOver
+    handleOnMouseOver,
+    expandText
   } = props;
   const plainCardClasses = cx({
     [" " + classes.cardPlain]: plainCard
@@ -55,7 +56,7 @@ function RegularCard({ ...props }) {
       {collapse !== undefined ? (<div><CardActions className={classes.actions} disableActionSpacing>
         {handleExpandClick !== undefined ? (
           <div>
-            户型图
+            <span className={classes.expandText}>{expandText}</span>
             <IconButton
               className={cx(classes.expand, {
                 [classes.expandOpen]: expanded,

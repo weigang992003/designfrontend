@@ -8,6 +8,8 @@ import RegularCard from "./Cards/RegularCard.jsx";
 import StatsCard from "./Cards/StatsCard.jsx";
 import TasksCard from "./Cards/TasksCard.jsx";
 import SimpleMediaCard from "./Cards/SimpleMediaCard.jsx";
+import Zhucai from "./Decoration/Zhucai.jsx";
+import RoomZhucai from "./Decoration/RoomZhucai.jsx";
 
 // ##############################
 // // // CustomButtons
@@ -82,6 +84,9 @@ import Small from "./Typography/Small.jsx";
 import A from "./Typography/A.jsx";
 
 export {
+  // Decoration
+  Zhucai,
+  RoomZhucai,
   // Cards
   ChartCard,
   ProfileCard,

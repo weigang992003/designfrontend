@@ -52,6 +52,10 @@ const regularCardStyle = {
   },
   cardContent: {
     overflow: "hidden"
+  },
+  expandText: {
+    color: "#000000",
+    paddingLeft: '20px'
   }
 };
 
