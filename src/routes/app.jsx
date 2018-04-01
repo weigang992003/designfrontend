@@ -1,6 +1,7 @@
 import HomePage from "views/Home/Home.jsx";
 import Load from "views/Home/Load.jsx";
 import DecorationStyle from "views/Decoration/Style.jsx";
+import Huxingtu from "views/Decoration/Huxingtu.jsx";
 import DecorationRoom from "views/Decoration/Room.jsx";
 import ZuiZhong from "views/Decoration/ZuiZhong.jsx";
 import Zhucai from "views/Decoration/Zhucai.jsx";
@@ -31,11 +32,18 @@ const appRoutes = [
     component: HomePage
   },
   {
-    path: "/style/:houseType",
+    path: "/style",
     sidebarName: "整体风格",
     navbarName: "风格定位",
     icon: BubbleChart,
     component: DecorationStyle
+  },
+  {
+    path: "/huxingtu",
+    sidebarName: "户型图",
+    navbarName: "户型图",
+    icon: BubbleChart,
+    component: Huxingtu
   },
   {
     path: "/rooms/:houseType/:houseStyle",

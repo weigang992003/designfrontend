@@ -129,9 +129,6 @@ class Dashboard extends React.Component {
             />
           </ItemGrid>
         </Grid>
-        <Button className={classes.button} variant="raised" component={Link} to={`/rooms/${ this.props.match.params.houseType }/${ this.state.selectedValue }`}>
-          下一步
-        </Button>
       </div>
     );
   }

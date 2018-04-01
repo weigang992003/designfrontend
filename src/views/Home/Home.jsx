@@ -387,7 +387,7 @@ class EnhancedTable extends React.Component {
                 )}
               </TableBody>
               <TableFooter>
-                <Button className={classes.button} variant="raised" component={Link} to={`/style/${ this.state.selectedValue }`}>
+                <Button className={classes.button} variant="raised" component={Link} to={`/huxingtu`}>
                   下一步
                 </Button>
               </TableFooter>
