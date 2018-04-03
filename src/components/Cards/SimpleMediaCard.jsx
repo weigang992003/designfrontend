@@ -5,11 +5,14 @@ import Card, { CardContent, CardMedia } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
 
 const styles = {
-  card: {
-    width: '100%',
+  cover: {
+    textAlign: 'center',
   },
-  media: {
+  title: {
     width: '100%',
+    fontWeight: 600,
+  },
+  image: {
     height: '500px',
   },
 };
@@ -22,22 +25,9 @@ function SimpleMediaCard({ ...props }) {
     image,
   } = props;
   return (
-    <div>
-      <Card className={classes.card}>
-        <CardMedia
-          className={classes.media}
-          image={image}
-          title={cardTitle}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="headline" component="h2">
-            {cardTitle}
-          </Typography>
-          <Typography component="p">
-            {content}
-          </Typography>
-        </CardContent>
-      </Card>
+    <div className={classes.cover}>
+      <img className={classes.image} src={image}/>
+      <div className={classes.title}>{cardTitle}</div>
     </div>
   );
 }
