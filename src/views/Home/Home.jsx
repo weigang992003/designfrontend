@@ -62,26 +62,21 @@ class EnhancedTableHead extends React.Component {
     const { numSelected, rowCount } = this.props;
 
     return (
-      <TableHead>
+      <TableHead style={{background: "#666"}}>
         <TableRow>
           <TableCell padding="checkbox">
-            <div
-              checked={numSelected === rowCount}
-            />
           </TableCell>
           {columnData.map(column => {
             return (
               <TableCell
                 key={column.id}
-                numeric={column.numeric}
-                padding={column.disablePadding ? 'none' : 'default'}
+                padding='none'
               >
                 <Tooltip
-                  title="Sort"
                   placement={column.numeric ? 'bottom-end' : 'bottom-start'}
                   enterDelay={300}
                 >
-                  <TableSortLabel>
+                  <TableSortLabel style={{color: "#fff"}}>
                     {column.label}
                   </TableSortLabel>
                 </Tooltip>
@@ -142,22 +137,6 @@ let EnhancedTableToolbar = props => {
           <Typography variant="title">空间选择</Typography>
         )}
       </div>
-      <div className={classes.spacer} />
-      <div className={classes.actions}>
-        {numSelected > 0 ? (
-          <Tooltip title="Delete">
-            <IconButton aria-label="Delete">
-              <DeleteIcon />
-            </IconButton>
-          </Tooltip>
-        ) : (
-          <Tooltip title="Filter list">
-            <IconButton aria-label="Filter list">
-              <FilterListIcon />
-            </IconButton>
-          </Tooltip>
-        )}
-      </div>
     </Toolbar>
   );
 };
@@ -170,6 +149,9 @@ EnhancedTableToolbar.propTypes = {
 EnhancedTableToolbar = withStyles(toolbarStyles)(EnhancedTableToolbar);
 
 const styles = theme => ({
+  cell: {
+    textAlign: 'center',
+  },
   root: {
     width: '100%',
     marginTop: theme.spacing.unit,
@@ -191,7 +173,7 @@ const styles = theme => ({
     overflowX: 'auto',
   },
   checked: {
-    color: '#00acc1',
+    color: '#666',
   },
   button: {
     margin: theme.spacing.unit,
@@ -266,135 +248,102 @@ class EnhancedTable extends React.Component {
 
     return (
       <div>
-        <Grid container>
-          {this.state.selectedValue === "four" ? (
-            <ItemGrid xs={12} sm={12} md={12}>
-              <RegularCard
-                headerColor="orange"
-                cardTitle="四世同堂"
-                cardSubtitle="其乐融融，此户型为了满足家庭成员的需要，设置了两间老人房、儿童房、主卧等。"
-                content={
-                  <img alt="a" src={SiImg} className={classes.gridImg} />
-                }
-                collapse={
-                  <HuXingSi />
-                }
-                classes={ classes }
-                expanded={ this.state.expanded }
-              />
-            </ItemGrid>
-          ) : null}
-          {this.state.selectedValue === "three" ? (
-            <ItemGrid xs={12} sm={12} md={12}>
-              <RegularCard
-                headerColor="orange"
-                cardTitle="三代和睦"
-                cardSubtitle="老少同乐。考虑到老人照看孩子的缘故，可将老人房设置在一层，儿童房在二层。方便照看孩 子。"
-                content={
-                  <img alt="a" src={SanImg} className={classes.gridImg} />
-                }
-                collapse={
-                  <HuXingSan />
-                }
-                classes={ classes }
-                expanded={ this.state.expanded }
-              />
-            </ItemGrid>
-          ) : null}
-          {this.state.selectedValue === "two" ? (
-            <ItemGrid xs={12} sm={12} md={12}>
-              <RegularCard
-                headerColor="orange"
-                cardTitle="二胎时代"
-                cardSubtitle="欢乐一家人。设置了主卧、儿童房、儿童娱乐室等。"
-                content={
-                  <img alt="a" src={ErImg} className={classes.gridImg} />
-                }
-                collapse={
-                  <HuXingEr />
-                }
-                classes={ classes }
-                expanded={ this.state.expanded }
-              />
-            </ItemGrid>
-          ) : null}
-          {this.state.selectedValue === "one" ? (
-            <ItemGrid xs={12} sm={12} md={12}>
-              <RegularCard
-                headerColor="orange"
-                cardTitle="一生一世"
-                cardSubtitle="过着甜蜜的二人世界。除了主卧，还配备次卧和客卧等。"
-                content={
-                  <img alt="a" src={YiImg} className={classes.gridImg} />
-                }
-                collapse={
-                  <HuXingYi />
-                }
-                classes={ classes }
-                expanded={ this.state.expanded }
-              />
-            </ItemGrid>
-          ) : null}
-        </Grid>
-        <Paper className={classes.root}>
-          <div className={classes.tableWrapper}>
-            <Table className={classes.table}>
-              <EnhancedTableHead
-                numSelected={selected.length}
-                rowCount={data.length}
-              />
-              <TableBody>
-                {data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(n => {
-                  const isSelected = this.isSelected(n.id);
-                  return (
-                    <TableRow
-                      hover
-                      onClick={event => this.handleClick(event, n.id)}
-                      role="checkbox"
-                      aria-checked={isSelected}
-                      tabIndex={-1}
-                      key={n.id}
-                      selected={isSelected}
-                    >
-                      <TableCell padding="checkbox">
-                        <RadioGroup
-                          aria-label="gender"
-                          name="huxing"
-                          className={classes.group}
-                          value={this.state.selectedValue}
-                          onChange={this.handleChange}
-                        >
-                          <FormControlLabel value={ n.value } control={<Radio classes={{ checked: classes.checked, }} />} label="" />
-                        </RadioGroup>
-                      </TableCell>
-                      <TableCell padding="none">{n.name}</TableCell>
-                      <TableCell numeric>{n.calories}</TableCell>
-                      <TableCell numeric>{n.fat}</TableCell>
-                      <TableCell numeric>{n.carbs}</TableCell>
-                      <TableCell numeric>{n.protein}</TableCell>
-                      <TableCell numeric>{n.book}</TableCell>
-                      <TableCell numeric>{n.toilet}</TableCell>
-                      <TableCell numeric>{n.jianshen}</TableCell>
-                      <TableCell numeric>{n.yingyin}</TableCell>
-                      <TableCell numeric>{n.yimao}</TableCell>
-                      <TableCell numeric>{n.entertainment}</TableCell>
-                    </TableRow>
-                  );
-                })}
-                {emptyRows > 0 && (
-                  <TableRow style={{ height: 49 * emptyRows }}>
-                    <TableCell colSpan={6} />
+        {this.state.selectedValue === "four" ? (
+          <RegularCard
+            headerColor="orange"
+            cardTitle="四世同堂"
+            cardSubtitle="其乐融融，此户型为了满足家庭成员的需要，设置了两间老人房、儿童房、主卧等。"
+            content={
+              <img alt="a" src={SiImg} className={classes.gridImg} />
+            }
+            classes={ classes }
+          />
+        ) : null}
+        {this.state.selectedValue === "three" ? (
+          <RegularCard
+            headerColor="orange"
+            cardTitle="三代和睦"
+            cardSubtitle="老少同乐。考虑到老人照看孩子的缘故，可将老人房设置在一层，儿童房在二层。方便照看孩 子。"
+            content={
+              <img alt="a" src={SanImg} className={classes.gridImg} />
+            }
+            classes={ classes }
+          />
+        ) : null}
+        {this.state.selectedValue === "two" ? (
+          <RegularCard
+            headerColor="orange"
+            cardTitle="二胎时代"
+            cardSubtitle="欢乐一家人。设置了主卧、儿童房、儿童娱乐室等。"
+            content={
+              <img alt="a" src={ErImg} className={classes.gridImg} />
+            }
+            classes={ classes }
+          />
+        ) : null}
+        {this.state.selectedValue === "one" ? (
+          <RegularCard
+            headerColor="orange"
+            cardTitle="一生一世"
+            cardSubtitle="过着甜蜜的二人世界。除了主卧，还配备次卧和客卧等。"
+            content={
+              <img alt="a" src={YiImg} className={classes.gridImg} />
+            }
+            classes={ classes }
+          />
+        ) : null}
+        <div className={classes.tableWrapper}>
+          <Table className={classes.table}>
+            <EnhancedTableHead
+              numSelected={selected.length}
+              rowCount={data.length}
+            />
+            <TableBody>
+              {data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(n => {
+                const isSelected = this.isSelected(n.id);
+                return (
+                  <TableRow
+                    hover
+                    onClick={event => this.handleClick(event, n.id)}
+                    role="checkbox"
+                    aria-checked={isSelected}
+                    tabIndex={-1}
+                    key={n.id}
+                    selected={isSelected}
+                  >
+                    <TableCell padding="checkbox">
+                      <RadioGroup
+                        aria-label="gender"
+                        name="huxing"
+                        className={classes.group}
+                        value={this.state.selectedValue}
+                        onChange={this.handleChange}
+                      >
+                        <FormControlLabel value={ n.value } control={<Radio classes={{ checked: classes.checked, }} />} label="" />
+                      </RadioGroup>
+                    </TableCell>
+                    <TableCell padding="none">{n.name}</TableCell>
+                    <TableCell padding="none">{n.calories}</TableCell>
+                    <TableCell padding="none">{n.fat}</TableCell>
+                    <TableCell padding="none">{n.carbs}</TableCell>
+                    <TableCell padding="none">{n.protein}</TableCell>
+                    <TableCell padding="none">{n.book}</TableCell>
+                    <TableCell padding="none">{n.toilet}</TableCell>
+                    <TableCell padding="none">{n.jianshen}</TableCell>
+                    <TableCell padding="none">{n.yingyin}</TableCell>
+                    <TableCell padding="none">{n.yimao}</TableCell>
+                    <TableCell padding="none">{n.entertainment}</TableCell>
                   </TableRow>
-                )}
-              </TableBody>
-              <TableFooter>
-                <Button color="primary" variant="raised" component={Link} to={`/huxingtu`}>
-                  下一步
-                </Button>
-              </TableFooter>
-            </Table>
-          </div>
-        </Paper>
+                );
+              })}
+            </TableBody>
+            <TableFooter>
+              <Button color="primary" variant="raised" component={Link} to={`/huxingtu`}>
+                下一步
+              </Button>
+            </TableFooter>
+          </Table>
+        </div>
       </div>
     );
   }

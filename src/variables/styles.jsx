@@ -38,7 +38,6 @@ const card = {
   display: "inline-block",
   position: "relative",
   width: "100%",
-  margin: "25px 0",
   boxShadow: "none",
   color: "rgba(0, 0, 0, 0.87)",
   background: "#fff"

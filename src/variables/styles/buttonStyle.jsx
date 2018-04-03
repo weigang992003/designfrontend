@@ -43,6 +43,7 @@ const buttonStyle = {
   },
   primary: {
     backgroundColor: redColor,
+    padding: "10px 30px",
     "&:hover": {
       backgroundColor: "#C70013",
       color: '#fff',

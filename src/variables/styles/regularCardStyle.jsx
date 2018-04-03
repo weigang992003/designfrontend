@@ -57,7 +57,7 @@ const regularCardStyle = {
   expandText: {
     color: "#000000",
     paddingLeft: '20px'
-  }
+  },
 };
 
 export default regularCardStyle;
