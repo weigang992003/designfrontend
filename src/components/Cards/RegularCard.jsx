@@ -52,7 +52,7 @@ function RegularCard({ ...props }) {
         subheader={cardSubtitle}
         action={cardAction}
       />
-      <CardContent classes={classes.CardContent}>{content}</CardContent>
+      <CardContent className={classes.CardContent}>{content}</CardContent>
       {collapse !== undefined ? (<div><CardActions className={classes.actions} disableActionSpacing>
         {handleExpandClick !== undefined ? (
           <div>

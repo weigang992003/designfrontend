@@ -20,11 +20,11 @@ import DeleteIcon from 'material-ui-icons/Delete';
 import FilterListIcon from 'material-ui-icons/FilterList';
 import { lighten } from 'material-ui/styles/colorManipulator';
 import { FormControlLabel } from 'material-ui/Form';
-import Button from 'material-ui/Button';
 import { Link } from 'react-router-dom'
 
 import {
   RegularCard,
+  Button,
   ItemGrid
 } from "components";
 import HuXingYi from "views/Home/HuXingYi";
@@ -174,6 +174,16 @@ const styles = theme => ({
     width: '100%',
     marginTop: theme.spacing.unit,
   },
+  cardTitle: {
+    fontSize: '1.2em',
+  },
+  CardContent: {
+    padding: '0',
+  },
+  cardSubtitle: {
+    color: '#666',
+    marginTop: '10px',
+  },
   table: {
     minWidth: 800,
   },
@@ -211,7 +221,6 @@ class EnhancedTable extends React.Component {
       page: 0,
       rowsPerPage: 5,
       selectedValue: "four",
-      expanded: false
     };
   }
 
@@ -250,10 +259,6 @@ class EnhancedTable extends React.Component {
 
   isSelected = id => this.state.selected.indexOf(id) !== -1;
 
-  handleExpandClick = () => {
-    this.setState({ expanded: !this.state.expanded });
-  };
-
   render() {
     const { classes } = this.props;
     const { data, selected, rowsPerPage, page } = this.state;
@@ -267,17 +272,15 @@ class EnhancedTable extends React.Component {
               <RegularCard
                 headerColor="orange"
                 cardTitle="四世同堂"
-                cardSubtitle="四世同堂，其乐融融，此户型为了满足家庭成员的需要，设置了两间老人房、儿童房、主卧等。"
+                cardSubtitle="其乐融融，此户型为了满足家庭成员的需要，设置了两间老人房、儿童房、主卧等。"
                 content={
                   <img alt="a" src={SiImg} className={classes.gridImg} />
                 }
                 collapse={
                   <HuXingSi />
                 }
-                expandText="户型图"
                 classes={ classes }
                 expanded={ this.state.expanded }
-                handleExpandClick={ this.handleExpandClick }
               />
             </ItemGrid>
           ) : null}
@@ -293,10 +296,8 @@ class EnhancedTable extends React.Component {
                 collapse={
                   <HuXingSan />
                 }
-                expandText="户型图"
                 classes={ classes }
                 expanded={ this.state.expanded }
-                handleExpandClick={ this.handleExpandClick }
               />
             </ItemGrid>
           ) : null}
@@ -312,10 +313,8 @@ class EnhancedTable extends React.Component {
                 collapse={
                   <HuXingEr />
                 }
-                expandText="户型图"
                 classes={ classes }
                 expanded={ this.state.expanded }
-                handleExpandClick={ this.handleExpandClick }
               />
             </ItemGrid>
           ) : null}
@@ -331,10 +330,8 @@ class EnhancedTable extends React.Component {
                 collapse={
                   <HuXingYi />
                 }
-                expandText="户型图"
                 classes={ classes }
                 expanded={ this.state.expanded }
-                handleExpandClick={ this.handleExpandClick }
               />
             </ItemGrid>
           ) : null}
@@ -391,7 +388,7 @@ class EnhancedTable extends React.Component {
                 )}
               </TableBody>
               <TableFooter>
-                <Button className={classes.button} variant="raised" component={Link} to={`/huxingtu`}>
+                <Button color="primary" variant="raised" component={Link} to={`/huxingtu`}>
                   下一步
                 </Button>
               </TableFooter>
