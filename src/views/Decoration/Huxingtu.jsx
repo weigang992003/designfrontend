@@ -4,7 +4,8 @@ import { withStyles, Grid } from "material-ui";
 
 import {
   SimpleMediaCard,
-  ItemGrid
+  ItemGrid,
+  Button
 } from "components";
 
 import DecorationStyle from "variables/styles/decorationStyle";
@@ -14,7 +15,6 @@ import sanlou from "assets/img/huxing/si/sanlou.png";
 import gelou from "assets/img/huxing/si/gelou.png";
 import dixiayilou from "assets/img/huxing/si/dixiayilou.png";
 import dixiaerlou from "assets/img/huxing/si/dixiaerlou.png";
-import Button from 'material-ui/Button';
 import { Link } from 'react-router-dom'
 
 class Dashboard extends React.Component {
@@ -80,7 +80,7 @@ class Dashboard extends React.Component {
           </ItemGrid>
         </Grid>
         <br />
-        <Button className={classes.button} variant="raised" component={Link} to={`/style`}>
+        <Button color='primary' component={Link} to={`/style`}>
           下一步
         </Button>
       </div>
