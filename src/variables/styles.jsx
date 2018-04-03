@@ -95,7 +95,7 @@ const greenCardHeader = {
   ...successBoxShadow
 };
 const redCardHeader = {
-  background: "linear-gradient(60deg, #ef5350, #e53935)",
+  background: "#c22",
   ...dangerBoxShadow
 };
 const blueCardHeader = {
