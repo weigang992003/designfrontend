@@ -41,8 +41,7 @@ const card = {
   position: "relative",
   width: "100%",
   margin: "25px 0",
-  boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.14)",
-  borderRadius: "3px",
+  boxShadow: "none",
   color: "rgba(0, 0, 0, 0.87)",
   background: "#fff"
 };
@@ -82,6 +81,11 @@ const dangerBoxShadow = {
     "0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2)"
 };
 
+const grayCardHeader = {
+  background: "#f7f7f7",
+  padding: '5px',
+  ...warningBoxShadow
+};
 const orangeCardHeader = {
   background: "linear-gradient(60deg, #ffa726, #fb8c00)",
   ...warningBoxShadow
@@ -147,6 +151,7 @@ export {
   warningBoxShadow,
   dangerBoxShadow,
   orangeCardHeader,
+  grayCardHeader,
   greenCardHeader,
   redCardHeader,
   blueCardHeader,

@@ -6,7 +6,7 @@ import {
   card,
   cardHeader,
   defaultFont,
-  orangeCardHeader,
+  grayCardHeader,
   greenCardHeader,
   redCardHeader,
   blueCardHeader,
@@ -20,24 +20,25 @@ const regularCardStyle = {
     boxShadow: "none"
   },
   cardHeader: {
-    ...cardHeader,
+    background: "#f7f7f7",
+    padding: '12px 0 12px 17px',
     ...defaultFont
   },
   cardPlainHeader: {
     marginLeft: 0,
     marginRight: 0
   },
-  orangeCardHeader,
+  grayCardHeader,
   greenCardHeader,
   redCardHeader,
   blueCardHeader,
   purpleCardHeader,
   cardTitle: {
-    color: "#FFFFFF",
+    color: "#000000",
     marginTop: "0",
-    marginBottom: "5px",
+    marginBottom: "0px",
     ...defaultFont,
-    fontSize: "1.125em"
+    fontSize: "0.9em",
   },
   cardSubtitle: {
     ...defaultFont,

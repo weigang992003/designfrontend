@@ -28,7 +28,7 @@ function Footer({ ...props }) {
         </div>
         <p className={classes.right}>
           <span>
-            九和空间 <FiberManualRecord className={classes.pointer} /> 远洋 <FiberManualRecord  className={classes.pointer}/> 天著春秋
+            远洋 <FiberManualRecord  className={classes.pointer}/> 天著春秋
           </span>
         </p>
       </div>
