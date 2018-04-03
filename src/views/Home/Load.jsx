@@ -36,10 +36,11 @@ const styles = {
     fontWeight: 400,
   },
   huxing: {
-    fontSize: '2em',
+    fontSize: '1.8em',
     fontWeight: 500,
     textAlign: 'center',
-    padding: '27px 0px 40px'
+    padding: '27px 0px 40px',
+    color: '#000'
   },
   cangshan: {
     float: 'left',
