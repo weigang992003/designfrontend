@@ -34,16 +34,7 @@ function Header({ ...props }) {
     <AppBar className={classes.appBar + appBarClasses}>
       <Toolbar className={classes.container}>
         <div className={classes.flex}>
-          { document.location.pathname !== '/load' ? (
-            <div>
-              <Button className={classes.title} component={Link} to="/load">
-                首页 >>
-              </Button>
-              <Button className={classes.title}>
-                {makeBrand()}
-              </Button>
-            </div>
-          ) : null}
+          logo
         </div>
         <div className={classes.centerMenu}>
           <span className={classes.menuText}>基础</span>

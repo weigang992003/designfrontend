@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import { Grid } from "material-ui";
 import Card, { CardContent, CardMedia } from 'material-ui/Card';
-import BannerImg from "assets/img/home.png";
+import BannerImg from "assets/img/banner.jpg";
 import { Link } from 'react-router-dom';
 import Divider from 'material-ui/Divider';
 import {
@@ -67,6 +67,7 @@ const styles = {
     color: '#000',
     fontSize: '0.9em',
     display: 'inline-block',
+    marginBottom: '30px',
   }
 };
 
