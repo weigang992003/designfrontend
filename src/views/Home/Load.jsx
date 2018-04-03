@@ -217,13 +217,13 @@ class SimpleMediaCard extends React.Component {
                           <ListItemIcon>
                             <FiberManualRecord classes={{root: this.classes.icon}}/>
                           </ListItemIcon>
-                          <ListItemText iclasses={{primary: this.classes.item}} nset primary="二胎时代" />
+                          <ListItemText classes={{primary: this.classes.item}} nset primary="二胎时代" />
                         </ListItem>
                         <ListItem button component={Link} to="/home">
                           <ListItemIcon>
                             <FiberManualRecord classes={{root: this.classes.icon}}/>
                           </ListItemIcon>
-                          <ListItemText iclasses={{primary: this.classes.item}} nset primary="一生一世" />
+                          <ListItemText classes={{primary: this.classes.item}} nset primary="一生一世" />
                         </ListItem>
                       </List>
                       <List component="nav" className={this.classes.leftNav}>
