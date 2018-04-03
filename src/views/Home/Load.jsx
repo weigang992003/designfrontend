@@ -23,6 +23,9 @@ import dudong from "assets/img/load/dudong.png";
 import bieshu from "assets/img/load/bieshu.png";
 
 const styles = {
+  popup: {
+    padding: '0 70px 0 90px',
+  },
   dudong: {
     float: 'left',
     width: '300px',
@@ -131,7 +134,7 @@ class SimpleMediaCard extends React.Component {
           maxWidth="md"
         >
           <DialogContent>
-            <div>
+            <div className={this.classes.popup}>
               <div className={this.classes.huxing}>选择户型</div>
               <div><img src={dudong} className={this.classes.dudong}/><img src={bieshu} className={this.classes.dudong}/></div>
               <div>
