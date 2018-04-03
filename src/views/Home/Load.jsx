@@ -63,11 +63,13 @@ const styles = {
     width: '10em',
     border: 'solid 1px',
     padding: '8px',
-    borderColor: '#000',
-    color: '#000',
+    color: '#fff',
+    background: '#c00',
     fontSize: '0.9em',
+    fontWeight: 600,
     display: 'inline-block',
     marginBottom: '30px',
+    cursor: 'pointer',
   }
 };
 
