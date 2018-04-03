@@ -14,7 +14,6 @@ import QingSheBaseImg from "assets/img/styles/qingshebase.jpg";
 import QingSheUpgradeImg from "assets/img/styles/qingsheupgrade.jpg";
 import YazhiBaseImg from "assets/img/styles/yazhibase.jpg";
 import YazhiUpgradeImg from "assets/img/styles/yazhiupgrade.jpg";
-import Button from 'material-ui/Button';
 import { Link } from 'react-router-dom'
 
 class Dashboard extends React.Component {

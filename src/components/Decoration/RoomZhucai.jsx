@@ -1,12 +1,10 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
-import Table, { TableFooter, TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
+import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
 import Paper from 'material-ui/Paper';
 import Radio, { RadioGroup } from 'material-ui/Radio';
 import { FormControlLabel } from 'material-ui/Form';
-import Button from 'material-ui/Button';
-import { Link } from 'react-router-dom'
 import DecorationStyle from "variables/styles/decorationStyle";
 
 let id = 0;

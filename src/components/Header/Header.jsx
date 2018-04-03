@@ -45,6 +45,12 @@ function Header({ ...props }) {
             </div>
           ) : null}
         </div>
+        <div className={classes.centerMenu}>
+          <span className={classes.menuText}>基础</span>
+          <span className={classes.menuText}>软装</span>
+          <span className={classes.menuText}>物业</span>
+          <span className={classes.menuText}>服务</span>
+        </div>
         <Hidden smDown implementation="css">
           <HeaderLinks />
         </Hidden>

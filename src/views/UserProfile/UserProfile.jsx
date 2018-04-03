@@ -1,17 +1,15 @@
 import React from "react";
 import { Grid } from "material-ui";
 import { Link } from 'react-router-dom'
-import Table, { TableFooter, TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
+import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
 
 import {
-  ProfileCard,
   RegularCard,
   Button,
   CustomInput,
   ItemGrid
 } from "components";
 
-import avatar from "assets/img/faces/marc.jpg";
 
 function UserProfile({ ...props }) {
   return (

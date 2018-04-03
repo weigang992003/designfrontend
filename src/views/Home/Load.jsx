@@ -57,7 +57,7 @@ const styles = {
 
 class SimpleMediaCard extends React.Component {
   state = {
-    open: true,
+    open: false,
   };
 
   classes = this.props.classes;
