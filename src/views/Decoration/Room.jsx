@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "material-ui";
 
-import Huike from "components/Decoration/Huike";
+import Room from "components/Decoration/Room";
 import Toilet from "components/Decoration/Toilet";
 import Bed from "components/Decoration/Bed";
 import Fuyi from "components/Decoration/Fuyi";
@@ -15,6 +15,13 @@ import Typography from 'material-ui/Typography';
 import { Link } from 'react-router-dom'
 import { Bottom } from "components";
 
+import QingSheBaseImg from "assets/img/styles/qshuikejichu.jpg";
+import QingSheUpgradeImg from "assets/img/styles/qshuikeshengji.jpg";
+import BedLeft from "assets/img/styles/qswoshijichu.jpg";
+import BedRight from "assets/img/styles/qswoshishengji.jpg";
+import ToiletLeft from "assets/img/styles/weijichu.jpg";
+import ToiletRight from "assets/img/styles/weiupgrade.jpg";
+
 function getSteps() {
   return ['会客厅', '卧室', '卫生间', '餐厅', '家庭式', '娱乐室', '书房'];
 }
@@ -23,19 +30,19 @@ function getStepContent(step, handleNext, handleExpandClick, expanded) {
   switch (step) {
     case 0:
       return(
-        <Huike onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick}/>
+        <Room onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick} leftImage={QingSheBaseImg} rightImage={QingSheUpgradeImg}/>
       );
     case 1:
       return(
-        <Bed onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick}/>
+        <Room onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick} leftImage={BedLeft} rightImage={BedRight}/>
       );
     case 2:
       return(
-        <Toilet onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick}/>
+        <Room onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick} leftImage={ToiletLeft} rightImage={ToiletRight}/>
       );
     case 3:
       return(
-        <Fuyi onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick}/>
+        <Room onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick} leftImage={ToiletLeft} rightImage={ToiletRight}/>
       );
     case 4:
       return(
@@ -43,7 +50,7 @@ function getStepContent(step, handleNext, handleExpandClick, expanded) {
       );
     case 5:
       return(
-        <Huike onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick}/>
+        <Room onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick}/>
       );
     case 6:
       return(

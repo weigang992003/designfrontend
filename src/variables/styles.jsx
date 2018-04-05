@@ -81,9 +81,7 @@ const dangerBoxShadow = {
 };
 
 const grayCardHeader = {
-  background: "#f7f7f7",
-  padding: '5px',
-  ...warningBoxShadow
+  padding: '16px',
 };
 const orangeCardHeader = {
   background: "linear-gradient(60deg, #ffa726, #fb8c00)",
