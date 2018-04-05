@@ -35,7 +35,7 @@ class Dashboard extends React.Component {
             <RegularCard
               headerColor="gray"
               cardTitle="当代轻奢(基础版)"
-              cardSubtitle="天花：石膏板吊顶，200元，墙面：乳胶漆+木饰面，2000元，地面：石材，1200元"
+              cardSubtitle="天花：石膏板吊顶，墙面：乳胶漆+木饰面，地面：石材"
               content={
                 <img alt='adsf' src={leftImage} className={classes.gridImg} onClick={this.props.onClick}/>
               }
@@ -52,7 +52,7 @@ class Dashboard extends React.Component {
             <RegularCard
               headerColor="gray"
               cardTitle="当代轻奢(升级版)"
-              cardSubtitle="天花：石膏板吊顶，200元，墙面：乳胶漆+木饰面，2000元，地面：石材，1200元"
+              cardSubtitle="天花：石膏板吊顶，墙面：乳胶漆+木饰面，地面：石材"
               content={
                 <img alt='adsf' src={rightImage} className={classes.gridImg} onClick={this.props.onClick}/>
               }

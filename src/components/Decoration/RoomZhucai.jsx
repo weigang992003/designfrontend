@@ -14,10 +14,9 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 const data = [
-  createData('墙面', ['石材', '乳胶漆', '布艺', '壁纸'], 'xxxxx元', 'qiangmian'),
-  createData('天花', ['乳胶漆'], 'xxxxx元', 'tianhua'),
-  createData('地面', ['木地板', '瓷砖', '石材'], 'xxxxx元', 'dimian'),
-  createData('总计', [], 'xxxxx元'),
+  createData('墙面', '壁纸', 'qiangmian'),
+  createData('天花', '乳胶漆', 'tianhua'),
+  createData('地面', '瓷砖', 'dimian'),
 ];
 
 class SimpleTable extends React.Component {
@@ -39,13 +38,12 @@ class SimpleTable extends React.Component {
     const { classes } = this.props;
 
     return (
-      <Paper className={classes.root}>
-        <Table className={classes.table}>
+      <Paper className={classes.root} style={{boxShadow: "none"}}>
+        <Table className={classes.table} >
           <TableHead>
             <TableRow key="jj">
               <TableCell key="sdf">区域</TableCell>
-              <TableCell key="sdfsdf">产品</TableCell>
-              <TableCell numeric key="sddff">总计</TableCell>
+              <TableCell key="sdfsdf">材料</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -53,22 +51,7 @@ class SimpleTable extends React.Component {
               return (
                 <TableRow key={n.id}>
                   <TableCell key={n.name}>{n.name}</TableCell>
-                  <TableCell numeric key={n.carbs}>
-                    <RadioGroup
-                      aria-label="gender"
-                      name={n.carbs}
-                      value={this.state[n.carbs]}
-                      className={classes.group}
-                      onChange={this.handleChange}
-                    >
-                      {n.calories.map(c => {
-                        return (
-                          <FormControlLabel key={c ? c : 'jjjj'} value={c} control={<Radio />} label={c} />
-                        )
-                      })}
-                    </RadioGroup>
-                  </TableCell>
-                  <TableCell numeric key={n.fat}>{n.fat}</TableCell>
+                  <TableCell key={n.calories}>{n.calories}</TableCell>
                 </TableRow>
               );
             })}

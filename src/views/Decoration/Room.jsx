@@ -3,25 +3,28 @@ import PropTypes from "prop-types";
 import { withStyles } from "material-ui";
 
 import Room from "components/Decoration/Room";
-import Fuyi from "components/Decoration/Fuyi";
-import Fuer from "components/Decoration/Fuer";
 import Summary from "components/Decoration/Summary";
 import DecorationStyle from "variables/styles/decorationStyle";
-import Button from 'material-ui/Button';
 import Stepper, { Step, StepLabel, StepIcon } from 'material-ui/Stepper';
 import Typography from 'material-ui/Typography';
 import { Link } from 'react-router-dom'
-import { Bottom } from "components";
+import { Bottom, Button } from "components";
 
 import QingSheBaseImg from "assets/img/styles/qshuikejichu.jpg";
 import QingSheUpgradeImg from "assets/img/styles/qshuikeshengji.jpg";
 import BedLeft from "assets/img/styles/qswoshijichu.jpg";
 import BedRight from "assets/img/styles/qswoshishengji.jpg";
+import ZhuWeiLeft from "assets/img/styles/zhuweijichu.jpg";
+import ZhuWeiRight from "assets/img/styles/zhuweiupgrade.jpg";
+import B1Left from "assets/img/styles/b1left.jpg";
+import B1Right from "assets/img/styles/b1right.jpg";
+import B1TiaokongLeft from "assets/img/styles/b1tiaokongleft.jpg";
+import B1TiaokongRight from "assets/img/styles/b1tiaokongright.jpg";
 import ToiletLeft from "assets/img/styles/weijichu.jpg";
 import ToiletRight from "assets/img/styles/weiupgrade.jpg";
 
 function getSteps() {
-  return ['会客厅', '卧室', '卫生间', '餐厅', '家庭式', '娱乐室', '书房'];
+  return ['会客厅', '卧室', '主卫', '卫生间', 'B1家庭室', 'B1挑空区'];
 }
 
 function getStepContent(step, handleNext, handleExpandClick, expanded) {
@@ -36,7 +39,7 @@ function getStepContent(step, handleNext, handleExpandClick, expanded) {
       );
     case 2:
       return(
-        <Room onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick} leftImage={ToiletLeft} rightImage={ToiletRight}/>
+        <Room onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick} leftImage={ZhuWeiLeft} rightImage={ZhuWeiRight}/>
       );
     case 3:
       return(
@@ -44,18 +47,14 @@ function getStepContent(step, handleNext, handleExpandClick, expanded) {
       );
     case 4:
       return(
-        <Fuer onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick}/>
+        <Room onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick} leftImage={B1Left} rightImage={B1Right}/>
       );
     case 5:
       return(
-        <Room onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick}/>
-      );
-    case 6:
-      return(
-        <Fuyi onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick}/>
+        <Room onClick={handleNext} expanded={expanded} handleExpandClick={handleExpandClick} leftImage={B1TiaokongLeft} rightImage={B1TiaokongRight}/>
       );
     default:
-      return 'Unknown step';
+      return '请返回';
   }
 }
 
@@ -157,6 +156,15 @@ class Dashboard extends React.Component {
             </div>
           )}
         </div>
+        <Bottom
+          content={
+            <div>
+              <Button color='black' component={Link} to={`/contactus`}>
+                进入总览
+              </Button>
+            </div>
+          }
+        />
       </div>
     );
   }
