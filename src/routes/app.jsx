@@ -1,5 +1,6 @@
 import HomePage from "views/Home/Home.jsx";
 import Load from "views/Home/Load.jsx";
+import Jichu from "views/Home/Jichu.jsx";
 import DecorationStyle from "views/Decoration/Style.jsx";
 import Huxingtu from "views/Decoration/Huxingtu.jsx";
 import DecorationRoom from "views/Decoration/Room.jsx";
@@ -23,6 +24,13 @@ const appRoutes = [
     navbarName: "",
     icon: AccountBalance,
     component: Load
+  },
+  {
+    path: "/jichu",
+    sidebarName: "首页",
+    navbarName: "",
+    icon: AccountBalance,
+    component: Jichu
   },
   {
     path: "/home",

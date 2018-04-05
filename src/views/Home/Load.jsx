@@ -24,8 +24,8 @@ const styles = {
     padding: '0 70px 0 90px',
   },
   slogan: {
-    fontWeight: '400',
-    marginTop: '1em',
+    fontWeight: '300',
+    marginTop: '2em',
   },
   dudong: {
     float: 'left',

@@ -87,6 +87,12 @@ const headerStyle = theme => ({
     backgroundColor: dangerColor,
     color: "#FFFFFF",
     ...defaultBoxShadow
+  },
+  link: {
+    color: '#fff',
+    "&:hover, &:focus": {
+      color: '#eee',
+    }
   }
 });
 

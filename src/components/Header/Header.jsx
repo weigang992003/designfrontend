@@ -9,9 +9,11 @@ import {
   Hidden,
 } from "material-ui";
 import cx from "classnames";
+import { Link } from 'react-router-dom'
 
 import headerStyle from "variables/styles/headerStyle.jsx";
 import HeaderLinks from "./HeaderLinks";
+import logo from "assets/img/logo.jpeg";
 
 function Header({ ...props }) {
   const { classes, color } = props;
@@ -20,12 +22,14 @@ function Header({ ...props }) {
   });
   return (
     <AppBar className={classes.appBar + appBarClasses}>
+      <Link to="/load">
+        <img src={logo} style={{height: '52px', float: 'left'}}/>
+      </Link>
       <Toolbar className={classes.container}>
-        <div className={classes.flex}>
-          logo
-        </div>
         <div className={classes.centerMenu}>
-          <span className={classes.menuText}>基础</span>
+          <Link to="/jichu" className={classes.link}>
+            <span className={classes.menuText}>基础</span>
+          </Link>
           <span className={classes.menuText}>软装</span>
           <span className={classes.menuText}>物业</span>
           <span className={classes.menuText}>服务</span>
