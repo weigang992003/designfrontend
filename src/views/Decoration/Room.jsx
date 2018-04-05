@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import { withStyles } from "material-ui";
 
 import Room from "components/Decoration/Room";
-import Toilet from "components/Decoration/Toilet";
-import Bed from "components/Decoration/Bed";
 import Fuyi from "components/Decoration/Fuyi";
 import Fuer from "components/Decoration/Fuer";
 import Summary from "components/Decoration/Summary";
