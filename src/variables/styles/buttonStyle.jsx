@@ -6,6 +6,7 @@ import {
   grayColor,
   roseColor,
   redColor,
+  blackColor,
   infoColor,
   successColor,
   warningColor,
@@ -42,9 +43,21 @@ const buttonStyle = {
   },
   primary: {
     backgroundColor: redColor,
-    padding: "10px 30px",
+    padding: "10px 5em",
+    borderRadius: "0px",
     "&:hover": {
-      backgroundColor: "#C70013",
+      backgroundColor: "#C22",
+      color: '#fff',
+      boxShadow:
+        "0 14px 26px -12px #fff, 0 4px 23px 0px #fff, 0 8px 10px -5px #fff"
+    }
+  },
+  black: {
+    backgroundColor: blackColor,
+    padding: "10px 5em",
+    borderRadius: "0px",
+    "&:hover": {
+      backgroundColor: "#444",
       color: '#fff',
       boxShadow:
         "0 14px 26px -12px #fff, 0 4px 23px 0px #fff, 0 8px 10px -5px #fff"

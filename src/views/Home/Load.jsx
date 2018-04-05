@@ -96,16 +96,18 @@ const styles = {
     marginLeft: '-16px',
   },
   dingzhi: {
-    width: '10em',
+    width: '12em',
     border: 'solid 1px',
     padding: '8px',
     color: '#fff',
     background: '#c00',
-    fontSize: '0.9em',
-    fontWeight: 600,
+    fontSize: '13px',
+    letterSpacing: '1px',
+    fontWeight: 400,
     display: 'inline-block',
     marginBottom: '30px',
     cursor: 'pointer',
+    fontFamily: 'Gotham Medium,"M Hei PRC W45","M Hei HK W42","M Hei HK W40","HelveticaNeue-Regular","Helvetica Neue Regular","Helvetica Neue",Helvetica,Arial,sans-serif',
   }
 };
 

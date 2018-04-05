@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { withStyles, Grid } from "material-ui";
+import { withStyles } from "material-ui";
 import Table, {
   TableBody,
   TableCell,
@@ -12,12 +12,8 @@ import Table, {
 } from 'material-ui/Table';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
-import Paper from 'material-ui/Paper';
 import Radio, { RadioGroup } from 'material-ui/Radio';
-import IconButton from 'material-ui/IconButton';
 import Tooltip from 'material-ui/Tooltip';
-import DeleteIcon from 'material-ui-icons/Delete';
-import FilterListIcon from 'material-ui-icons/FilterList';
 import { lighten } from 'material-ui/styles/colorManipulator';
 import { FormControlLabel } from 'material-ui/Form';
 import { Link } from 'react-router-dom'
@@ -25,12 +21,7 @@ import { Link } from 'react-router-dom'
 import {
   RegularCard,
   Button,
-  ItemGrid
 } from "components";
-import HuXingYi from "views/Home/HuXingYi";
-import HuXingEr from "views/Home/HuXingEr";
-import HuXingSan from "views/Home/HuXingSan";
-import HuXingSi from "views/Home/HuXingSi";
 import YiImg from "assets/img/styles/yi.png";
 import ErImg from "assets/img/styles/er.png";
 import SanImg from "assets/img/styles/san.png";
@@ -338,7 +329,7 @@ class EnhancedTable extends React.Component {
               })}
             </TableBody>
             <TableFooter>
-              <Button color="primary" variant="raised" component={Link} to={`/huxingtu`}>
+              <Button color="primary" component={Link} to={`/huxingtu`}>
                 下一步
               </Button>
             </TableFooter>

@@ -5,7 +5,8 @@ import { withStyles, Grid } from "material-ui";
 import {
   SimpleMediaCard,
   ItemGrid,
-  Button
+  Button,
+  Bottom
 } from "components";
 
 import DecorationStyle from "variables/styles/decorationStyle";
@@ -31,8 +32,6 @@ class Dashboard extends React.Component {
     this.setState({ value: index });
   };
   render() {
-    const { classes } = this.props;
-
     return (
       <div>
         <Grid container>
@@ -40,49 +39,51 @@ class Dashboard extends React.Component {
             <SimpleMediaCard
               cardTitle="一楼"
               image={yilou}
-              classes={ classes }
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
             <SimpleMediaCard
               cardTitle="二楼"
               image={erlou}
-              classes={ classes }
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
             <SimpleMediaCard
               cardTitle="三楼"
               image={sanlou}
-              classes={ classes }
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
             <SimpleMediaCard
               cardTitle="阁楼"
               image={gelou}
-              classes={ classes }
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
             <SimpleMediaCard
               cardTitle="地下一楼"
               image={dixiayilou}
-              classes={ classes }
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
             <SimpleMediaCard
               cardTitle="地下二楼"
               image={dixiaerlou}
-              classes={ classes }
             />
           </ItemGrid>
         </Grid>
-        <br />
-        <Button color='primary' component={Link} to={`/style`}>
-          下一步
-        </Button>
+        <Bottom
+          content={
+            <div>
+              <Button color='primary' component={Link} to={`/style`}>
+                下一步
+              </Button>
+              <Button color='black' component={Link} to={`/style`}>
+                进入总览
+              </Button>
+            </div>
+          }
+        />
       </div>
     );
   }

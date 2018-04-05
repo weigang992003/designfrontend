@@ -56,6 +56,7 @@ const successColor = "#4caf50";
 const infoColor = "#00acc1";
 const roseColor = "#e91e63";
 const grayColor = "#999999";
+const blackColor = "#333";
 const redColor = "#c00";
 
 const primaryBoxShadow = {
@@ -138,6 +139,7 @@ export {
   defaultFont,
   primaryColor,
   redColor,
+  blackColor,
   warningColor,
   dangerColor,
   successColor,
