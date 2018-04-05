@@ -43,6 +43,7 @@ import ItemGrid from "./Grid/ItemGrid.jsx";
 
 import Header from "./Header/Header.jsx";
 import HeaderLinks from "./Header/HeaderLinks.jsx";
+import Top from "./Header/Top.jsx";
 
 // ##############################
 // // // Sidebar
@@ -106,6 +107,7 @@ export {
   // Grid
   ItemGrid,
   // Header
+  Top,
   Header,
   HeaderLinks,
   // Sidebar

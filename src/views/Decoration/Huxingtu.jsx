@@ -6,7 +6,8 @@ import {
   SimpleMediaCard,
   ItemGrid,
   Button,
-  Bottom
+  Bottom,
+  Top
 } from "components";
 
 import DecorationStyle from "variables/styles/decorationStyle";
@@ -34,51 +35,57 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div>
-        <Grid container>
-          <ItemGrid xs={12} sm={12} md={6}>
-            <SimpleMediaCard
-              cardTitle="一楼"
-              image={yilou}
-            />
-          </ItemGrid>
-          <ItemGrid xs={12} sm={12} md={6}>
-            <SimpleMediaCard
-              cardTitle="二楼"
-              image={erlou}
-            />
-          </ItemGrid>
-          <ItemGrid xs={12} sm={12} md={6}>
-            <SimpleMediaCard
-              cardTitle="三楼"
-              image={sanlou}
-            />
-          </ItemGrid>
-          <ItemGrid xs={12} sm={12} md={6}>
-            <SimpleMediaCard
-              cardTitle="阁楼"
-              image={gelou}
-            />
-          </ItemGrid>
-          <ItemGrid xs={12} sm={12} md={6}>
-            <SimpleMediaCard
-              cardTitle="地下一楼"
-              image={dixiayilou}
-            />
-          </ItemGrid>
-          <ItemGrid xs={12} sm={12} md={6}>
-            <SimpleMediaCard
-              cardTitle="地下二楼"
-              image={dixiaerlou}
-            />
-          </ItemGrid>
-        </Grid>
+        <Top
+          title="户型图"
+          subTitle="四世同堂，其乐融融，此户型为了满足家庭成员的需要，设置了两间老人房、儿童房、主卧等。"
+        />
+        <div style={{paddingTop: '10px'}}>
+          <Grid container>
+            <ItemGrid xs={12} sm={12} md={6}>
+              <SimpleMediaCard
+                cardTitle="一楼"
+                image={yilou}
+              />
+            </ItemGrid>
+            <ItemGrid xs={12} sm={12} md={6}>
+              <SimpleMediaCard
+                cardTitle="二楼"
+                image={erlou}
+              />
+            </ItemGrid>
+            <ItemGrid xs={12} sm={12} md={6}>
+              <SimpleMediaCard
+                cardTitle="三楼"
+                image={sanlou}
+              />
+            </ItemGrid>
+            <ItemGrid xs={12} sm={12} md={6}>
+              <SimpleMediaCard
+                cardTitle="阁楼"
+                image={gelou}
+              />
+            </ItemGrid>
+            <ItemGrid xs={12} sm={12} md={6}>
+              <SimpleMediaCard
+                cardTitle="地下一楼"
+                image={dixiayilou}
+              />
+            </ItemGrid>
+            <ItemGrid xs={12} sm={12} md={6}>
+              <SimpleMediaCard
+                cardTitle="地下二楼"
+                image={dixiaerlou}
+              />
+            </ItemGrid>
+          </Grid>
+        </div>
         <Bottom
           content={
             <div>
               <Button color='primary' component={Link} to={`/style`}>
                 下一步
               </Button>
-              <Button color='black' component={Link} to={`/style`}>
+              <Button color='black' component={Link} to={`/contactus`}>
                 进入总览
               </Button>
             </div>

@@ -22,7 +22,7 @@ const footerStyle = {
     display: "block"
   },
   right: {
-    padding: "15px 0",
+    padding: "15px 30px",
     margin: "0",
     fontSize: "14px",
     float: "right!important"

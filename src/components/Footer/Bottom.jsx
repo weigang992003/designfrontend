@@ -5,7 +5,10 @@ import { withStyles } from 'material-ui/styles';
 const styles = {
   bottom: {
     textAlign: 'right',
-    padding: '3em 4em 0'
+    padding: '3em 4em 0',
+    "& a": {
+      margin: '10px 2px',
+    }
   },
 
 };

@@ -59,7 +59,7 @@ html * {
 }
 body {
     background-color: #FFFFFF;
-    color: #3C4858;
+    color: #000;
     margin: 0;
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-weight: 300;
@@ -102,11 +102,6 @@ h6 {
     font-weight: 500;
 }
 
-body {
-    background-color: #FFFFFF;
-    color: #3C4858;
-}
-
 blockquote p {
     font-style: italic;
 }
@@ -118,12 +113,12 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: #9c27b0;
+    color: #000;
     text-decoration: none;
 }
 
 a:hover, a:focus {
-    color: #89229b;
+    color: #222;
     text-decoration: none;
 }
 

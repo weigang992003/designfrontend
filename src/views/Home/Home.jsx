@@ -5,7 +5,6 @@ import { withStyles } from "material-ui";
 import Table, {
   TableBody,
   TableCell,
-  TableFooter,
   TableHead,
   TableRow,
   TableSortLabel,
@@ -21,6 +20,7 @@ import { Link } from 'react-router-dom'
 import {
   RegularCard,
   Button,
+  Bottom,
 } from "components";
 import YiImg from "assets/img/styles/yi.png";
 import ErImg from "assets/img/styles/er.png";
@@ -314,12 +314,19 @@ class EnhancedTable extends React.Component {
                 );
               })}
             </TableBody>
-            <TableFooter>
-              <Button color="primary" component={Link} to={`/huxingtu`}>
-                下一步
-              </Button>
-            </TableFooter>
           </Table>
+          <Bottom
+            content={
+              <div>
+                <Button color='primary' component={Link} to={`/huxingtu`}>
+                  下一步
+                </Button>
+                <Button color='black' component={Link} to={`/contactus`}>
+                  进入总览
+                </Button>
+              </div>
+            }
+          />
         </div>
       </div>
     );
