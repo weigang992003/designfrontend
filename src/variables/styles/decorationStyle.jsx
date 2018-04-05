@@ -37,6 +37,11 @@ const decorationStyle = {
   },
   table: {
     minWidth: '300px'
+  },
+  iconContainer: {
+    "& svg": {
+      color: "rgba(0, 0, 0, 0.5)",
+    }
   }
 };
 

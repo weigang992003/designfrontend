@@ -10,9 +10,10 @@ import Fuer from "components/Decoration/Fuer";
 import Summary from "components/Decoration/Summary";
 import DecorationStyle from "variables/styles/decorationStyle";
 import Button from 'material-ui/Button';
-import Stepper, { Step, StepLabel } from 'material-ui/Stepper';
+import Stepper, { Step, StepLabel, StepIcon } from 'material-ui/Stepper';
 import Typography from 'material-ui/Typography';
 import { Link } from 'react-router-dom'
+import { Bottom } from "components";
 
 function getSteps() {
   return ['会客厅', '卧室', '卫生间', '餐厅', '家庭式', '娱乐室', '书房'];
@@ -124,7 +125,11 @@ class Dashboard extends React.Component {
             }
             return (
               <Step key={label} {...props}>
-                <StepLabel {...labelProps}>{label}</StepLabel>
+                <StepLabel {...labelProps}
+                  className={ classes.iconContainer }
+                >
+                  {label}
+                </StepLabel>
               </Step>
             );
           })}

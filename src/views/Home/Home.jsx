@@ -51,7 +51,7 @@ class EnhancedTableHead extends React.Component {
 
   render() {
     return (
-      <TableHead style={{background: "#666"}}>
+      <TableHead style={{background: "rgba(0, 0, 0, 0.5)"}}>
         <TableRow>
           <TableCell padding="checkbox">
           </TableCell>
