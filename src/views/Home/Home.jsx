@@ -50,8 +50,6 @@ const columnData = [
 class EnhancedTableHead extends React.Component {
 
   render() {
-    const { numSelected, rowCount } = this.props;
-
     return (
       <TableHead style={{background: "#666"}}>
         <TableRow>
@@ -81,8 +79,6 @@ class EnhancedTableHead extends React.Component {
 }
 
 EnhancedTableHead.propTypes = {
-  numSelected: PropTypes.number.isRequired,
-  rowCount: PropTypes.number.isRequired,
 };
 
 const toolbarStyles = theme => ({
@@ -111,22 +107,16 @@ const toolbarStyles = theme => ({
 });
 
 let EnhancedTableToolbar = props => {
-  const { numSelected, classes } = props;
+  const { classes } = props;
 
   return (
     <Toolbar
       className={classNames(classes.root, {
-        [classes.highlight]: numSelected > 0,
+        [classes.highlight]: false,
       })}
     >
       <div className={classes.title}>
-        {numSelected > 0 ? (
-          <Typography color="inherit" variant="subheading">
-            {numSelected} selected
-          </Typography>
-        ) : (
-          <Typography variant="title">空间选择</Typography>
-        )}
+        <Typography variant="title">空间选择</Typography>
       </div>
     </Toolbar>
   );
@@ -134,7 +124,6 @@ let EnhancedTableToolbar = props => {
 
 EnhancedTableToolbar.propTypes = {
   classes: PropTypes.object.isRequired,
-  numSelected: PropTypes.number.isRequired,
 };
 
 EnhancedTableToolbar = withStyles(toolbarStyles)(EnhancedTableToolbar);
@@ -234,8 +223,7 @@ class EnhancedTable extends React.Component {
 
   render() {
     const { classes } = this.props;
-    const { data, selected, rowsPerPage, page } = this.state;
-    const emptyRows = rowsPerPage - Math.min(rowsPerPage, data.length - page * rowsPerPage);
+    const { data, rowsPerPage, page } = this.state;
 
     return (
       <div>
@@ -286,8 +274,6 @@ class EnhancedTable extends React.Component {
         <div className={classes.tableWrapper}>
           <Table className={classes.table}>
             <EnhancedTableHead
-              numSelected={selected.length}
-              rowCount={data.length}
             />
             <TableBody>
               {data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(n => {
