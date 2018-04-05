@@ -37,7 +37,7 @@ class Dashboard extends React.Component {
               cardTitle="当代轻奢(基础版)"
               cardSubtitle="天花：石膏板吊顶，墙面：乳胶漆+木饰面，地面：石材"
               content={
-                <img alt='adsf' src={leftImage} className={classes.gridImg} onClick={this.props.onClick}/>
+                <img alt='adsf' src={leftImage} className={classes.gridImg} onClick={this.props.onClick} style={{cursor: "pointer"}}/>
               }
               collapse={
                 <RoomZhucai />
@@ -54,7 +54,7 @@ class Dashboard extends React.Component {
               cardTitle="当代轻奢(升级版)"
               cardSubtitle="天花：石膏板吊顶，墙面：乳胶漆+木饰面，地面：石材"
               content={
-                <img alt='adsf' src={rightImage} className={classes.gridImg} onClick={this.props.onClick}/>
+                <img alt='adsf' src={rightImage} className={classes.gridImg} onClick={this.props.onClick} style={{cursor: "pointer"}}/>
               }
               collapse={
                 <RoomZhucai />

@@ -81,15 +81,14 @@ class Dashboard extends React.Component {
 
   handleNext = () => {
     const { activeStep } = this.state;
-    let { skipped } = this.state;
-    if (this.isStepSkipped(activeStep)) {
-      skipped = new Set(skipped.values());
-      skipped.delete(activeStep);
+    console.log(activeStep);
+    if(activeStep == 5){
+      window.location = "/zhucai";
+    }else{
+      this.setState({
+        activeStep: activeStep + 1,
+      });
     }
-    this.setState({
-      activeStep: activeStep + 1,
-      skipped,
-    });
   };
 
   handleBack = () => {
