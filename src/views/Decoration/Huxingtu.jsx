@@ -4,6 +4,7 @@ import { withStyles, Grid } from "material-ui";
 
 import {
   SimpleMediaCard,
+  ImageCard,
   ItemGrid,
   Button,
   Bottom,
@@ -39,46 +40,44 @@ class Dashboard extends React.Component {
           title="户型图"
           subTitle="四世同堂，其乐融融，此户型为了满足家庭成员的需要，设置了两间老人房、儿童房、主卧等。"
         />
-        <div style={{paddingTop: '10px'}}>
-          <Grid container>
-            <ItemGrid xs={12} sm={12} md={6}>
-              <SimpleMediaCard
-                cardTitle="一楼"
-                image={yilou}
-              />
-            </ItemGrid>
-            <ItemGrid xs={12} sm={12} md={6}>
-              <SimpleMediaCard
-                cardTitle="二楼"
-                image={erlou}
-              />
-            </ItemGrid>
-            <ItemGrid xs={12} sm={12} md={6}>
-              <SimpleMediaCard
-                cardTitle="三楼"
-                image={sanlou}
-              />
-            </ItemGrid>
-            <ItemGrid xs={12} sm={12} md={6}>
-              <SimpleMediaCard
-                cardTitle="阁楼"
-                image={gelou}
-              />
-            </ItemGrid>
-            <ItemGrid xs={12} sm={12} md={6}>
-              <SimpleMediaCard
-                cardTitle="地下一楼"
-                image={dixiayilou}
-              />
-            </ItemGrid>
-            <ItemGrid xs={12} sm={12} md={6}>
-              <SimpleMediaCard
-                cardTitle="地下二楼"
-                image={dixiaerlou}
-              />
-            </ItemGrid>
-          </Grid>
-        </div>
+        <Grid container>
+          <ItemGrid xs={12} sm={12} md={4}>
+            <ImageCard
+              cardTitle="一楼"
+              image={yilou}
+            />
+          </ItemGrid>
+          <ItemGrid xs={12} sm={12} md={4}>
+            <ImageCard
+              cardTitle="二楼"
+              image={erlou}
+            />
+          </ItemGrid>
+          <ItemGrid xs={12} sm={12} md={4}>
+            <ImageCard
+              cardTitle="三楼"
+              image={sanlou}
+            />
+          </ItemGrid>
+          <ItemGrid xs={12} sm={12} md={4}>
+            <ImageCard
+              cardTitle="阁楼"
+              image={gelou}
+            />
+          </ItemGrid>
+          <ItemGrid xs={12} sm={12} md={4}>
+            <ImageCard
+              cardTitle="地下一楼"
+              image={dixiayilou}
+            />
+          </ItemGrid>
+          <ItemGrid xs={12} sm={12} md={4}>
+            <ImageCard
+              cardTitle="地下二楼"
+              image={dixiaerlou}
+            />
+          </ItemGrid>
+        </Grid>
         <Bottom
           content={
             <div>

@@ -3,13 +3,14 @@ import PropTypes from "prop-types";
 import { withStyles, Grid } from "material-ui";
 
 import {
-  RegularCard,
+  ImageCard,
   ItemGrid,
+  Button,
+  Bottom,
+  Top
 } from "components";
 
 import DecorationStyle from "variables/styles/decorationStyle";
-import Radio, { RadioGroup } from 'material-ui/Radio';
-import { FormControlLabel } from 'material-ui/Form';
 import QingSheBaseImg from "assets/img/styles/qingshebase.jpg";
 import QingSheUpgradeImg from "assets/img/styles/qingsheupgrade.jpg";
 import YazhiBaseImg from "assets/img/styles/yazhibase.jpg";
@@ -21,113 +22,56 @@ class Dashboard extends React.Component {
     value: 0,
     selectedValue: "qingsheBase",
   };
-
-  handleChange = event => {
-    this.setState({ selectedValue: event.target.value })
-  }
-
-  handleChangeIndex = index => {
-    this.setState({ value: index });
-  };
   render() {
-    const { classes } = this.props;
-
     return (
       <div>
+        <Top title="风格选择"/>
         <Grid container>
           <ItemGrid xs={12} sm={12} md={6}>
-            <RegularCard
-              headerColor="orange"
-              cardTitle="当代轻奢(基础版)"
-              content={
-                <Link to="/rooms/four/qingsheBase">
-                  <img alt="a" src={QingSheBaseImg} className={classes.gridImg}/>
-                </Link>
-              }
-              classes={ classes }
-              cardAction={
-                <RadioGroup
-                  aria-label=""
-                  name="huxing"
-                  value={this.state.selectedValue}
-                  onChange={this.handleChange}
-                >
-                  <FormControlLabel
-                    value="qingsheBase"
-                    control={<Radio classes={{ checked: classes.checked, default: classes.unchecked }} />}
-                    classes={{ label: classes.uncheckedddd }}
-                    label="" />
-                </RadioGroup>
-              }
-            />
+            <Link to="/rooms/four/qingsheBase">
+              <ImageCard
+                cardTitle="当代轻奢(基础版)"
+                image={QingSheBaseImg}
+              />
+            </Link>
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
-            <RegularCard
-              headerColor="orange"
-              cardTitle="当代轻奢(升级版)"
-              content={
-                <Link to="/rooms/four/qingsheBase">
-                  <img alt="a" src={QingSheUpgradeImg} className={classes.gridImg} />
-                </Link>
-              }
-              cardAction={
-                <RadioGroup
-                  aria-label=""
-                  name="huxing"
-                  value={this.state.selectedValue}
-                  onChange={this.handleChange}
-                >
-                  <FormControlLabel value="qingsheUpgrade" control={<Radio classes={{ checked: classes.checked, default: classes.unchecked }} />} label="" />
-
-                </RadioGroup>
-              }
-            />
+            <Link to="/rooms/four/qingsheBase">
+              <ImageCard
+                cardTitle="当代轻奢(升级版)"
+                image={QingSheUpgradeImg}
+              />
+            </Link>
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
-            <RegularCard
-              headerColor="red"
-              cardTitle="当代雅致(基础版)"
-              content={
-                <Link to="/rooms/four/qingsheBase">
-                  <img alt="a" src={YazhiBaseImg} className={classes.gridImg} />
-                </Link>
-              }
-              cardAction={
-                <RadioGroup
-                  aria-label=""
-                  name="huxing"
-                  value={this.state.selectedValue}
-                  onChange={this.handleChange}
-                >
-                  <FormControlLabel value="yazhiBase" control={<Radio classes={{ checked: classes.checked, default: classes.unchecked }} />} label="" />
-
-                </RadioGroup>
-              }
-            />
+            <Link to="/rooms/four/qingsheBase">
+              <ImageCard
+                image={YazhiBaseImg}
+                cardTitle="当代雅致(基础版)"
+              />
+            </Link>
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
-            <RegularCard
-              headerColor="red"
-              cardTitle="当代雅致(升级版)"
-              content={
-                <Link to="/rooms/four/qingsheBase">
-                  <img alt="a" src={YazhiUpgradeImg} className={classes.gridImg} />
-                </Link>
-              }
-              cardAction={
-                <RadioGroup
-                  aria-label=""
-                  name="huxing"
-                  value={this.state.selectedValue}
-                  onChange={this.handleChange}
-                >
-                  <FormControlLabel value="yazhiUpgrade" control={<Radio classes={{ checked: classes.checked, default: classes.unchecked }} />} label="" />
-
-                </RadioGroup>
-              }
-            />
+            <Link to="/rooms/four/qingsheBase">
+              <ImageCard
+                cardTitle="当代雅致(升级版)"
+                image={YazhiUpgradeImg}
+              />
+            </Link>
           </ItemGrid>
         </Grid>
+        <Bottom
+          content={
+            <div>
+              <Button color='primary' component={Link} to={`/rooms/four/qingsheBase`}>
+                下一步
+              </Button>
+              <Button color='black' component={Link} to={`/contactus`}>
+                进入总览
+              </Button>
+            </div>
+          }
+        />
       </div>
     );
   }

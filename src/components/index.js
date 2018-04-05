@@ -7,6 +7,7 @@ import ProfileCard from "./Cards/ProfileCard.jsx";
 import RegularCard from "./Cards/RegularCard.jsx";
 import StatsCard from "./Cards/StatsCard.jsx";
 import TasksCard from "./Cards/TasksCard.jsx";
+import ImageCard from "./Cards/ImageCard.jsx";
 import SimpleMediaCard from "./Cards/SimpleMediaCard.jsx";
 import Zhucai from "./Decoration/Zhucai.jsx";
 import RoomZhucai from "./Decoration/RoomZhucai.jsx";
@@ -96,6 +97,7 @@ export {
   StatsCard,
   TasksCard,
   SimpleMediaCard,
+  ImageCard,
   // CustomButtons
   Button,
   IconButton,
