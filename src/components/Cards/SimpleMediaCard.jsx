@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
-import Card, { CardContent, CardMedia } from 'material-ui/Card';
-import Typography from 'material-ui/Typography';
 
 const styles = {
   cover: {
@@ -21,12 +19,11 @@ function SimpleMediaCard({ ...props }) {
   const {
     classes,
     cardTitle,
-    content,
     image,
   } = props;
   return (
     <div className={classes.cover}>
-      <img className={classes.image} src={image}/>
+      <img alt="" className={classes.image} src={image}/>
       <div className={classes.title}>{cardTitle}</div>
     </div>
   );

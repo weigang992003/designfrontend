@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import { Grid } from "material-ui";
-import Card, { CardContent, CardMedia } from 'material-ui/Card';
+import Card, { CardContent } from 'material-ui/Card';
 import { Link } from 'react-router-dom';
 import Divider from 'material-ui/Divider';
 import {
@@ -13,10 +13,7 @@ import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
 import {FiberManualRecord} from "material-ui-icons";
 
 import Dialog, {
-  DialogActions,
   DialogContent,
-  DialogContentText,
-  DialogTitle,
 } from 'material-ui/Dialog';
 import BannerImg from "assets/img/banner.jpg";
 import dudong from "assets/img/load/dudong.png";
@@ -25,6 +22,10 @@ import bieshu from "assets/img/load/bieshu.png";
 const styles = {
   popup: {
     padding: '0 70px 0 90px',
+  },
+  slogan: {
+    fontWeight: '400',
+    marginTop: '1em',
   },
   dudong: {
     float: 'left',
@@ -81,7 +82,7 @@ const styles = {
     color: '#ffffff',
   },
   pointer: {
-    width: '16px',
+    width: '12px',
     height: '32px',
   },
   leftNav: {
@@ -136,7 +137,7 @@ class SimpleMediaCard extends React.Component {
           <DialogContent>
             <div className={this.classes.popup}>
               <div className={this.classes.huxing}>选择户型</div>
-              <div><img src={dudong} className={this.classes.dudong}/><img src={bieshu} className={this.classes.dudong}/></div>
+              <div><img alt="藏山独栋" src={dudong} className={this.classes.dudong}/><img alt="藏山别墅" src={bieshu} className={this.classes.dudong}/></div>
               <div>
                 <div className={this.classes.cangshan}>
                   <RegularCard
@@ -179,19 +180,16 @@ class SimpleMediaCard extends React.Component {
           </DialogContent>
         </Dialog>
         <Card className={this.classes.card}>
-          <CardMedia
-            className={this.classes.media}
-            title="定制化装修方案"
-          >
+          <div className={this.classes.media}>
             <img
               src={ BannerImg }
               className={this.classes.banner}
               alt="定制化装修方案"
             />
-          </CardMedia>
+          </div>
           <div>
             <div className={this.classes.typo}>
-              <h1>远洋<FiberManualRecord className={this.classes.pointer}/>天著春秋 定制化装修方案</h1>
+              <h1 className={this.classes.slogan}>远洋<FiberManualRecord className={this.classes.pointer}/>天著春秋 定制化装修方案</h1>
               <p className={this.classes.desc}>精装定制化，方案个性化，服务全方位。<br />更懂天著春秋，更懂你。</p>
               <div className={this.classes.dingzhi} onClick={this.handleClickOpen}>立即定制</div>
             </div>
@@ -221,13 +219,13 @@ class SimpleMediaCard extends React.Component {
                           <ListItemIcon>
                             <FiberManualRecord classes={{root: this.classes.icon}}/>
                           </ListItemIcon>
-                          <ListItemText classes={{primary: this.classes.item}} nset primary="二胎时代" />
+                          <ListItemText classes={{primary: this.classes.item}} inset primary="二胎时代" />
                         </ListItem>
                         <ListItem button component={Link} to="/home">
                           <ListItemIcon>
                             <FiberManualRecord classes={{root: this.classes.icon}}/>
                           </ListItemIcon>
-                          <ListItemText classes={{primary: this.classes.item}} nset primary="一生一世" />
+                          <ListItemText classes={{primary: this.classes.item}} inset primary="一生一世" />
                         </ListItem>
                       </List>
                       <List component="nav" className={this.classes.leftNav}>
@@ -258,7 +256,6 @@ class SimpleMediaCard extends React.Component {
                       </List>
                     </div>
                   }
-                  classes={ this.classes }
                 />
               </ItemGrid>
               <ItemGrid xs={12} sm={12} md={3}>

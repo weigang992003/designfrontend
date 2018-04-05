@@ -7,25 +7,13 @@ import {
   Toolbar,
   IconButton,
   Hidden,
-  Button
 } from "material-ui";
 import cx from "classnames";
 
 import headerStyle from "variables/styles/headerStyle.jsx";
-import { Link } from 'react-router-dom'
 import HeaderLinks from "./HeaderLinks";
 
 function Header({ ...props }) {
-  function makeBrand() {
-    var name;
-    props.routes.map((prop, key) => {
-      if (prop.path === props.location.pathname) {
-        name = prop.navbarName;
-      }
-      return null;
-    });
-    return name;
-  }
   const { classes, color } = props;
   const appBarClasses = cx({
     [" " + classes[color]]: color
