@@ -8,7 +8,7 @@ const styles = {
     margin: '1em',
   },
   title: {
-    padding: '10px 12px 8px',
+    padding: '6px 12px 4px',
     position: 'absolute',
     left: '8px',
     top: '8px',
