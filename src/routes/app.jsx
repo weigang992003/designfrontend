@@ -2,6 +2,7 @@ import HomePage from "views/Home/Home.jsx";
 import Load from "views/Home/Load.jsx";
 import Jichu from "views/Home/Jichu.jsx";
 import DecorationStyle from "views/Decoration/Style.jsx";
+import DecorationStyleChoose from "views/Decoration/StyleChoose.jsx";
 import Huxingtu from "views/Decoration/Huxingtu.jsx";
 import DecorationRoom from "views/Decoration/Room.jsx";
 import ZuiZhong from "views/Decoration/ZuiZhong.jsx";
@@ -40,9 +41,16 @@ const appRoutes = [
     component: HomePage
   },
   {
-    path: "/style",
+    path: "/stylechoose",
     sidebarName: "整体风格",
     navbarName: "风格定位",
+    icon: BubbleChart,
+    component: DecorationStyleChoose
+  },
+  {
+    path: "/style",
+    sidebarName: "整体风格",
+    navbarName: "档次定位",
     icon: BubbleChart,
     component: DecorationStyle
   },

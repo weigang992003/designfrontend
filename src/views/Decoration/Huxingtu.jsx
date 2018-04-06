@@ -39,7 +39,7 @@ class Dashboard extends React.Component {
           title="户型图"
           subTitle="四世同堂，其乐融融，此户型为了满足家庭成员的需要，设置了两间老人房、儿童房、主卧等。"
         />
-        <Grid container>
+        <Grid container style={{width: "100%"}}>
           <ItemGrid xs={12} sm={12} md={4}>
             <ImageCard
               cardTitle="一楼"
@@ -80,7 +80,7 @@ class Dashboard extends React.Component {
         <Bottom
           content={
             <div>
-              <Button color='primary' component={Link} to={`/style`}>
+              <Button color='primary' component={Link} to={`/stylechoose`}>
                 下一步
               </Button>
               <Button color='black' component={Link} to={`/case`}>
