@@ -5,7 +5,7 @@ import { withStyles } from 'material-ui/styles';
 const styles = {
   bottom: {
     textAlign: 'right',
-    padding: '3em 4em 0',
+    padding: '3em 0 4em 0',
     "& a": {
       margin: '10px 2px',
     }
@@ -15,10 +15,11 @@ const styles = {
 function Bottom({ ...props }) {
   const {
     classes,
+    style,
     content
   } = props;
   return (
-    <div className={classes.bottom}>
+    <div className={classes.bottom} style={style}>
       {content}
     </div>
   );

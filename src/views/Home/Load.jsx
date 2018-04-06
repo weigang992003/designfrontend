@@ -55,7 +55,8 @@ const styles = {
     padding: '12px 12px 12px 0px',
   },
   dudongText: {
-    fontSize: '0.9em',
+    fontSize: '13px',
+    paddingLeft: '16px',
   },
   item: {
     fontSize: '0.9em',
@@ -144,7 +145,7 @@ class SimpleMediaCard extends React.Component {
                 <div className={this.classes.cangshan}>
                   <RegularCard
                     headerColor="red"
-                    classes={{cardTitle: this.classes.white}}
+                    classes={{cardTitle: this.classes.white, CardContent: {padding: '0px'}}}
                     cardTitle="藏山独栋"
                     content={
                       <List component={Link} to="/home">

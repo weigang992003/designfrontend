@@ -8,6 +8,7 @@ import {
   grayCardHeader,
   greenCardHeader,
   redCardHeader,
+  redCardContent,
   blueCardHeader,
   purpleCardHeader
 } from "variables/styles";
@@ -29,6 +30,7 @@ const regularCardStyle = {
   grayCardHeader,
   greenCardHeader,
   redCardHeader,
+  redCardContent,
   blueCardHeader,
   purpleCardHeader,
   cardTitle: {

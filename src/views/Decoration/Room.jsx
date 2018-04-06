@@ -157,6 +157,9 @@ class Dashboard extends React.Component {
         <Bottom
           content={
             <div>
+              <Button color='primary' onClick={this.handleNext}>
+                下一步
+              </Button>
               <Button color='black' component={Link} to={`/case`}>
                 进入总览
               </Button>

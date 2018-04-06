@@ -81,7 +81,7 @@ const dangerBoxShadow = {
 };
 
 const grayCardHeader = {
-  padding: '16px',
+  padding: '16px 16px 0',
 };
 const orangeCardHeader = {
   background: "linear-gradient(60deg, #ffa726, #fb8c00)",
@@ -93,8 +93,14 @@ const greenCardHeader = {
 };
 const redCardHeader = {
   background: "#c22",
-  ...dangerBoxShadow
+  boxShadow: "none",
+  "& span": {
+    fontSize: "14px",
+  },
 };
+const redCardContent = {
+  padding: "0px"
+}
 const blueCardHeader = {
   background: "linear-gradient(60deg, #26c6da, #00acc1)",
   ...infoBoxShadow
@@ -153,6 +159,7 @@ export {
   grayCardHeader,
   greenCardHeader,
   redCardHeader,
+  redCardContent,
   blueCardHeader,
   purpleCardHeader,
   cardActions,

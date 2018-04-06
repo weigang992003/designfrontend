@@ -26,6 +26,7 @@ const decorationStyle = {
   },
   root: {
     width: '90%',
+    margin: '0 auto',
   },
   instructions: {
     marginTop: '5px',

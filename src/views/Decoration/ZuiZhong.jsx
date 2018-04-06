@@ -1,11 +1,14 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
-import Table, { TableFooter, TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
+import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
 import { Link } from 'react-router-dom'
 import { Bottom, Button, Top } from "components";
 import DecorationStyle from "variables/styles/decorationStyle";
 
+const styles = {
+  paddingRight: '0px'
+}
 class SimpleTable extends React.Component {
   state = {
     qiangmian: '布艺',
@@ -56,7 +59,7 @@ class SimpleTable extends React.Component {
                 <TableCell key='kdr'></TableCell>
                 <TableCell key='ksdf'><Link to="">修改</Link></TableCell>
               </TableRow>
-              <TableRow key='kk4'>
+              <TableRow key='skk4'>
                 <TableCell key='adf'>定位</TableCell>
                 <TableCell key='kdf'>当代轻奢</TableCell>
                 <TableCell key='kdr'></TableCell>
@@ -98,13 +101,13 @@ class SimpleTable extends React.Component {
                 <TableCell key='skdf'>天花：石膏板吊顶<br />墙面：乳胶漆+木饰面<br />地面：石材</TableCell>
                 <TableCell key='ksdf'><Link to="">修改</Link></TableCell>
               </TableRow>
-              <TableRow key='kk4'>
+              <TableRow key='sskk4'>
                 <TableCell key='adf'>B1家庭室</TableCell>
                 <TableCell key='kdf'>当代轻奢(基础版)</TableCell>
                 <TableCell key='skdf'>天花：石膏板吊顶<br />墙面：乳胶漆+木饰面<br />地面：石材</TableCell>
                 <TableCell key='ksdf'><Link to="">修改</Link></TableCell>
               </TableRow>
-              <TableRow key='kk4'>
+              <TableRow key='jjkk4'>
                 <TableCell key='adf'>B1挑空区</TableCell>
                 <TableCell key='kdf'>当代轻奢(升级版)</TableCell>
                 <TableCell key='skdf'>天花：石膏板吊顶<br />墙面：乳胶漆+木饰面<br />地面：石材</TableCell>
@@ -140,7 +143,7 @@ class SimpleTable extends React.Component {
                 <TableCell key='kd'>15万</TableCell>
                 <TableCell key='ksdf'><Link to="">修改</Link></TableCell>
               </TableRow>
-              <TableRow key='kk4'>
+              <TableRow key='kkjkk4'>
                 <TableCell key='adf'>电梯</TableCell>
                 <TableCell key='kdf'>日立LCA&蒂森克虏伯</TableCell>
                 <TableCell key='kd'>10万</TableCell>
@@ -148,16 +151,17 @@ class SimpleTable extends React.Component {
               </TableRow>
             </TableBody>
           </Table>
+          <Bottom
+            content={
+              <div>
+                <Button color='primary' component={Link} to={`/contactus`}>
+                  确认方案
+                </Button>
+              </div>
+            }
+            style={styles}
+          />
         </div>
-        <Bottom
-          content={
-            <div>
-              <Button color='primary' component={Link} to={`/contactus`}>
-                确认方案
-              </Button>
-            </div>
-          }
-        />
       </div>
     );
   }

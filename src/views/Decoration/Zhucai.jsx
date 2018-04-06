@@ -94,19 +94,19 @@ class SimpleTable extends React.Component {
               })}
             </TableBody>
           </Table>
+          <Bottom
+            content={
+              <div>
+                <Button color='primary' component={Link} to={`/case`}>
+                  下一步
+                </Button>
+                <Button color='black' component={Link} to={`/case`}>
+                  进入总览
+                </Button>
+              </div>
+            }
+          />
         </div>
-        <Bottom
-          content={
-            <div>
-              <Button color='primary' component={Link} to={`/case`}>
-                下一步
-              </Button>
-              <Button color='black' component={Link} to={`/case`}>
-                进入总览
-              </Button>
-            </div>
-          }
-        />
       </div>
     );
   }
