@@ -10,7 +10,6 @@ import {
 } from "components";
 
 import DecorationStyle from "variables/styles/decorationStyle";
-import { FormControlLabel } from 'material-ui/Form';
 
 class Dashboard extends React.Component {
   state = {

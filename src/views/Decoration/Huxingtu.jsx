@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { withStyles, Grid } from "material-ui";
 
 import {
-  SimpleMediaCard,
   ImageCard,
   ItemGrid,
   Button,

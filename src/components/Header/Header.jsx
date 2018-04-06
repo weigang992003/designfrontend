@@ -23,7 +23,7 @@ function Header({ ...props }) {
   return (
     <AppBar className={classes.appBar + appBarClasses}>
       <Link to="/load">
-        <img src={logo} style={{height: '52px', float: 'left'}}/>
+        <img alt="远洋" src={logo} style={{height: '52px', float: 'left'}}/>
       </Link>
       <Toolbar className={classes.container}>
         <div className={classes.centerMenu}>

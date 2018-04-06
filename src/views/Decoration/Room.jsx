@@ -5,7 +5,7 @@ import { withStyles } from "material-ui";
 import Room from "components/Decoration/Room";
 import Summary from "components/Decoration/Summary";
 import DecorationStyle from "variables/styles/decorationStyle";
-import Stepper, { Step, StepLabel, StepIcon } from 'material-ui/Stepper';
+import Stepper, { Step, StepLabel } from 'material-ui/Stepper';
 import Typography from 'material-ui/Typography';
 import { Link } from 'react-router-dom'
 import { Bottom, Button } from "components";
@@ -81,8 +81,7 @@ class Dashboard extends React.Component {
 
   handleNext = () => {
     const { activeStep } = this.state;
-    console.log(activeStep);
-    if(activeStep == 5){
+    if(activeStep === 5){
       window.location = "/zhucai";
     }else{
       this.setState({
