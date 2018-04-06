@@ -97,7 +97,7 @@ const styles = {
     marginLeft: '-16px',
   },
   dingzhi: {
-    width: '12em',
+    width: '13em',
     border: 'solid 1px',
     padding: '8px',
     color: '#fff',
