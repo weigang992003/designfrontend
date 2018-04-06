@@ -43,6 +43,24 @@ const decorationStyle = {
     },
     "& svg": {
       fontSize: '15px',
+    },
+    "& tr": {
+      height: '36px',
+      "& td": {
+        width: "35%",
+      },
+      "& td:first-child": {
+        width: "20%",
+      },
+      "& td:last-child": {
+        width: "10%",
+      },
+    },
+  },
+  tableHeader: {
+    background: 'rgba(0, 0, 0, 0.5)',
+    "& th": {
+      color: "#fff",
     }
   },
   iconContainer: {
@@ -52,6 +70,10 @@ const decorationStyle = {
   },
   radio: {
     color: '#666',
+  },
+  zuizhong: {
+    width: "80%",
+    margin: "0 auto",
   }
 };
 

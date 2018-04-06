@@ -157,7 +157,7 @@ class Dashboard extends React.Component {
         <Bottom
           content={
             <div>
-              <Button color='black' component={Link} to={`/contactus`}>
+              <Button color='black' component={Link} to={`/case`}>
                 进入总览
               </Button>
             </div>

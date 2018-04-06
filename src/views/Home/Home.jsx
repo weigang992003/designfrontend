@@ -321,7 +321,7 @@ class EnhancedTable extends React.Component {
                 <Button color='primary' component={Link} to={`/huxingtu`}>
                   下一步
                 </Button>
-                <Button color='black' component={Link} to={`/contactus`}>
+                <Button color='black' component={Link} to={`/case`}>
                   进入总览
                 </Button>
               </div>

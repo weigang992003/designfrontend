@@ -52,54 +52,56 @@ class SimpleTable extends React.Component {
     return (
       <div>
         <Top title="升级模块"/>
-        <Table className={classes.table}>
-          <TableHead style={{background: 'rgba(0, 0, 0, 0.5)'}}>
-            <TableRow key="jj">
-              <TableCell key="sdf" style={{color: "#fff"}}>名称</TableCell>
-              <TableCell key="sdfsdf" style={{color: "#fff"}}>产品</TableCell>
-              <TableCell key="xiangqing" style={{color: "#fff"}}>详情</TableCell>
-              <TableCell numeric key="sddff" style={{color: "#fff"}}>价格</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {data.map(n => {
-              return (
-                <TableRow key={n.id}>
-                  <TableCell key={n.name}>{n.name}</TableCell>
-                  <TableCell numeric key={n.calories}>
-                    <RadioGroup
-                      aria-label="gender"
-                      name={n.carbs}
-                      value={this.state[n.carbs]}
-                      className={classes.group}
-                      onChange={this.handleChange}
-                    >
-                      {n.calories.map(c => {
-                        return (
-                          <FormControlLabel
-                            key={c ? c : 'jjjj'}
-                            value={c}
-                            control={<Radio classes={{ default: classes.radio, checked: classes.radio }}/>}
-                            label={c}
-                          />
-                        )
-                      })}
-                    </RadioGroup>
-                  </TableCell>
-                  <TableCell key={`${n.carbs}xx`}>查看</TableCell>
-                  <TableCell numeric key={n.carbs}>{prices[this.state[n.carbs]]}</TableCell>
-                </TableRow>
-              );
-            })}
-          </TableBody>
-        </Table>
+        <div className={classes.zuizhong}>
+          <Table className={classes.table}>
+            <TableHead className={classes.tableHeader}>
+              <TableRow key="jj">
+                <TableCell key="sdf">名称</TableCell>
+                <TableCell key="sdfsdf">产品</TableCell>
+                <TableCell key="xiangqing">详情</TableCell>
+                <TableCell numeric key="sddff">价格</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {data.map(n => {
+                return (
+                  <TableRow key={n.id}>
+                    <TableCell key={n.name}>{n.name}</TableCell>
+                    <TableCell numeric key={n.calories}>
+                      <RadioGroup
+                        aria-label="gender"
+                        name={n.carbs}
+                        value={this.state[n.carbs]}
+                        className={classes.group}
+                        onChange={this.handleChange}
+                      >
+                        {n.calories.map(c => {
+                          return (
+                            <FormControlLabel
+                              key={c ? c : 'jjjj'}
+                              value={c}
+                              control={<Radio classes={{ default: classes.radio, checked: classes.radio }}/>}
+                              label={c}
+                            />
+                          )
+                        })}
+                      </RadioGroup>
+                    </TableCell>
+                    <TableCell key={`${n.carbs}xx`}>查看</TableCell>
+                    <TableCell numeric key={n.carbs}>{prices[this.state[n.carbs]]}</TableCell>
+                  </TableRow>
+                );
+              })}
+            </TableBody>
+          </Table>
+        </div>
         <Bottom
           content={
             <div>
               <Button color='primary' component={Link} to={`/case`}>
                 下一步
               </Button>
-              <Button color='black' component={Link} to={`/contactus`}>
+              <Button color='black' component={Link} to={`/case`}>
                 进入总览
               </Button>
             </div>
