@@ -4,6 +4,7 @@ import Jichu from "views/Home/Jichu.jsx";
 import DecorationStyle from "views/Decoration/Style.jsx";
 import DecorationStyleChoose from "views/Decoration/StyleChoose.jsx";
 import Huxingtu from "views/Decoration/Huxingtu.jsx";
+import HuxingtuChoose from "views/Decoration/HuxingtuChoose.jsx";
 import DecorationRoom from "views/Decoration/Room.jsx";
 import ZuiZhong from "views/Decoration/ZuiZhong.jsx";
 import Zhucai from "views/Decoration/Zhucai.jsx";
@@ -60,6 +61,13 @@ const appRoutes = [
     navbarName: "户型图",
     icon: BubbleChart,
     component: Huxingtu
+  },
+  {
+    path: "/huxingtuchoose",
+    sidebarName: "户型图",
+    navbarName: "户型图选择",
+    icon: BubbleChart,
+    component: HuxingtuChoose
   },
   {
     path: "/rooms/:houseType/:houseStyle",

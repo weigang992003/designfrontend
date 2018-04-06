@@ -51,19 +51,67 @@ class SimpleTable extends React.Component {
                 <TableCell key='adf'>家庭</TableCell>
                 <TableCell key='kdf'>四世同堂</TableCell>
                 <TableCell key='kdr'></TableCell>
-                <TableCell key='ksdf'><Link to="">修改</Link></TableCell>
+                <TableCell key='ksdf'><Link to="/home">修改</Link></TableCell>
               </TableRow>
               <TableRow key='k3k'>
                 <TableCell key='adf'>风格</TableCell>
                 <TableCell key='kdf'>新中式</TableCell>
                 <TableCell key='kdr'></TableCell>
-                <TableCell key='ksdf'><Link to="">修改</Link></TableCell>
+                <TableCell key='ksdf'><Link to="/stylechoose">修改</Link></TableCell>
               </TableRow>
               <TableRow key='skk4'>
                 <TableCell key='adf'>定位</TableCell>
                 <TableCell key='kdf'>当代轻奢</TableCell>
                 <TableCell key='kdr'></TableCell>
-                <TableCell key='ksdf'><Link to="">修改</Link></TableCell>
+                <TableCell key='ksdf'><Link to="/style">修改</Link></TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+          <Table className={classes.table}>
+            <TableHead className={classes.tableHeader}>
+              <TableRow key="jj">
+                <TableCell key="sdf">每层方案</TableCell>
+                <TableCell key="sddff">方案</TableCell>
+                <TableCell key="srdff"></TableCell>
+                <TableCell key="sdsdff">操作</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow key='1kk'>
+                <TableCell key='adf'>一层</TableCell>
+                <TableCell key='kdf'>四世同堂</TableCell>
+                <TableCell key='kdr'></TableCell>
+                <TableCell key='ksdf'><Link to="/huxingtu">修改</Link></TableCell>
+              </TableRow>
+              <TableRow key='2kk'>
+                <TableCell key='adf'>二层</TableCell>
+                <TableCell key='kdf'>三代和睦</TableCell>
+                <TableCell key='kdr'></TableCell>
+                <TableCell key='ksdf'><Link to="/huxingtu">修改</Link></TableCell>
+              </TableRow>
+              <TableRow key='k3k'>
+                <TableCell key='adf'>三层</TableCell>
+                <TableCell key='kdf'>一生一世</TableCell>
+                <TableCell key='kdr'></TableCell>
+                <TableCell key='ksdf'><Link to="/huxingtu">修改</Link></TableCell>
+              </TableRow>
+              <TableRow key='skk4'>
+                <TableCell key='adf'>阁楼</TableCell>
+                <TableCell key='kdf'>四世同堂</TableCell>
+                <TableCell key='kdr'></TableCell>
+                <TableCell key='ksdf'><Link to="/huxingtu">修改</Link></TableCell>
+              </TableRow>
+              <TableRow key='skk4'>
+                <TableCell key='adf'>地下一层</TableCell>
+                <TableCell key='kdf'>四世同堂</TableCell>
+                <TableCell key='kdr'></TableCell>
+                <TableCell key='ksdf'><Link to="/huxingtu">修改</Link></TableCell>
+              </TableRow>
+              <TableRow key='skk4'>
+                <TableCell key='adf'>地下二层</TableCell>
+                <TableCell key='kdf'>四世同堂</TableCell>
+                <TableCell key='kdr'></TableCell>
+                <TableCell key='ksdf'><Link to="/huxingtu">修改</Link></TableCell>
               </TableRow>
             </TableBody>
           </Table>

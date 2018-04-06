@@ -26,7 +26,7 @@ class Dashboard extends React.Component {
     return (
       <div>
         <Top title="选择档次"/>
-        <Grid container>
+        <Grid container style={{width: "100%"}}>
           <ItemGrid xs={12} sm={12} md={6}>
             <Link to="/rooms/four/qingsheBase">
               <ImageCard

@@ -11,9 +11,9 @@ import {
 } from "components";
 
 import DecorationStyle from "variables/styles/decorationStyle";
-import QingSheBaseImg from "assets/img/styles/qingshebase.jpg";
-import QingSheUpgradeImg from "assets/img/styles/qingsheupgrade.jpg";
-import YazhiBaseImg from "assets/img/styles/yazhibase.jpg";
+import QingSheBaseImg from "assets/img/stylechoose/style.png";
+import QingSheUpgradeImg from "assets/img/stylechoose/style2.png";
+import YazhiBaseImg from "assets/img/stylechoose/style3.png";
 import { Link } from 'react-router-dom'
 
 class Dashboard extends React.Component {
@@ -25,19 +25,11 @@ class Dashboard extends React.Component {
     return (
       <div>
         <Top title="风格选择"/>
-        <Grid container>
+        <Grid container style={{width: "100%"}}>
           <ItemGrid xs={12} sm={12} md={4}>
             <Link to="/style">
               <ImageCard
                 cardTitle="现代"
-                image={QingSheBaseImg}
-              />
-            </Link>
-          </ItemGrid>
-          <ItemGrid xs={12} sm={12} md={4}>
-            <Link to="/style">
-              <ImageCard
-                cardTitle="新中式"
                 image={QingSheUpgradeImg}
               />
             </Link>
@@ -45,7 +37,15 @@ class Dashboard extends React.Component {
           <ItemGrid xs={12} sm={12} md={4}>
             <Link to="/style">
               <ImageCard
+                cardTitle="新中式"
                 image={YazhiBaseImg}
+              />
+            </Link>
+          </ItemGrid>
+          <ItemGrid xs={12} sm={12} md={4}>
+            <Link to="/style">
+              <ImageCard
+                image={QingSheBaseImg}
                 cardTitle="简欧"
               />
             </Link>

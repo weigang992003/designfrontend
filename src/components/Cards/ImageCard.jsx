@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 
@@ -31,10 +32,17 @@ function SimpleMediaCard({ ...props }) {
     classes,
     cardTitle,
     image,
+    link,
   } = props;
   return (
     <div className={classes.cover}>
-      <img alt="" className={classes.image} src={image}/>
+      {link === undefined ? (
+        <img alt="" className={classes.image} src={image}/>
+      ) : (
+        <Link to={link}>
+          <img alt="" className={classes.image} src={image}/>
+        </Link>
+      )}
       <span className={classes.title}>{cardTitle}</span>
     </div>
   );

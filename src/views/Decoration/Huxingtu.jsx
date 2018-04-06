@@ -44,36 +44,42 @@ class Dashboard extends React.Component {
             <ImageCard
               cardTitle="一楼"
               image={yilou}
+              link="/huxingtuchoose"
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={4}>
             <ImageCard
               cardTitle="二楼"
               image={erlou}
+              link="/huxingtuchoose"
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={4}>
             <ImageCard
               cardTitle="三楼"
               image={sanlou}
+              link="/huxingtuchoose"
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={4}>
             <ImageCard
               cardTitle="阁楼"
               image={gelou}
+              link="/huxingtuchoose"
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={4}>
             <ImageCard
               cardTitle="地下一楼"
               image={dixiayilou}
+              link="/huxingtuchoose"
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={4}>
             <ImageCard
               cardTitle="地下二楼"
               image={dixiaerlou}
+              link="/huxingtuchoose"
             />
           </ItemGrid>
         </Grid>
