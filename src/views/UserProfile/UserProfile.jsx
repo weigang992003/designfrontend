@@ -15,7 +15,7 @@ function UserProfile({ ...props }) {
   return (
     <div>
       <Top
-        title="联系方式"
+        title="提交订单"
         subTitle="请正确填写您的联系方式提交订单。"
       />
       <div style={{width: "80%", margin: "0 auto", padding: "20px 0 20px"}}>
