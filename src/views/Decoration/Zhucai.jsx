@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
-import Table, { TableFooter, TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
-import Paper from 'material-ui/Paper';
+import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
 import Radio, { RadioGroup } from 'material-ui/Radio';
 import { FormControlLabel } from 'material-ui/Form';
 import { Bottom, Button, Top } from "components";
@@ -58,6 +57,7 @@ class SimpleTable extends React.Component {
             <TableRow key="jj">
               <TableCell key="sdf" style={{color: "#fff"}}>名称</TableCell>
               <TableCell key="sdfsdf" style={{color: "#fff"}}>产品</TableCell>
+              <TableCell key="xiangqing" style={{color: "#fff"}}>详情</TableCell>
               <TableCell numeric key="sddff" style={{color: "#fff"}}>价格</TableCell>
             </TableRow>
           </TableHead>
@@ -76,11 +76,17 @@ class SimpleTable extends React.Component {
                     >
                       {n.calories.map(c => {
                         return (
-                          <FormControlLabel key={c ? c : 'jjjj'} value={c} control={<Radio classes={{ checked: classes.radio }}/>} label={c} />
+                          <FormControlLabel
+                            key={c ? c : 'jjjj'}
+                            value={c}
+                            control={<Radio classes={{ default: classes.radio, checked: classes.radio }}/>}
+                            label={c}
+                          />
                         )
                       })}
                     </RadioGroup>
                   </TableCell>
+                  <TableCell key={`${n.carbs}xx`}>查看</TableCell>
                   <TableCell numeric key={n.carbs}>{prices[this.state[n.carbs]]}</TableCell>
                 </TableRow>
               );

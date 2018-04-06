@@ -36,7 +36,14 @@ const decorationStyle = {
     marginBottom: '10px',
   },
   table: {
-    minWidth: '300px'
+    minWidth: '300px',
+    "& span": {
+      fontSize: '13px',
+      fontWeight: 300,
+    },
+    "& svg": {
+      fontSize: '15px',
+    }
   },
   iconContainer: {
     "& svg": {
@@ -44,7 +51,7 @@ const decorationStyle = {
     }
   },
   radio: {
-    color: '#666'
+    color: '#666',
   }
 };
 
