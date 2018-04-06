@@ -4,59 +4,19 @@ import { withStyles } from 'material-ui/styles';
 import { Grid } from "material-ui";
 import Card, { CardContent } from 'material-ui/Card';
 import { Link } from 'react-router-dom';
-import Divider from 'material-ui/Divider';
 import {
+  Huxing,
   RegularCard,
   ItemGrid
 } from "components";
 import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
 import {FiberManualRecord} from "material-ui-icons";
-
-import Dialog, {
-  DialogContent,
-} from 'material-ui/Dialog';
 import BannerImg from "assets/img/banner.jpg";
-import dudong from "assets/img/load/dudong.png";
-import bieshu from "assets/img/load/bieshu.png";
 
 const styles = {
-  popup: {
-    padding: '0 70px 0 90px',
-  },
   slogan: {
     fontWeight: '300',
     marginTop: '2em',
-  },
-  dudong: {
-    float: 'left',
-    width: '300px',
-    padding: '5px',
-    border: 'solid 1px #eee',
-    marginRight: '20px',
-    height: '180px'
-  },
-  white: {
-    color: "#fff",
-    fontWeight: 400,
-  },
-  huxing: {
-    fontSize: '1.8em',
-    fontWeight: 500,
-    textAlign: 'center',
-    padding: '27px 0px 40px',
-    color: '#000'
-  },
-  cangshan: {
-    float: 'left',
-    width: '310px',
-    marginRight: '23px',
-  },
-  huxingItem: {
-    padding: '12px 12px 12px 0px',
-  },
-  dudongText: {
-    fontSize: '13px',
-    paddingLeft: '16px',
   },
   item: {
     fontSize: '0.9em',
@@ -113,77 +73,11 @@ const styles = {
 };
 
 class SimpleMediaCard extends React.Component {
-  state = {
-    open: false,
-  };
-
   classes = this.props.classes;
-  handleClickOpen = () => {
-    this.setState({
-      open: true,
-    });
-  };
-  handleClose = () => {
-    this.setState({ open: false });
-  };
 
   render () {
     return (
       <div>
-        <Dialog
-          open={this.state.open}
-          onClose={this.handleClose}
-          aria-labelledby="alert-dialog-title"
-          aria-describedby="alert-dialog-description"
-          maxWidth="md"
-        >
-          <DialogContent>
-            <div className={this.classes.popup}>
-              <div className={this.classes.huxing}>选择户型</div>
-              <div><img alt="藏山独栋" src={dudong} className={this.classes.dudong}/><img alt="藏山别墅" src={bieshu} className={this.classes.dudong}/></div>
-              <div>
-                <div className={this.classes.cangshan}>
-                  <RegularCard
-                    headerColor="red"
-                    classes={{cardTitle: this.classes.white, CardContent: {padding: '0px'}}}
-                    cardTitle="藏山独栋"
-                    content={
-                      <List component={Link} to="/home">
-                        <ListItem button className={this.classes.huxingItem}>
-                          <ListItemText classes={{primary: this.classes.dudongText}} primary="联排265平米户型" />
-                        </ListItem>
-                        <Divider light />
-                        <ListItem button className={this.classes.huxingItem}>
-                          <ListItemText classes={{primary: this.classes.dudongText}} primary="双拼270平米户型" />
-                        </ListItem>
-                        <Divider light />
-                      </List>
-                    }
-                  />
-                </div>
-                <div className={this.classes.cangshan}>
-                  <RegularCard
-                    headerColor="red"
-                    classes={{cardTitle: this.classes.white}}
-                    cardTitle="藏山别墅"
-                    content={
-                      <List component={Link} to="/home">
-                        <ListItem button className={this.classes.huxingItem}>
-                          <ListItemText classes={{primary: this.classes.dudongText}} primary="联排225平米户型" />
-                        </ListItem>
-                        <Divider />
-                        <ListItem button className={this.classes.huxingItem}>
-                          <ListItemText classes={{primary: this.classes.dudongText}} primary="联排240平米户型" />
-                        </ListItem>
-                        <Divider light />
-                      </List>
-                    }
-                  />
-                </div>
-              </div>
-            </div>
-          </DialogContent>
-        </Dialog>
         <Card className={this.classes.card}>
           <div className={this.classes.media}>
             <img
@@ -196,7 +90,12 @@ class SimpleMediaCard extends React.Component {
             <div className={this.classes.typo}>
               <h1 className={this.classes.slogan}>远洋<FiberManualRecord className={this.classes.pointer}/>天著春秋 定制化装修方案</h1>
               <p className={this.classes.desc}>精装定制化，方案个性化，服务全方位。<br />更懂天著春秋，更懂你。</p>
-              <div className={this.classes.dingzhi} onClick={this.handleClickOpen}>立即定制</div>
+              <Huxing
+                button={
+                  <div className={this.classes.dingzhi}>立即定制</div>
+                }
+                dist="/home"
+              />
             </div>
           </div>
           <CardContent>
@@ -303,25 +202,25 @@ class SimpleMediaCard extends React.Component {
                   cardTitle="加载升级模块"
                   content={
                     <List component="nav">
-                      <ListItem button>
+                      <ListItem button component={Link} to="/zhucai">
                         <ListItemIcon>
                           <FiberManualRecord  classes={{root: this.classes.icon}}/>
                         </ListItemIcon>
                         <ListItemText classes={{primary: this.classes.item}} inset primary="洁具升级模块" />
                       </ListItem>
-                      <ListItem button>
+                      <ListItem button component={Link} to="/zhucai">
                         <ListItemIcon>
                           <FiberManualRecord  classes={{root: this.classes.icon}}/>
                         </ListItemIcon>
                         <ListItemText classes={{primary: this.classes.item}} inset primary="电器升级模块" />
                       </ListItem>
-                      <ListItem button>
+                      <ListItem button component={Link} to="/zhucai">
                         <ListItemIcon>
                           <FiberManualRecord  classes={{root: this.classes.icon}}/>
                         </ListItemIcon>
                         <ListItemText classes={{primary: this.classes.item}} inset primary="橱柜升级模块" />
                       </ListItem>
-                      <ListItem button>
+                      <ListItem button component={Link} to="/zhucai">
                         <ListItemIcon>
                           <FiberManualRecord  classes={{root: this.classes.icon}}/>
                         </ListItemIcon>

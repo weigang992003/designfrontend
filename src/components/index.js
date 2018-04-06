@@ -10,6 +10,7 @@ import TasksCard from "./Cards/TasksCard.jsx";
 import ImageCard from "./Cards/ImageCard.jsx";
 import SimpleMediaCard from "./Cards/SimpleMediaCard.jsx";
 import Zhucai from "./Decoration/Zhucai.jsx";
+import Huxing from "./Decoration/Huxing.jsx";
 import RoomZhucai from "./Decoration/RoomZhucai.jsx";
 
 // ##############################
@@ -88,6 +89,7 @@ import A from "./Typography/A.jsx";
 
 export {
   // Decoration
+  Huxing,
   Zhucai,
   RoomZhucai,
   // Cards

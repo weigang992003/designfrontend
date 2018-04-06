@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
 import { Link } from 'react-router-dom'
-import { Bottom, Button, Top } from "components";
+import { Huxing, Bottom, Button, Top } from "components";
 import DecorationStyle from "variables/styles/decorationStyle";
 
 const styles = {
@@ -45,7 +45,7 @@ class SimpleTable extends React.Component {
                 <TableCell key='adf'>户型</TableCell>
                 <TableCell key='kdf'>联排270平米</TableCell>
                 <TableCell key='kdr'></TableCell>
-                <TableCell key='ksdf'><Link to="">修改</Link></TableCell>
+                <TableCell key='ksdf'><Huxing button={<div style={{cursor: 'pointer'}}>修改</div>} dist="/case" /></TableCell>
               </TableRow>
               <TableRow key='2kk'>
                 <TableCell key='adf'>家庭</TableCell>
