@@ -5,30 +5,40 @@ import Table, { TableFooter, TableBody, TableCell, TableHead, TableRow } from 'm
 import Paper from 'material-ui/Paper';
 import Radio, { RadioGroup } from 'material-ui/Radio';
 import { FormControlLabel } from 'material-ui/Form';
-import Button from 'material-ui/Button';
+import { Bottom, Button, Top } from "components";
 import { Link } from 'react-router-dom'
 import DecorationStyle from "variables/styles/decorationStyle";
 
 let id = 0;
-function createData(name, calories, fat, carbs, protein) {
+function createData(name, calories, carbs) {
   id += 1;
-  return { id, name, calories, fat, carbs, protein };
+  return { id, name, calories, carbs };
 }
 
 const data = [
-  createData('橱柜升级模块', ['海格&瓦伦多夫', '欧派'], 'xxxxx元', 'chugui'),
-  createData('洁具升级模块', ['汉斯格雅&杜拉', '维特&唯宝', 'TOTO'], 'xxxxx元', 'jieju'),
-  createData('... ...', ['...', '...', '...'], 'xxxxx元', 'jieju'),
-  createData('总计', [], 'xxxxx元'),
+  createData('橱柜', ['欧派', '海格&瓦伦多夫'], 'chugui'),
+  createData('洁具', ['TOTO', '汉斯格雅&杜拉维特&唯宝'], 'jieju'),
+  createData('电器', ['西门子', 'MIELE'], 'dianqi'),
+  createData('电梯', ['日立LGE', '日立LCA&蒂森克虏伯'], 'dianti'),
 ];
+
+const prices = {
+  '欧派': '0元',
+  '海格&瓦伦多夫': '20万',
+  'TOTO': '0元',
+  '汉斯格雅&杜拉维特&唯宝': '20万',
+  '西门子': '0元',
+  'MIELE': '15万',
+  '日立LGE': '0元',
+  '日立LCA&蒂森克虏伯': '10万',
+}
 
 class SimpleTable extends React.Component {
   state = {
-    qiangmian: '布艺',
-    tianhua: '乳胶漆',
-    dimian: '木地板',
-    chugui: '海格&瓦伦多夫',
-    jieju: '汉斯格雅&杜拉',
+    chugui: '欧派',
+    jieju: 'TOTO',
+    dianqi: '西门子',
+    dianti: '日立LGE',
   };
 
   handleChange = (event, value) => {
@@ -41,13 +51,14 @@ class SimpleTable extends React.Component {
     const { classes } = this.props;
 
     return (
-      <Paper className={classes.root}>
+      <div>
+        <Top title="升级模块"/>
         <Table className={classes.table}>
-          <TableHead>
+          <TableHead style={{background: 'rgba(0, 0, 0, 0.5)'}}>
             <TableRow key="jj">
-              <TableCell key="sdf">区域</TableCell>
-              <TableCell key="sdfsdf">产品</TableCell>
-              <TableCell numeric key="sddff">总计</TableCell>
+              <TableCell key="sdf" style={{color: "#fff"}}>名称</TableCell>
+              <TableCell key="sdfsdf" style={{color: "#fff"}}>产品</TableCell>
+              <TableCell numeric key="sddff" style={{color: "#fff"}}>价格</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -55,7 +66,7 @@ class SimpleTable extends React.Component {
               return (
                 <TableRow key={n.id}>
                   <TableCell key={n.name}>{n.name}</TableCell>
-                  <TableCell numeric key={n.carbs}>
+                  <TableCell numeric key={n.calories}>
                     <RadioGroup
                       aria-label="gender"
                       name={n.carbs}
@@ -65,23 +76,30 @@ class SimpleTable extends React.Component {
                     >
                       {n.calories.map(c => {
                         return (
-                          <FormControlLabel key={c ? c : 'jjjj'} value={c} control={<Radio />} label={c} />
+                          <FormControlLabel key={c ? c : 'jjjj'} value={c} control={<Radio classes={{ checked: classes.radio }}/>} label={c} />
                         )
                       })}
                     </RadioGroup>
                   </TableCell>
-                  <TableCell numeric key={n.fat}>{n.fat}</TableCell>
+                  <TableCell numeric key={n.carbs}>{prices[this.state[n.carbs]]}</TableCell>
                 </TableRow>
               );
             })}
           </TableBody>
-          <TableFooter>
-            <Button className={classes.button} variant="raised" component={Link} to='/case'>
-              下一步
-            </Button>
-          </TableFooter>
         </Table>
-      </Paper>
+        <Bottom
+          content={
+            <div>
+              <Button color='primary' component={Link} to={`/case`}>
+                下一步
+              </Button>
+              <Button color='black' component={Link} to={`/contactus`}>
+                进入总览
+              </Button>
+            </div>
+          }
+        />
+      </div>
     );
   }
 }

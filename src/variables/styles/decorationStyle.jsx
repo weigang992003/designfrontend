@@ -42,6 +42,9 @@ const decorationStyle = {
     "& svg": {
       color: "rgba(0, 0, 0, 0.5)",
     }
+  },
+  radio: {
+    color: '#666'
   }
 };
 

@@ -5,7 +5,7 @@ import { withStyles } from 'material-ui/styles';
 const styles = {
   top: {
     textAlign: 'left',
-    padding: '12px 0 12px 17px',
+    padding: '22px 0 12px 17px',
     background: '#f7f7f7',
   },
   title: {
