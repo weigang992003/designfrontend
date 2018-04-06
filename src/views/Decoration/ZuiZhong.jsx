@@ -177,25 +177,25 @@ class SimpleTable extends React.Component {
                 <TableCell key='adf'>橱柜</TableCell>
                 <TableCell key='kdf'>海格&瓦伦多夫</TableCell>
                 <TableCell key='kd'>20万</TableCell>
-                <TableCell key='ksdf'><Link to="">修改</Link></TableCell>
+                <TableCell key='ksdf'><Link to="/zhucai">修改</Link></TableCell>
               </TableRow>
               <TableRow key='2kk'>
                 <TableCell key='adf'>洁具</TableCell>
                 <TableCell key='kdf'>汉斯格雅&杜拉维特&唯宝</TableCell>
                 <TableCell key='kd'>20万</TableCell>
-                <TableCell key='ksdf'><Link to="">修改</Link></TableCell>
+                <TableCell key='ksdf'><Link to="/zhucai">修改</Link></TableCell>
               </TableRow>
               <TableRow key='k3k'>
                 <TableCell key='adf'>电器</TableCell>
                 <TableCell key='kdf'>MIELE</TableCell>
                 <TableCell key='kd'>15万</TableCell>
-                <TableCell key='ksdf'><Link to="">修改</Link></TableCell>
+                <TableCell key='ksdf'><Link to="/zhucai">修改</Link></TableCell>
               </TableRow>
               <TableRow key='kkjkk4'>
                 <TableCell key='adf'>电梯</TableCell>
                 <TableCell key='kdf'>日立LCA&蒂森克虏伯</TableCell>
                 <TableCell key='kd'>10万</TableCell>
-                <TableCell key='ksdf'><Link to="">修改</Link></TableCell>
+                <TableCell key='ksdf'><Link to="/zhucai">修改</Link></TableCell>
               </TableRow>
             </TableBody>
           </Table>

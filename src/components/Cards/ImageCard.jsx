@@ -43,7 +43,9 @@ function SimpleMediaCard({ ...props }) {
           <img alt="" className={classes.image} src={image}/>
         </Link>
       )}
-      <span className={classes.title}>{cardTitle}</span>
+      {cardTitle &&
+        <span className={classes.title}>{cardTitle}</span>
+      }
     </div>
   );
 }

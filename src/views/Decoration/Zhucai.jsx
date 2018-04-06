@@ -87,7 +87,7 @@ class SimpleTable extends React.Component {
                         })}
                       </RadioGroup>
                     </TableCell>
-                    <TableCell key={`${n.carbs}xx`}>查看</TableCell>
+                    <TableCell key={`${n.carbs}xx`}><Link to={`/shengji/${n.carbs}`}>查看</Link></TableCell>
                     <TableCell numeric key={n.carbs}>{prices[this.state[n.carbs]]}</TableCell>
                   </TableRow>
                 );

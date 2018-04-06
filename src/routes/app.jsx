@@ -8,6 +8,7 @@ import HuxingtuChoose from "views/Decoration/HuxingtuChoose.jsx";
 import DecorationRoom from "views/Decoration/Room.jsx";
 import ZuiZhong from "views/Decoration/ZuiZhong.jsx";
 import Zhucai from "views/Decoration/Zhucai.jsx";
+import Shengji from "views/Decoration/Shengji.jsx";
 import ContactUs from "views/UserProfile/UserProfile.jsx";
 
 import {
@@ -82,6 +83,13 @@ const appRoutes = [
     navbarName: "升级模块选择",
     icon: ContentPaste,
     component: Zhucai
+  },
+  {
+    path: "/shengji/:module",
+    sidebarName: "升级模块选择",
+    navbarName: "升级模块选择",
+    icon: ContentPaste,
+    component: Shengji
   },
   {
     path: "/case",
