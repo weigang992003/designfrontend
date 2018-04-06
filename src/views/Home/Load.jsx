@@ -202,25 +202,25 @@ class SimpleMediaCard extends React.Component {
                   cardTitle="加载升级模块"
                   content={
                     <List component="nav">
-                      <ListItem button component={Link} to="/zhucai">
+                      <ListItem button component={Link} to="/shengji">
                         <ListItemIcon>
                           <FiberManualRecord  classes={{root: this.classes.icon}}/>
                         </ListItemIcon>
                         <ListItemText classes={{primary: this.classes.item}} inset primary="洁具升级模块" />
                       </ListItem>
-                      <ListItem button component={Link} to="/zhucai">
+                      <ListItem button component={Link} to="/shengji">
                         <ListItemIcon>
                           <FiberManualRecord  classes={{root: this.classes.icon}}/>
                         </ListItemIcon>
                         <ListItemText classes={{primary: this.classes.item}} inset primary="电器升级模块" />
                       </ListItem>
-                      <ListItem button component={Link} to="/zhucai">
+                      <ListItem button component={Link} to="/shengji">
                         <ListItemIcon>
                           <FiberManualRecord  classes={{root: this.classes.icon}}/>
                         </ListItemIcon>
                         <ListItemText classes={{primary: this.classes.item}} inset primary="橱柜升级模块" />
                       </ListItem>
-                      <ListItem button component={Link} to="/zhucai">
+                      <ListItem button component={Link} to="/shengji">
                         <ListItemIcon>
                           <FiberManualRecord  classes={{root: this.classes.icon}}/>
                         </ListItemIcon>
@@ -236,25 +236,25 @@ class SimpleMediaCard extends React.Component {
                   cardTitle="个性化定制"
                   content={
                     <List component="nav">
-                      <ListItem button>
+                      <ListItem button component={Link} to="/siren">
                         <ListItemIcon>
                           <FiberManualRecord  classes={{root: this.classes.icon}}/>
                         </ListItemIcon>
                         <ListItemText classes={{primary: this.classes.item}} inset primary="私人酒窖" />
                       </ListItem>
-                      <ListItem button>
+                      <ListItem button component={Link} to="/siren">
                         <ListItemIcon>
                           <FiberManualRecord  classes={{root: this.classes.icon}}/>
                         </ListItemIcon>
                         <ListItemText classes={{primary: this.classes.item}} inset primary="私人影音室" />
                       </ListItem>
-                      <ListItem button>
+                      <ListItem button component={Link} to="/siren">
                         <ListItemIcon>
                           <FiberManualRecord  classes={{root: this.classes.icon}}/>
                         </ListItemIcon>
                         <ListItemText classes={{primary: this.classes.item}} inset primary="私家衣帽间" />
                       </ListItem>
-                      <ListItem button>
+                      <ListItem button component={Link} to="/siren">
                         <ListItemIcon>
                           <FiberManualRecord  classes={{root: this.classes.icon}}/>
                         </ListItemIcon>

@@ -24,7 +24,10 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div>
-        <Top title="风格选择"/>
+        <Top
+          title="风格选择"
+          subTitle="三种风格供您选择：现代、新中式、简欧。"
+        />
         <Grid container style={{width: "100%"}}>
           <ItemGrid xs={12} sm={12} md={4}>
             <Link to="/style">

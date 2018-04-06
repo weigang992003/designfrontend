@@ -81,34 +81,14 @@ class Dashboard extends React.Component {
 
   handleNext = () => {
     const { activeStep } = this.state;
+    this.setState({ expanded: false });
     if(activeStep === 5){
-      window.location = "/zhucai";
+      window.location = "/shengji";
     }else{
       this.setState({
         activeStep: activeStep + 1,
       });
     }
-  };
-
-  handleBack = () => {
-    const { activeStep } = this.state;
-    this.setState({
-      activeStep: activeStep - 1,
-    });
-  };
-
-  handleReset = () => {
-    this.setState({
-      activeStep: 0,
-    });
-  };
-
-  handleChange = event => {
-    this.setState({ selectedValue: event.target.value })
-  }
-
-  handleChangeIndex = index => {
-    this.setState({ value: index });
   };
 
   render() {
@@ -143,7 +123,7 @@ class Dashboard extends React.Component {
                 <Summary />
               </Typography>
               <div>
-                <Button className={classes.button} variant="raised" component={Link} to="/zhucai">确认</Button>
+                <Button className={classes.button} variant="raised" component={Link} to="/shengji">确认</Button>
               </div>
             </div>
           ) : (

@@ -15,29 +15,30 @@ function createData(name, calories, carbs) {
 }
 
 const data = [
-  createData('橱柜', ['欧派', '海格&瓦伦多夫'], 'chugui'),
-  createData('洁具', ['TOTO', '汉斯格雅&杜拉维特&唯宝'], 'jieju'),
-  createData('电器', ['西门子', 'MIELE'], 'dianqi'),
-  createData('电梯', ['日立LGE', '日立LCA&蒂森克虏伯'], 'dianti'),
+  createData('私人酒窖', ['不需要', '高品质私人酒窖', '奢华进口专业酒窖'], 'chugui'),
+  createData('私人影音室', ['不需要', '高品质私人影音室', '奢华进口专业影音室'], 'jieju'),
+  createData('私家衣帽间', ['不需要', '优质成品衣帽间', '原装进口衣帽间'], 'dianqi'),
+  createData('私家健身房', ['不需要', '私家健身房', '发烧级健身房'], 'dianti'),
 ];
 
 const prices = {
-  '欧派': '0元',
-  '海格&瓦伦多夫': '20万',
-  'TOTO': '0元',
-  '汉斯格雅&杜拉维特&唯宝': '20万',
-  '西门子': '0元',
-  'MIELE': '15万',
-  '日立LGE': '0元',
-  '日立LCA&蒂森克虏伯': '10万',
+  '不需要': '0元',
+  '高品质私人酒窖': '20万',
+  '奢华进口专业酒窖': '30元',
+  '高品质私人影音室': '20万',
+  '奢华进口专业影音室': '30元',
+  '优质成品衣帽间': '15万',
+  '原装进口衣帽间': '25元',
+  '私家健身房': '20万',
+  '发烧级健身房': '30万',
 }
 
 class SimpleTable extends React.Component {
   state = {
-    chugui: '欧派',
-    jieju: 'TOTO',
-    dianqi: '西门子',
-    dianti: '日立LGE',
+    chugui: '不需要',
+    jieju: '不需要',
+    dianqi: '不需要',
+    dianti: '不需要',
   };
 
   handleChange = (event, value) => {
@@ -51,14 +52,16 @@ class SimpleTable extends React.Component {
 
     return (
       <div>
-        <Top title="升级模块"/>
+        <Top
+          title="个性化定制"
+          subTitle="个性化空间私人定制。"
+        />
         <div className={classes.zuizhong}>
           <Table className={classes.table}>
             <TableHead className={classes.tableHeader}>
               <TableRow key="jj">
                 <TableCell key="sdf">名称</TableCell>
                 <TableCell key="sdfsdf">产品</TableCell>
-                <TableCell key="xiangqing">详情</TableCell>
                 <TableCell numeric key="sddff">价格</TableCell>
               </TableRow>
             </TableHead>
@@ -87,7 +90,6 @@ class SimpleTable extends React.Component {
                         })}
                       </RadioGroup>
                     </TableCell>
-                    <TableCell key={`${n.carbs}xx`}><Link to={`/shengji/${n.carbs}`}>查看</Link></TableCell>
                     <TableCell numeric key={n.carbs}>{prices[this.state[n.carbs]]}</TableCell>
                   </TableRow>
                 );

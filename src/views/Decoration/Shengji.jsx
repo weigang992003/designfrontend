@@ -26,10 +26,10 @@ import dianqi4 from "assets/img/shengji/dianqi4.png";
 import { Link } from 'react-router-dom'
 
 const titles = {
-  jieju: "洁具",
-  chugui: "橱柜",
-  dianqi: "电器",
-  dianti: "电梯",
+  jieju: "洁具升级方案",
+  chugui: "橱柜升级方案",
+  dianqi: "电器升级方案",
+  dianti: "电梯升级方案",
 };
 const shengji = (module) => {
   switch (module) {
@@ -153,7 +153,7 @@ class Dashboard extends React.Component {
         <Bottom
           content={
             <div>
-              <Button color='primary' component={Link} to={`/zhucai`}>
+              <Button color='primary' component={Link} to={`/shengji`}>
                 返回
               </Button>
               <Button color='black' component={Link} to={`/case`}>

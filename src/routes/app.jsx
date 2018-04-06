@@ -7,9 +7,10 @@ import Huxingtu from "views/Decoration/Huxingtu.jsx";
 import HuxingtuChoose from "views/Decoration/HuxingtuChoose.jsx";
 import DecorationRoom from "views/Decoration/Room.jsx";
 import ZuiZhong from "views/Decoration/ZuiZhong.jsx";
-import Zhucai from "views/Decoration/Zhucai.jsx";
+import Sheng from "views/Decoration/Sheng.jsx";
 import Shengji from "views/Decoration/Shengji.jsx";
 import ContactUs from "views/UserProfile/UserProfile.jsx";
+import Siren from "views/Decoration/Siren.jsx";
 
 import {
   Dashboard,
@@ -30,10 +31,17 @@ const appRoutes = [
   },
   {
     path: "/jichu",
-    sidebarName: "首页",
+    sidebarName: "基础",
     navbarName: "",
     icon: AccountBalance,
     component: Jichu
+  },
+  {
+    path: "/siren",
+    sidebarName: "个性化定制",
+    navbarName: "",
+    icon: AccountBalance,
+    component: Siren
   },
   {
     path: "/home",
@@ -78,18 +86,18 @@ const appRoutes = [
     component: DecorationRoom
   },
   {
-    path: "/zhucai",
-    sidebarName: "升级模块选择",
-    navbarName: "升级模块选择",
-    icon: ContentPaste,
-    component: Zhucai
-  },
-  {
     path: "/shengji/:module",
     sidebarName: "升级模块选择",
     navbarName: "升级模块选择",
     icon: ContentPaste,
     component: Shengji
+  },
+  {
+    path: "/shengji",
+    sidebarName: "升级模块选择",
+    navbarName: "升级模块选择",
+    icon: ContentPaste,
+    component: Sheng
   },
   {
     path: "/case",

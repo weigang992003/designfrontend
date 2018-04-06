@@ -25,7 +25,10 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div>
-        <Top title="选择档次"/>
+        <Top
+          title="选择档次"
+          subTitle="两种档次可供您选择：基础版、升级版。"
+        />
         <Grid container style={{width: "100%"}}>
           <ItemGrid xs={12} sm={12} md={6}>
             <Link to="/rooms/four/qingsheBase">
