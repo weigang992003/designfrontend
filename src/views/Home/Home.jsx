@@ -148,6 +148,17 @@ const styles = theme => ({
   },
   table: {
     minWidth: 800,
+    "& span": {
+      fontSize: '13px',
+      fontWeight: 300,
+      height: '36px'
+    },
+    "& svg": {
+      fontSize: '15px',
+    },
+    "& tr": {
+      height: '36px',
+    },
   },
   tableWrapper: {
     overflowX: 'auto',
@@ -288,7 +299,7 @@ class EnhancedTable extends React.Component {
                     key={n.id}
                     selected={isSelected}
                   >
-                    <TableCell padding="checkbox">
+                    <TableCell padding="checkbox" numeric>
                       <RadioGroup
                         aria-label="gender"
                         name="huxing"

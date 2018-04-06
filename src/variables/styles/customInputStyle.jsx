@@ -3,7 +3,7 @@
 // #############################
 
 import {
-  primaryColor,
+  redColor,
   dangerColor,
   successColor,
   defaultFont
@@ -23,7 +23,7 @@ const customInputStyle = {
   },
   inkbar: {
     "&:after": {
-      backgroundColor: primaryColor
+      backgroundColor: redColor
     }
   },
   inkbarError: {

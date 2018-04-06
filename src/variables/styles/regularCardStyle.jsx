@@ -19,7 +19,7 @@ const regularCardStyle = {
     boxShadow: "none"
   },
   cardHeader: {
-    padding: '20px 0 12px 17px',
+    padding: '12px 0 12px 17px',
     ...defaultFont
   },
   cardPlainHeader: {
