@@ -240,7 +240,7 @@ class EnhancedTable extends React.Component {
       <div>
         {this.state.selectedValue === "four" ? (
           <RegularCard
-            headerColor="orange"
+            headerColor="gray"
             cardTitle="四世同堂"
             cardSubtitle="其乐融融，此户型为了满足家庭成员的需要，设置了两间老人房、儿童房、主卧等。"
             content={
@@ -251,7 +251,7 @@ class EnhancedTable extends React.Component {
         ) : null}
         {this.state.selectedValue === "three" ? (
           <RegularCard
-            headerColor="orange"
+            headerColor="gray"
             cardTitle="三代和睦"
             cardSubtitle="老少同乐。考虑到老人照看孩子的缘故，可将老人房设置在一层，儿童房在二层。方便照看孩 子。"
             content={
@@ -262,7 +262,7 @@ class EnhancedTable extends React.Component {
         ) : null}
         {this.state.selectedValue === "two" ? (
           <RegularCard
-            headerColor="orange"
+            headerColor="gray"
             cardTitle="二胎时代"
             cardSubtitle="欢乐一家人。设置了主卧、儿童房、儿童娱乐室等。"
             content={
@@ -273,7 +273,7 @@ class EnhancedTable extends React.Component {
         ) : null}
         {this.state.selectedValue === "one" ? (
           <RegularCard
-            headerColor="orange"
+            headerColor="gray"
             cardTitle="一生一世"
             cardSubtitle="过着甜蜜的二人世界。除了主卧，还配备次卧和客卧等。"
             content={

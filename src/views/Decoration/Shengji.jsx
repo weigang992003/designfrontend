@@ -37,21 +37,21 @@ const shengji = (module) => {
       return(
         <Grid container style={{width: "100%"}}>
           <ItemGrid xs={12} sm={12} md={12}>
-            <Link to="/style">
+            <Link to="/shengji">
               <ImageCard
                 image={Chugui1}
               />
             </Link>
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
-            <Link to="/style">
+            <Link to="/shengji">
               <ImageCard
                 image={Chugui2}
               />
             </Link>
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
-            <Link to="/style">
+            <Link to="/shengji">
               <ImageCard
                 image={Chugui3}
               />
@@ -63,21 +63,21 @@ const shengji = (module) => {
       return(
         <Grid container style={{width: "100%"}}>
           <ItemGrid xs={12} sm={12} md={12}>
-            <Link to="/style">
+            <Link to="/shengji">
               <ImageCard
                 image={Jieju}
               />
             </Link>
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
-            <Link to="/style">
+            <Link to="/shengji">
               <ImageCard
                 image={Jieju1}
               />
             </Link>
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
-            <Link to="/style">
+            <Link to="/shengji">
               <ImageCard
                 image={Jieju2}
               />
@@ -89,28 +89,28 @@ const shengji = (module) => {
       return(
         <Grid container style={{width: "100%"}}>
           <ItemGrid xs={12} sm={12} md={12}>
-            <Link to="/style">
+            <Link to="/shengji">
               <ImageCard
                 image={dianqi1}
               />
             </Link>
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
-            <Link to="/style">
+            <Link to="/shengji">
               <ImageCard
                 image={dianqi2}
               />
             </Link>
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
-            <Link to="/style">
+            <Link to="/shengji">
               <ImageCard
                 image={dianqi3}
               />
             </Link>
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
-            <Link to="/style">
+            <Link to="/shengji">
               <ImageCard
                 image={dianqi4}
               />
@@ -122,14 +122,14 @@ const shengji = (module) => {
       return(
         <Grid container style={{width: "100%"}}>
           <ItemGrid xs={12} sm={12} md={12}>
-            <Link to="/style">
+            <Link to="/shengji">
               <ImageCard
                 image={dianti1}
               />
             </Link>
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={12}>
-            <Link to="/style">
+            <Link to="/shengji">
               <ImageCard
                 image={dianti2}
               />

@@ -8,6 +8,8 @@ import {
   grayCardHeader,
   greenCardHeader,
   redCardHeader,
+  orangeCardHeader,
+  whiteCardHeader,
   redCardContent,
   blueCardHeader,
   purpleCardHeader
@@ -28,6 +30,8 @@ const regularCardStyle = {
     marginRight: 0
   },
   grayCardHeader,
+  orangeCardHeader,
+  whiteCardHeader,
   greenCardHeader,
   redCardHeader,
   redCardContent,

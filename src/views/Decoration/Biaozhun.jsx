@@ -53,7 +53,7 @@ class SimpleTable extends React.Component {
           title="精装配置标准"
           subTitle="详情如下表："
         />
-        <div className={classes.zuizhong}>
+        <div>
           <Table className={classes.table}>
             <TableHead className={classes.tableHeader}>
               <TableRow key="jj">

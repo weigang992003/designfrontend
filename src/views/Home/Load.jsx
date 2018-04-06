@@ -86,7 +86,7 @@ class SimpleMediaCard extends React.Component {
               alt="定制化装修方案"
             />
           </div>
-          <div>
+          <div style={{paddingBottom: "30px"}}>
             <div className={this.classes.typo}>
               <h1 className={this.classes.slogan}>远洋<FiberManualRecord className={this.classes.pointer}/>天著春秋 定制化装修方案</h1>
               <p className={this.classes.desc}>精装定制化，方案个性化，服务全方位。<br />更懂天著春秋，更懂你。</p>
@@ -102,7 +102,7 @@ class SimpleMediaCard extends React.Component {
             <Grid container>
               <ItemGrid xs={12} sm={12} md={3}>
                 <RegularCard
-                  headerColor="orange"
+                  headerColor="white"
                   cardTitle="平面布局方案"
                   content={
                     <div>
@@ -164,7 +164,7 @@ class SimpleMediaCard extends React.Component {
               </ItemGrid>
               <ItemGrid xs={12} sm={12} md={3}>
                 <RegularCard
-                  headerColor="orange"
+                  headerColor="white"
                   cardTitle="精装风格定位"
                   content={
                     <List component="nav">
@@ -198,7 +198,7 @@ class SimpleMediaCard extends React.Component {
               </ItemGrid>
               <ItemGrid xs={12} sm={12} md={3}>
                 <RegularCard
-                  headerColor="orange"
+                  headerColor="white"
                   cardTitle="加载升级模块"
                   content={
                     <List component="nav">
@@ -232,7 +232,7 @@ class SimpleMediaCard extends React.Component {
               </ItemGrid>
               <ItemGrid xs={12} sm={12} md={3}>
                 <RegularCard
-                  headerColor="orange"
+                  headerColor="white"
                   cardTitle="个性化定制"
                   content={
                     <List component="nav">

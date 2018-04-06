@@ -23,7 +23,7 @@ function UserProfile({ ...props }) {
           <ItemGrid xs={12} sm={12} md={8}>
             <RegularCard
               cardTitle=""
-              headerColor="orange"
+              headerColor="gray"
               content={
                 <div>
                   <Grid container>
