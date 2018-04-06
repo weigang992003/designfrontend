@@ -10,20 +10,6 @@ const styles = {
   paddingRight: '0px'
 }
 class SimpleTable extends React.Component {
-  state = {
-    qiangmian: '布艺',
-    tianhua: '乳胶漆',
-    dimian: '木地板',
-    chugui: '海格&瓦伦多夫',
-    jieju: '汉斯格雅&杜拉',
-  };
-
-  handleChange = (event, value) => {
-    let newState = {};
-    newState[event.target.name] = value;
-    this.setState(newState);
-  };
-
   render() {
     const { classes } = this.props;
 

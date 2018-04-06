@@ -3,6 +3,7 @@ import Load from "views/Home/Load.jsx";
 import Jichu from "views/Home/Jichu.jsx";
 import DecorationStyle from "views/Decoration/Style.jsx";
 import DecorationStyleChoose from "views/Decoration/StyleChoose.jsx";
+import Biaozhun from "views/Decoration/Biaozhun.jsx";
 import Huxingtu from "views/Decoration/Huxingtu.jsx";
 import HuxingtuChoose from "views/Decoration/HuxingtuChoose.jsx";
 import DecorationRoom from "views/Decoration/Room.jsx";
@@ -56,6 +57,13 @@ const appRoutes = [
     navbarName: "风格定位",
     icon: BubbleChart,
     component: DecorationStyleChoose
+  },
+  {
+    path: "/biaozhun",
+    sidebarName: "整体风格",
+    navbarName: "风格定位",
+    icon: BubbleChart,
+    component: Biaozhun
   },
   {
     path: "/style",

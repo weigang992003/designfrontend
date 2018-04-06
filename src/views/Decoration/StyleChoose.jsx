@@ -54,6 +54,23 @@ class Dashboard extends React.Component {
             </Link>
           </ItemGrid>
         </Grid>
+        <Grid container style={{width: "100%"}}>
+          <ItemGrid xs={12} sm={12} md={4} style={{textAlign: "center", fontSize: "13px"}}>
+            <Link to="/biaozhun">
+              查看精装标准
+            </Link>
+          </ItemGrid>
+          <ItemGrid xs={12} sm={12} md={4} style={{textAlign: "center", fontSize: "13px"}}>
+            <Link to="/biaozhun">
+              查看精装标准
+            </Link>
+          </ItemGrid>
+          <ItemGrid xs={12} sm={12} md={4} style={{textAlign: "center", fontSize: "13px"}}>
+            <Link to="/biaozhun">
+              查看精装标准
+            </Link>
+          </ItemGrid>
+        </Grid>
         <Bottom
           content={
             <div>
