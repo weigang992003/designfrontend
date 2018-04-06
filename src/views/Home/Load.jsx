@@ -156,6 +156,7 @@ class SimpleMediaCard extends React.Component {
                         <ListItem button className={this.classes.huxingItem}>
                           <ListItemText classes={{primary: this.classes.dudongText}} primary="双拼270平米户型" />
                         </ListItem>
+                        <Divider light />
                       </List>
                     }
                   />
@@ -174,6 +175,7 @@ class SimpleMediaCard extends React.Component {
                         <ListItem button className={this.classes.huxingItem}>
                           <ListItemText classes={{primary: this.classes.dudongText}} primary="联排240平米户型" />
                         </ListItem>
+                        <Divider light />
                       </List>
                     }
                   />
