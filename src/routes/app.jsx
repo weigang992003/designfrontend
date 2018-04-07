@@ -12,6 +12,7 @@ import Sheng from "views/Decoration/Sheng.jsx";
 import Shengji from "views/Decoration/Shengji.jsx";
 import ContactUs from "views/UserProfile/UserProfile.jsx";
 import Siren from "views/Decoration/Siren.jsx";
+import Gexing from "views/SiRen/Gexing.jsx";
 
 import {
   Dashboard,
@@ -43,6 +44,13 @@ const appRoutes = [
     navbarName: "",
     icon: AccountBalance,
     component: Siren
+  },
+  {
+    path: "/gexinghua/:module",
+    sidebarName: "个性化定制",
+    navbarName: "",
+    icon: AccountBalance,
+    component: Gexing
   },
   {
     path: "/home",

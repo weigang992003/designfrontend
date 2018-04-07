@@ -9,16 +9,16 @@ import { Link } from 'react-router-dom'
 import DecorationStyle from "variables/styles/decorationStyle";
 
 let id = 0;
-function createData(name, calories, carbs) {
+function createData(name, calories, carbs, path) {
   id += 1;
-  return { id, name, calories, carbs };
+  return { id, name, calories, carbs, path };
 }
 
 const data = [
-  createData('私人酒窖', ['不需要', '高品质私人酒窖', '奢华进口专业酒窖'], 'chugui'),
-  createData('私人影音室', ['不需要', '高品质私人影音室', '奢华进口专业影音室'], 'jieju'),
-  createData('私家衣帽间', ['不需要', '优质成品衣帽间', '原装进口衣帽间'], 'dianqi'),
-  createData('私家健身房', ['不需要', '私家健身房', '发烧级健身房'], 'dianti'),
+  createData('私人酒窖', ['不需要', '高品质私人酒窖', '奢华进口专业酒窖'], 'chugui', 'jiujiao'),
+  createData('私人影音室', ['不需要', '高品质私人影音室', '奢华进口专业影音室'], 'jieju', 'yingyingshi'),
+  createData('私家衣帽间', ['不需要', '优质成品衣帽间', '原装进口衣帽间'], 'dianqi', 'yimaojian'),
+  createData('私家健身房', ['不需要', '私家健身房', '发烧级健身房'], 'dianti', 'jianshenfang'),
 ];
 
 const prices = {
@@ -62,6 +62,7 @@ class SimpleTable extends React.Component {
               <TableRow key="jj">
                 <TableCell key="sdf">名称</TableCell>
                 <TableCell key="sdfsdf">产品</TableCell>
+                <TableCell key="sdfsdf">预览</TableCell>
                 <TableCell numeric key="sddff">价格</TableCell>
               </TableRow>
             </TableHead>
@@ -90,6 +91,7 @@ class SimpleTable extends React.Component {
                         })}
                       </RadioGroup>
                     </TableCell>
+                    <TableCell key={n.path}><Link to={`/gexinghua/${n.path}`}>查看</Link></TableCell>
                     <TableCell numeric key={n.carbs}>{prices[this.state[n.carbs]]}</TableCell>
                   </TableRow>
                 );
