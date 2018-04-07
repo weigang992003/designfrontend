@@ -83,6 +83,7 @@ const dangerBoxShadow = {
 const whiteCardHeader = {
   padding: '16px 16px 5px',
   borderBottom: 'solid 1px #eee',
+  fontSize: '0.9em',
 };
 const grayCardHeader = {
   padding: '16px 16px 0',

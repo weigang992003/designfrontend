@@ -20,6 +20,7 @@ const styles = {
   },
   item: {
     fontSize: '0.9em',
+    color: '#666',
   },
   card: {
     width: '100%',
@@ -52,8 +53,8 @@ const styles = {
     marginBottom: '24px',
   },
   icon: {
-    width: '8px',
-    marginRight: '0px',
+    width: '5px',
+    marginRight: '-4px',
     marginLeft: '-16px',
   },
   dingzhi: {
