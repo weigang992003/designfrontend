@@ -18,17 +18,19 @@ const styles = {
     minWidth: '300px',
     "& th": {
       textAlign: 'center',
+      padding: '4px 24px 4px 24px',
     },
     "& td": {
       textAlign: 'center',
       fontSize: '12px',
+      padding: '4px 24px 4px 24px',
     },
     "& span": {
       fontSize: '13px',
       fontWeight: 300,
     },
     "& svg": {
-      height: '16px',
+      height: '10px',
       verticalAlign: 'middle',
     },
     "& tr": {
