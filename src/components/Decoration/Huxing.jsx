@@ -2,8 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 // react plugin for creating charts
 import { withStyles, Grid } from "material-ui";
-import dudong from "assets/img/load/dudong.png";
-import bieshu from "assets/img/load/bieshu.png";
+import dudong1 from "assets/img/load/265.png";
+import dudong2 from "assets/img/load/270.png";
+import bieshu1 from "assets/img/load/225.png";
+import bieshu2 from "assets/img/load/245.png";
 import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
 import { Link } from 'react-router-dom';
 import Divider from 'material-ui/Divider';
@@ -21,11 +23,10 @@ const styles = {
   },
   dudong: {
     float: 'left',
-    width: '300px',
+    width: '46%',
     padding: '5px',
     border: 'solid 1px #eee',
-    marginRight: '20px',
-    height: '180px'
+    height: '80px'
   },
   white: {
     color: "#fff",
@@ -42,6 +43,7 @@ const styles = {
     float: 'left',
     width: '310px',
     marginRight: '23px',
+    marginBottom: '23px',
   },
   huxingItem: {
     padding: '12px 12px 12px 0px',
@@ -50,6 +52,10 @@ const styles = {
     fontSize: '13px',
     paddingLeft: '16px',
   },
+  imageWrapper: {
+    width: '50%',
+    marginRight: '20px',
+  }
 }
 class Dashboard extends React.Component {
   state = {
@@ -81,7 +87,16 @@ class Dashboard extends React.Component {
           <DialogContent>
             <div className={classes.popup}>
               <div className={classes.huxing}>选择户型</div>
-              <div><img alt="藏山独栋" src={dudong} className={classes.dudong}/><img alt="藏山别墅" src={bieshu} className={classes.dudong}/></div>
+              <div>
+                <div className={classes.cangshan}>
+                  <img alt="藏山独栋" src={dudong1} className={classes.dudong}/>
+                  <img alt="藏山独栋" src={dudong2} className={classes.dudong}/>
+                </div>
+                <div className={classes.cangshan}>
+                  <img alt="藏山别墅" src={bieshu1} className={classes.dudong}/>
+                  <img alt="藏山别墅" src={bieshu2} className={classes.dudong}/>
+                </div>
+              </div>
               <div>
                 <div className={classes.cangshan}>
                   <RegularCard
