@@ -47,11 +47,6 @@ const styles = {
     width: '12px',
     height: '32px',
   },
-  leftNav: {
-    float: 'left',
-    width: '50%',
-    marginBottom: '24px',
-  },
   icon: {
     width: '5px',
     marginRight: '-4px',
@@ -99,7 +94,7 @@ class SimpleMediaCard extends React.Component {
               />
             </div>
           </div>
-          <CardContent>
+          <CardContent style={{width: '75%', margin: "0 auto", paddingLeft: "10%"}}>
             <Grid container>
               <ItemGrid xs={12} sm={12} md={3}>
                 <RegularCard
@@ -107,7 +102,7 @@ class SimpleMediaCard extends React.Component {
                   cardTitle="平面布局方案"
                   content={
                     <div>
-                      <List component="nav" className={this.classes.leftNav}>
+                      <List component="nav">
                         <ListItem button component={Link} to="/home">
                           <ListItemIcon>
                             <FiberManualRecord classes={{root: this.classes.icon}}/>
@@ -133,32 +128,6 @@ class SimpleMediaCard extends React.Component {
                           <ListItemText classes={{primary: this.classes.item}} inset primary="一生一世" />
                         </ListItem>
                       </List>
-                      <List component="nav" className={this.classes.leftNav}>
-                        <ListItem button component={Link} to="/home">
-                          <ListItemIcon>
-                            <FiberManualRecord classes={{root: this.classes.icon}}/>
-                          </ListItemIcon>
-                          <ListItemText classes={{primary: this.classes.item}} inset primary="一二三层" />
-                        </ListItem>
-                        <ListItem button component={Link} to="/home">
-                          <ListItemIcon>
-                            <FiberManualRecord classes={{root: this.classes.icon}}/>
-                          </ListItemIcon>
-                          <ListItemText classes={{primary: this.classes.item}} inset primary="阁楼" />
-                        </ListItem>
-                        <ListItem button component={Link} to="/home">
-                          <ListItemIcon>
-                            <FiberManualRecord classes={{root: this.classes.icon}}/>
-                          </ListItemIcon>
-                          <ListItemText classes={{primary: this.classes.item}} inset primary="地下一层" />
-                        </ListItem>
-                        <ListItem button component={Link} to="/home">
-                          <ListItemIcon>
-                            <FiberManualRecord classes={{root: this.classes.icon}}/>
-                          </ListItemIcon>
-                          <ListItemText classes={{primary: this.classes.item}} inset primary="地下二层" />
-                        </ListItem>
-                      </List>
                     </div>
                   }
                 />
@@ -169,29 +138,23 @@ class SimpleMediaCard extends React.Component {
                   cardTitle="精装风格定位"
                   content={
                     <List component="nav">
-                      <ListItem button component={Link} to="/style/four">
+                      <ListItem button component={Link} to="/stylechoose">
                         <ListItemIcon>
                           <FiberManualRecord classes={{root: this.classes.icon}}/>
                         </ListItemIcon>
-                        <ListItemText classes={{primary: this.classes.item}} inset primary="当代轻奢(基础版)" />
+                        <ListItemText classes={{primary: this.classes.item}} inset primary="现代" />
                       </ListItem>
-                      <ListItem button component={Link} to="/style/four">
+                      <ListItem button component={Link} to="/stylechoose">
                         <ListItemIcon>
                           <FiberManualRecord classes={{root: this.classes.icon}}/>
                         </ListItemIcon>
-                        <ListItemText classes={{primary: this.classes.item}} inset primary="当代轻奢(升级版)" />
+                        <ListItemText classes={{primary: this.classes.item}} inset primary="新中式" />
                       </ListItem>
-                      <ListItem button component={Link} to="/style/four">
+                      <ListItem button component={Link} to="/stylechoose">
                         <ListItemIcon>
                           <FiberManualRecord classes={{root: this.classes.icon}}/>
                         </ListItemIcon>
-                        <ListItemText classes={{primary: this.classes.item}} inset primary="当代雅致(基础版)" />
-                      </ListItem>
-                      <ListItem button component={Link} to="/style/four">
-                        <ListItemIcon>
-                          <FiberManualRecord classes={{root: this.classes.icon}}/>
-                        </ListItemIcon>
-                        <ListItemText classes={{primary: this.classes.item}} inset primary="当代雅致(升级版)" />
+                        <ListItemText classes={{primary: this.classes.item}} inset primary="简欧" />
                       </ListItem>
                     </List>
                   }

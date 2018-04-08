@@ -19,6 +19,7 @@ const styles = {
     minWidth: '175px',
     color: '#fff',
     textAlign: 'center',
+    fontWeight: 400,
   },
   image: {
     border: 'solid 1px #eee',

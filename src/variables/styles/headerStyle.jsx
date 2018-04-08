@@ -17,7 +17,7 @@ const headerStyle = theme => ({
   centerMenu: {
     fontSize: "13px",
     width: "100%",
-    textAlign: "center",
+    textAlign: "right",
     height: "52px",
     lineHeight: "44px",
     fontWeight: 400,
