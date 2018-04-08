@@ -148,13 +148,13 @@ class SimpleMediaCard extends React.Component {
                         <ListItemIcon>
                           <FiberManualRecord classes={{root: this.classes.icon}}/>
                         </ListItemIcon>
-                        <ListItemText classes={{primary: this.classes.item}} inset primary="新中式" />
+                        <ListItemText classes={{primary: this.classes.item}} inset primary="简欧" />
                       </ListItem>
                       <ListItem button component={Link} to="/stylechoose">
                         <ListItemIcon>
                           <FiberManualRecord classes={{root: this.classes.icon}}/>
                         </ListItemIcon>
-                        <ListItemText classes={{primary: this.classes.item}} inset primary="简欧" />
+                        <ListItemText classes={{primary: this.classes.item}} inset primary="新中式" />
                       </ListItem>
                     </List>
                   }
@@ -204,6 +204,12 @@ class SimpleMediaCard extends React.Component {
                         <ListItemIcon>
                           <FiberManualRecord  classes={{root: this.classes.icon}}/>
                         </ListItemIcon>
+                        <ListItemText classes={{primary: this.classes.item}} inset primary="健身房" />
+                      </ListItem>
+                      <ListItem button component={Link} to="/siren">
+                        <ListItemIcon>
+                          <FiberManualRecord  classes={{root: this.classes.icon}}/>
+                        </ListItemIcon>
                         <ListItemText classes={{primary: this.classes.item}} inset primary="私人酒窖" />
                       </ListItem>
                       <ListItem button component={Link} to="/siren">
@@ -217,12 +223,6 @@ class SimpleMediaCard extends React.Component {
                           <FiberManualRecord  classes={{root: this.classes.icon}}/>
                         </ListItemIcon>
                         <ListItemText classes={{primary: this.classes.item}} inset primary="私家衣帽间" />
-                      </ListItem>
-                      <ListItem button component={Link} to="/siren">
-                        <ListItemIcon>
-                          <FiberManualRecord  classes={{root: this.classes.icon}}/>
-                        </ListItemIcon>
-                        <ListItemText classes={{primary: this.classes.item}} inset primary="健身房" />
                       </ListItem>
                     </List>
                   }

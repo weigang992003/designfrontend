@@ -11,9 +11,9 @@ import {
 } from "components";
 
 import DecorationStyle from "variables/styles/decorationStyle";
-import QingSheBaseImg from "assets/img/stylechoose/style.png";
-import QingSheUpgradeImg from "assets/img/stylechoose/style2.png";
-import YazhiBaseImg from "assets/img/stylechoose/style3.png";
+import Xiandai from "assets/img/stylechoose/xiandai.jpg";
+import Xinzhongshi from "assets/img/stylechoose/xinzhongshi.jpg";
+import Jianou from "assets/img/stylechoose/jianou.jpg";
 import { Link } from 'react-router-dom'
 
 class Dashboard extends React.Component {
@@ -33,7 +33,7 @@ class Dashboard extends React.Component {
             <Link to="/style">
               <ImageCard
                 cardTitle="现代"
-                image={QingSheUpgradeImg}
+                image={Xiandai}
               />
             </Link>
           </ItemGrid>
@@ -41,14 +41,14 @@ class Dashboard extends React.Component {
             <Link to="/style">
               <ImageCard
                 cardTitle="新中式"
-                image={YazhiBaseImg}
+                image={Xinzhongshi}
               />
             </Link>
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={4}>
             <Link to="/style">
               <ImageCard
-                image={QingSheBaseImg}
+                image={Jianou}
                 cardTitle="简欧"
               />
             </Link>

@@ -11,14 +11,14 @@ import {
 } from "components";
 
 import DecorationStyle from "variables/styles/decorationStyle";
-import Jiujiao1 from "assets/img/siren/jiujiao1.png";
-import Jiujiao2 from "assets/img/siren/jiujiao2.png";
-import Yingyin1 from "assets/img/siren/yingyin1.png";
-import Yingyin2 from "assets/img/siren/yingyin2.png";
-import Yimao1 from "assets/img/siren/yimao1.png";
-import Yimao2 from "assets/img/siren/yimao2.png";
-import Jianshen1 from "assets/img/siren/jianshen1.png";
-import Jianshen2 from "assets/img/siren/jianshen2.png";
+import Jiujiao1 from "assets/img/siren/jiujiao1.jpg";
+import Jiujiao2 from "assets/img/siren/jiujiao2.jpg";
+import Yingyin1 from "assets/img/siren/yingyin1.jpg";
+import Yingyin2 from "assets/img/siren/yingyin2.jpg";
+import Yimao1 from "assets/img/siren/yimao1.jpg";
+import Yimao2 from "assets/img/siren/yimao2.jpg";
+import Jianshen1 from "assets/img/siren/jianshen1.jpg";
+import Jianshen2 from "assets/img/siren/jianshen2.jpg";
 import { Link } from 'react-router-dom'
 
 const space = (module) => {
