@@ -26,7 +26,7 @@ const transition = {
 
 const container = {
   marginRight: "auto",
-  marginLeft: "auto"
+  marginLeft: "auto",
 };
 
 const boxShadow = {
