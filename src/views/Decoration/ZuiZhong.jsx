@@ -117,37 +117,37 @@ class SimpleTable extends React.Component {
               <TableRow key='1kk'>
                 <TableCell key='adf'>会客厅</TableCell>
                 <TableCell key='kdf'>当代轻奢(升级版)</TableCell>
-                <TableCell key='skdf'>天花：石膏板吊顶<br />墙面：乳胶漆+木饰面<br />地面：石材</TableCell>
+                <TableCell key='skdf'>天花：石膏板吊顶<br />墙面：石材+木饰面<br />地面：石材+木地板</TableCell>
                 <TableCell key='ksdf'><Link to="">修改</Link></TableCell>
               </TableRow>
               <TableRow key='2kk'>
                 <TableCell key='adf'>卧室</TableCell>
                 <TableCell key='kdf'>当代轻奢(升级版)</TableCell>
-                <TableCell key='skdf'>天花：石膏板吊顶<br />墙面：乳胶漆+木饰面<br />地面：石材</TableCell>
+                <TableCell key='skdf'>天花：石膏板吊顶<br />墙面：壁纸<br />地面：木地板</TableCell>
                 <TableCell key='ksdf'><Link to="">修改</Link></TableCell>
               </TableRow>
               <TableRow key='k3k'>
                 <TableCell key='adf'>主卫</TableCell>
-                <TableCell key='kdf'>当代轻奢(基础版)</TableCell>
-                <TableCell key='skdf'>天花：石膏板吊顶<br />墙面：乳胶漆+木饰面<br />地面：石材</TableCell>
+                <TableCell key='kdf'>当代轻奢(升级版)</TableCell>
+                <TableCell key='skdf'>天花：石膏板吊顶<br />墙面：石材<br />地面：石材</TableCell>
                 <TableCell key='ksdf'><Link to="">修改</Link></TableCell>
               </TableRow>
               <TableRow key='kk4s'>
                 <TableCell key='adf'>卫生间</TableCell>
                 <TableCell key='kdf'>当代轻奢(升级版)</TableCell>
-                <TableCell key='skdf'>天花：石膏板吊顶<br />墙面：乳胶漆+木饰面<br />地面：石材</TableCell>
+                <TableCell key='skdf'>天花：石膏板吊顶<br />墙面：石材<br />地面：石材</TableCell>
                 <TableCell key='ksdf'><Link to="">修改</Link></TableCell>
               </TableRow>
               <TableRow key='sskk4'>
                 <TableCell key='adf'>B1家庭室</TableCell>
-                <TableCell key='kdf'>当代轻奢(基础版)</TableCell>
-                <TableCell key='skdf'>天花：石膏板吊顶<br />墙面：乳胶漆+木饰面<br />地面：石材</TableCell>
+                <TableCell key='kdf'>当代轻奢(升级版)</TableCell>
+                <TableCell key='skdf'>天花：石膏板吊顶<br />墙面：石材+木饰面<br />地面：木地板</TableCell>
                 <TableCell key='ksdf'><Link to="">修改</Link></TableCell>
               </TableRow>
               <TableRow key='jjkk4'>
                 <TableCell key='adf'>B1挑空区</TableCell>
                 <TableCell key='kdf'>当代轻奢(升级版)</TableCell>
-                <TableCell key='skdf'>天花：石膏板吊顶<br />墙面：乳胶漆+木饰面<br />地面：石材</TableCell>
+                <TableCell key='skdf'>天花：石膏板吊顶<br />墙面：石材+木饰面<br />地面：木地板</TableCell>
                 <TableCell key='ksdf'><Link to="">修改</Link></TableCell>
               </TableRow>
             </TableBody>

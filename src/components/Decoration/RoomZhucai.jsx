@@ -5,18 +5,6 @@ import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Ta
 import Paper from 'material-ui/Paper';
 import DecorationStyle from "variables/styles/decorationStyle";
 
-let id = 0;
-function createData(name, calories, fat, carbs, protein) {
-  id += 1;
-  return { id, name, calories, fat, carbs, protein };
-}
-
-const data = [
-  createData('墙面', '壁纸', 'qiangmian'),
-  createData('天花', '乳胶漆', 'tianhua'),
-  createData('地面', '瓷砖', 'dimian'),
-];
-
 class SimpleTable extends React.Component {
   state = {
     qiangmian: '布艺',
@@ -34,6 +22,7 @@ class SimpleTable extends React.Component {
 
   render() {
     const { classes } = this.props;
+    const { data } = this.props;
 
     return (
       <Paper className={classes.root} style={{boxShadow: "none"}}>
@@ -42,6 +31,7 @@ class SimpleTable extends React.Component {
             <TableRow key="jj">
               <TableCell key="sdf">区域</TableCell>
               <TableCell key="sdfsdf">材料</TableCell>
+              <TableCell key="dfsdfsdf"></TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -50,6 +40,9 @@ class SimpleTable extends React.Component {
                 <TableRow key={n.id}>
                   <TableCell key={n.name}>{n.name}</TableCell>
                   <TableCell key={n.calories}>{n.calories}</TableCell>
+                  <TableCell key={n.carbs}>{n.carbs && n.carbs.map(c => {
+                    return (<img src={c} style={{width: "36px", verticalAlign: "bottom", paddingBottom: "2px"}} />)
+                  })}</TableCell>
                 </TableRow>
               );
             })}
