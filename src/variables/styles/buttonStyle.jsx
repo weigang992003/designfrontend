@@ -43,10 +43,21 @@ const buttonStyle = {
   },
   primary: {
     backgroundColor: redColor,
-    padding: "10px 5em",
+    padding: "10px 4em",
     borderRadius: "0px",
     "&:hover": {
-      backgroundColor: "#C22",
+      backgroundColor: "#b00",
+      color: '#fff',
+      boxShadow:
+        "0 14px 26px -12px #fff, 0 4px 23px 0px #fff, 0 8px 10px -5px #fff"
+    }
+  },
+  gray: {
+    backgroundColor: "#666",
+    padding: "10px 4em",
+    borderRadius: "0px",
+    "&:hover": {
+      backgroundColor: "#444",
       color: '#fff',
       boxShadow:
         "0 14px 26px -12px #fff, 0 4px 23px 0px #fff, 0 8px 10px -5px #fff"
@@ -54,7 +65,7 @@ const buttonStyle = {
   },
   black: {
     backgroundColor: blackColor,
-    padding: "10px 5em",
+    padding: "10px 4em",
     borderRadius: "0px",
     "&:hover": {
       backgroundColor: "#444",

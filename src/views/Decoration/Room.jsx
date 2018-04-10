@@ -358,6 +358,12 @@ class Dashboard extends React.Component {
     }
   };
 
+  handleBack = () => {
+    const { activeStep } = this.state;
+    this.setState({
+      activeStep: activeStep - 1,
+    });
+  };
   render() {
     const { classes } = this.props;
     const steps = getSteps();
@@ -407,6 +413,15 @@ class Dashboard extends React.Component {
               <Button color='primary' onClick={this.handleNext}>
                 下一步
               </Button>
+              {activeStep === 0 ? (
+                <Button color='gray' component={Link} to={`/style`}>
+                  上一步
+                </Button>
+              ) : (
+                <Button color='gray' onClick={this.handleBack}>
+                  上一步
+                </Button>
+              )}
               <Button color='black' component={Link} to={`/case`}>
                 进入总览
               </Button>

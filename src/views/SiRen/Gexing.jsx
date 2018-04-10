@@ -44,7 +44,7 @@ const space = (module) => {
           </ItemGrid>
         </Grid>
       )
-    case 'yingyingshi':
+    case 'yingyinshi':
       return(
         <Grid container style={{width: "100%"}}>
           <ItemGrid xs={12} sm={12} md={6}>
@@ -113,8 +113,8 @@ const space = (module) => {
 }
 const titles = {
   jiujiao: "私人酒窖定制",
-  jiujiao: "私人影音室定制",
-  jiujiao: "私家衣帽间定制",
+  yingyinshi: "私人影音室定制",
+  yimaojian: "私家衣帽间定制",
   jianshenfang: "私家健身房定制",
 };
 

@@ -16,7 +16,7 @@ function createData(name, calories, carbs, path) {
 
 const data = [
   createData('私人酒窖', ['不需要', '高品质私人酒窖', '奢华进口专业酒窖'], 'chugui', 'jiujiao'),
-  createData('私人影音室', ['不需要', '高品质私人影音室', '奢华进口专业影音室'], 'jieju', 'yingyingshi'),
+  createData('私人影音室', ['不需要', '高品质私人影音室', '奢华进口专业影音室'], 'jieju', 'yingyinshi'),
   createData('私家衣帽间', ['不需要', '优质成品衣帽间', '原装进口衣帽间'], 'dianqi', 'yimaojian'),
   createData('私家健身房', ['不需要', '私家健身房', '发烧级健身房'], 'dianti', 'jianshenfang'),
 ];

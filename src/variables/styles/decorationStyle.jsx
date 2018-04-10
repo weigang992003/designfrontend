@@ -67,6 +67,9 @@ const decorationStyle = {
   iconContainer: {
     "& svg": {
       color: "rgba(0, 0, 0, 0.5)",
+    },
+    "& svg[class*='active']": {
+      color: "#c22",
     }
   },
   radio: {
@@ -75,6 +78,13 @@ const decorationStyle = {
   zuizhong: {
     width: "80%",
     margin: "0 auto",
+  },
+  zhucai: {
+    width: "50px",
+    verticalAlign: "bottom",
+    paddingBottom: "2px",
+    cursor: "pointer",
+    "&:hover": {width: "100px"},
   }
 };
 

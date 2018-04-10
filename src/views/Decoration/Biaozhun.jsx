@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
 import { Link } from 'react-router-dom'
-import { Huxing, Bottom, Button, Top } from "components";
+import { Bottom, Button, Top } from "components";
 import {
   FiberManualRecord,
 } from "material-ui-icons";

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import { Grid } from "material-ui";
-import Card, { CardContent } from 'material-ui/Card';
+import { CardContent } from 'material-ui/Card';
 import { Link } from 'react-router-dom';
 import {
   Huxing,

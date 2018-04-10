@@ -41,7 +41,7 @@ class SimpleTable extends React.Component {
                   <TableCell key={n.name}>{n.name}</TableCell>
                   <TableCell key={n.calories}>{n.calories}</TableCell>
                   <TableCell key={n.carbs}>{n.carbs && n.carbs.map(c => {
-                    return (<img src={c} style={{width: "36px", verticalAlign: "bottom", paddingBottom: "2px"}} />)
+                    return (<img src={c} className={classes.zhucai} />)
                   })}</TableCell>
                 </TableRow>
               );

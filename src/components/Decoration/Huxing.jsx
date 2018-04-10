@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 // react plugin for creating charts
-import { withStyles, Grid } from "material-ui";
+import { withStyles } from "material-ui";
 import dudong1 from "assets/img/load/265.png";
 import dudong2 from "assets/img/load/270.png";
 import bieshu1 from "assets/img/load/225.png";
 import bieshu2 from "assets/img/load/245.png";
-import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
+import List, { ListItem, ListItemText } from 'material-ui/List';
 import { Link } from 'react-router-dom';
 import Divider from 'material-ui/Divider';
 
