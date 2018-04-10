@@ -12,9 +12,9 @@ import {
 
 import DecorationStyle from "variables/styles/decorationStyle";
 import yilou from "assets/img/huxing/yi/yi.png";
-import erlou from "assets/img/huxing/er/yi.png";
-import sanlou from "assets/img/huxing/san/yi.png";
-import gelou from "assets/img/huxing/si/yilou.png";
+import erlou from "assets/img/huxing/er/er.png";
+import sanlou from "assets/img/huxing/san/san.png";
+import gelou from "assets/img/huxing/si/dixiayilou.png";
 import { Link } from 'react-router-dom'
 
 class Dashboard extends React.Component {
@@ -40,28 +40,30 @@ class Dashboard extends React.Component {
         <Grid container style={{width: "100%"}}>
           <ItemGrid xs={12} sm={12} md={6}>
             <ImageCard
-              cardTitle="一生一世"
+              cardTitle="方案A"
               image={yilou}
               link="/huxingtu"
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
             <ImageCard
-              cardTitle="二胎时代"
+              cardTitle="方案B"
+
               image={erlou}
               link="/huxingtu"
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
             <ImageCard
-              cardTitle="三代和睦"
+              cardTitle="方案C"
+
               image={sanlou}
               link="/huxingtu"
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
             <ImageCard
-              cardTitle="四世同堂"
+              cardTitle="方案D"
               image={gelou}
               link="/huxingtu"
             />
