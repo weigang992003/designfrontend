@@ -36,6 +36,25 @@ const decorationStyle = {
     marginTop: '20px',
     marginBottom: '10px',
   },
+  shengjitable: {
+    minWidth: '300px',
+    "& span": {
+      fontSize: '13px',
+      fontWeight: 300,
+    },
+    "& svg": {
+      fontSize: '15px',
+    },
+    "& tr": {
+      height: '36px',
+      "& td:first-child": {
+        width: "20%",
+      },
+      "& td:last-child": {
+        width: "10%",
+      },
+    },
+  },
   table: {
     minWidth: '300px',
     "& span": {

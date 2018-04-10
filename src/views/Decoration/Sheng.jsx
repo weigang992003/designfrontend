@@ -15,29 +15,29 @@ function createData(name, calories, carbs) {
 }
 
 const data = [
-  createData('橱柜', ['欧派', '海格&瓦伦多夫'], 'chugui'),
-  createData('洁具', ['TOTO', '汉斯格雅&杜拉维特&唯宝'], 'jieju'),
-  createData('电器', ['西门子', 'MIELE'], 'dianqi'),
-  createData('电梯', ['日立LGE', '日立LCA&蒂森克虏伯'], 'dianti'),
+  createData('橱柜', ['中国 欧派 OPPEIN', '德国 海格&瓦伦多夫 Haecker&Warendorf'], 'chugui'),
+  createData('洁具', ['日本 东陶 TOTO', '德国 汉斯格雅&杜拉维特&唯宝 Hansgrohe&Duravit&Villeroy'], 'jieju'),
+  createData('电器', ['德国 西门子 SIEMENS', '德国 美诺 MIELE'], 'dianqi'),
+  createData('电梯', ['中国 日立 HITACHI', '中国 日立 HITACHI & 德国 蒂森克虏伯 ThyssenKrupp'], 'dianti'),
 ];
 
 const prices = {
-  '欧派': '0元',
-  '海格&瓦伦多夫': '20万',
-  'TOTO': '0元',
-  '汉斯格雅&杜拉维特&唯宝': '20万',
-  '西门子': '0元',
-  'MIELE': '15万',
-  '日立LGE': '0元',
-  '日立LCA&蒂森克虏伯': '10万',
+  '中国 欧派 OPPEIN': '0元',
+  '德国 海格&瓦伦多夫 Haecker&Warendorf': '20万',
+  '日本 东陶 TOTO': '0元',
+  '德国 汉斯格雅&杜拉维特&唯宝 Hansgrohe&Duravit&Villeroy': '20万',
+  '德国 西门子 SIEMENS': '0元',
+  '德国 美诺 MIELE': '15万',
+  '中国 日立 HITACHI': '0元',
+  '中国 日立 HITACHI & 德国 蒂森克虏伯 ThyssenKrupp': '10万',
 }
 
 class SimpleTable extends React.Component {
   state = {
-    chugui: '欧派',
-    jieju: 'TOTO',
-    dianqi: '西门子',
-    dianti: '日立LGE',
+    chugui: '中国 欧派 OPPEIN',
+    jieju: '日本 东陶 TOTO',
+    dianqi: '德国 西门子 SIEMENS',
+    dianti: '中国 日立 HITACHI',
   };
 
   handleChange = (event, value) => {
@@ -56,13 +56,13 @@ class SimpleTable extends React.Component {
           subTitle="多种升级方案供您选择。"
         />
         <div className={classes.zuizhong}>
-          <Table className={classes.table}>
+          <Table className={classes.shengjitable}>
             <TableHead className={classes.tableHeader}>
               <TableRow key="jj">
                 <TableCell key="sdf">名称</TableCell>
-                <TableCell key="sdfsdf">产品</TableCell>
+                <TableCell key="sdfsdf">品牌</TableCell>
                 <TableCell key="xiangqing">详情</TableCell>
-                <TableCell numeric key="sddff">价格</TableCell>
+                <TableCell numeric key="sddff">增加费用</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -90,7 +90,7 @@ class SimpleTable extends React.Component {
                         })}
                       </RadioGroup>
                     </TableCell>
-                    <TableCell key={`${n.carbs}xx`}><Link to={`/shengji/${n.carbs}`}>查看</Link></TableCell>
+                    <TableCell key={`${n.carbs}xx`}><Link to={`/shengji/${n.carbs}`}>查看品牌介绍和方案详情</Link></TableCell>
                     <TableCell numeric key={n.carbs}>{prices[this.state[n.carbs]]}</TableCell>
                   </TableRow>
                 );
