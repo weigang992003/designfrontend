@@ -29,7 +29,7 @@ const styles = {
   dudongbox: {
     marginBottom: '15px',
     float: 'left',
-    height: '260px',
+    height: '80px',
     textAlign: 'center',
   },
   dudongimg: {
@@ -111,29 +111,17 @@ class Dashboard extends React.Component {
               <Link to={dist} onClick={this.handleClose}>
                 <div className={classes.cangshan}>
                   <div className={classes.dudongbox}>
-                    <div className={classes.dudongimg}>
-                      <img alt="藏山独栋" src={dudong2} className={classes.dudong}/>
-                    </div>
                     <div className={classes.dudongdesc}>独栋别墅户型</div>
                   </div>
                   <div className={classes.dudongbox}>
-                    <div className={classes.dudongimg}>
-                      <img alt="藏山别墅" src={bieshu2} className={classes.dudong}/>
-                    </div>
                     <div className={classes.dudongdesc}>双拼别墅240户型</div>
                   </div>
                 </div>
                 <div className={classes.cangshan}>
                   <div className={classes.dudongbox}>
-                    <div className={classes.dudongimg}>
-                      <img alt="藏山独栋" src={dudong1} className={classes.dudong}/>
-                    </div>
                     <div className={classes.dudongdesc}>类独栋别墅户型</div>
                   </div>
                   <div className={classes.dudongbox}>
-                    <div className={classes.dudongimg}>
-                      <img alt="藏山别墅" src={bieshu1} className={classes.dudong}/>
-                    </div>
                     <div className={classes.dudongdesc}>双拼别墅225户型</div>
                   </div>
                 </div>
