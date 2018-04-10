@@ -244,6 +244,9 @@ class SimpleTable extends React.Component {
                 <Button color='primary' component={Link} to={`/contactus`}>
                   确认方案
                 </Button>
+                <Button color='gray' component={Link} to={`/siren`}>
+                  上一步
+                </Button>
               </div>
             }
             style={styles}

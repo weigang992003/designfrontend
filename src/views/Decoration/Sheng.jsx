@@ -103,6 +103,9 @@ class SimpleTable extends React.Component {
                 <Button color='primary' component={Link} to={`/siren`}>
                   下一步
                 </Button>
+                <Button color='gray' component={Link} to={`/rooms/four/qingsheBase`}>
+                  上一步
+                </Button>
                 <Button color='black' component={Link} to={`/case`}>
                   进入总览
                 </Button>
