@@ -68,37 +68,37 @@ class SimpleTable extends React.Component {
             <TableBody>
               <TableRow key='1kk'>
                 <TableCell key='adf'>一层</TableCell>
-                <TableCell key='kdf'>四世同堂</TableCell>
+                <TableCell key='kdf'>方案A</TableCell>
                 <TableCell key='kdr'>客厅、卧室、中厨、西厨、卫生间</TableCell>
                 <TableCell key='ksdf'><Link to="/huxingtu">修改</Link></TableCell>
               </TableRow>
               <TableRow key='2kk'>
                 <TableCell key='adf'>二层</TableCell>
-                <TableCell key='kdf'>三代和睦</TableCell>
+                <TableCell key='kdf'>方案A</TableCell>
                 <TableCell key='kdr'>三室两卫</TableCell>
                 <TableCell key='ksdf'><Link to="/huxingtu">修改</Link></TableCell>
               </TableRow>
               <TableRow key='k3k'>
                 <TableCell key='adf'>三层</TableCell>
-                <TableCell key='kdf'>一生一世</TableCell>
+                <TableCell key='kdf'>方案B</TableCell>
                 <TableCell key='kdr'>卧室、会客厅</TableCell>
                 <TableCell key='ksdf'><Link to="/huxingtu">修改</Link></TableCell>
               </TableRow>
               <TableRow key='skk4'>
                 <TableCell key='adf'>阁楼</TableCell>
-                <TableCell key='kdf'>四世同堂</TableCell>
+                <TableCell key='kdf'>方案A</TableCell>
                 <TableCell key='kdr'>不上人屋面上空</TableCell>
                 <TableCell key='ksdf'><Link to="/huxingtu">修改</Link></TableCell>
               </TableRow>
               <TableRow key='skk4'>
                 <TableCell key='adf'>地下一层</TableCell>
-                <TableCell key='kdf'>四世同堂</TableCell>
+                <TableCell key='kdf'>方案C</TableCell>
                 <TableCell key='kdr'>储藏室、卫生间</TableCell>
                 <TableCell key='ksdf'><Link to="/huxingtu">修改</Link></TableCell>
               </TableRow>
               <TableRow key='skk4'>
                 <TableCell key='adf'>地下二层</TableCell>
-                <TableCell key='kdf'>四世同堂</TableCell>
+                <TableCell key='kdf'>方案A</TableCell>
                 <TableCell key='kdr'>洗衣房、储藏室、衣帽间、影音室</TableCell>
                 <TableCell key='ksdf'><Link to="/huxingtu">修改</Link></TableCell>
               </TableRow>

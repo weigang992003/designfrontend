@@ -11,10 +11,10 @@ import {
 } from "components";
 
 import DecorationStyle from "variables/styles/decorationStyle";
-import yilou from "assets/img/huxing/yi/yi.png";
+import yilou from "assets/img/huxing/yi/er.png";
 import erlou from "assets/img/huxing/er/er.png";
-import sanlou from "assets/img/huxing/san/san.png";
-import gelou from "assets/img/huxing/si/dixiayilou.png";
+import sanlou from "assets/img/huxing/san/er.png";
+import gelou from "assets/img/huxing/si/erlou.png";
 import { Link } from 'react-router-dom'
 
 class Dashboard extends React.Component {
@@ -41,7 +41,7 @@ class Dashboard extends React.Component {
           <ItemGrid xs={12} sm={12} md={6}>
             <ImageCard
               cardTitle="方案A"
-              image={yilou}
+              image={gelou}
               link="/huxingtu"
             />
           </ItemGrid>
@@ -64,7 +64,7 @@ class Dashboard extends React.Component {
           <ItemGrid xs={12} sm={12} md={6}>
             <ImageCard
               cardTitle="方案D"
-              image={gelou}
+              image={yilou}
               link="/huxingtu"
             />
           </ItemGrid>
