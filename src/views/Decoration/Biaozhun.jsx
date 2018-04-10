@@ -62,8 +62,8 @@ class SimpleTable extends React.Component {
                 <TableCell key="sdf">区域</TableCell>
                 <TableCell key="sddff">产品</TableCell>
                 <TableCell key="srdff">当代轻奢<br />基础版</TableCell>
-                <TableCell key="srdff">当代轻奢<br />基础版</TableCell>
-                <TableCell key="sdslff">当代雅致<br />升级版</TableCell>
+                <TableCell key="srdff">当代轻奢<br />升级版</TableCell>
+                <TableCell key="sdslff">当代雅致<br />基础版</TableCell>
                 <TableCell key="sdsllf">当代雅致<br />升级版</TableCell>
               </TableRow>
             </TableHead>
