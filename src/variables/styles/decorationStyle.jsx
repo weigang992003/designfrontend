@@ -104,7 +104,11 @@ const decorationStyle = {
     paddingBottom: "2px",
     cursor: "pointer",
     "&:hover": {width: "100px"},
-  }
+  },
+  forward: {
+    height: '500px',
+    lineHeight: '500px',
+    textAlign: "center"}
 };
 
 export default decorationStyle;

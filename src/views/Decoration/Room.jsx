@@ -34,6 +34,9 @@ import Shicaihei from "assets/img/room/shicaihei.jpg";
 import Shicaihui from "assets/img/room/shicaihui.jpg";
 import Shimudiban from "assets/img/room/shimudiban.jpg";
 import Zhuyaobizhi from "assets/img/room/zhuyaobizhi.jpg";
+import {
+  Forward,
+} from "material-ui-icons";
 
 function getSteps() {
   return ['会客厅', '卧室', '主卫', '卫生间', 'B1家庭室', 'B1挑空区'];
@@ -118,11 +121,12 @@ class Dashboard extends React.Component {
 
 
   getStepContent = (step, handleNext, handleExpandClick, expanded) => {
+    const classes  = this.props.classes;
     switch (step) {
       case 0:
         return(
           <Grid container>
-            <ItemGrid xs={12} sm={12} md={6}>
+            <ItemGrid xs={12} sm={12} md={5}>
               <RegularCard
                 headerColor="gray"
                 cardTitle="当代轻奢(基础版)"
@@ -138,7 +142,12 @@ class Dashboard extends React.Component {
                 handleExpandClick={ handleExpandClick }
               />
             </ItemGrid>
-            <ItemGrid xs={12} sm={12} md={6}>
+            <ItemGrid xs={12} sm={12} md={1}>
+              <div className={classes.forward}>
+               <Forward style={{color: "#666"}}/>
+              </div>
+            </ItemGrid>
+            <ItemGrid xs={12} sm={12} md={5}>
               <RegularCard
                 headerColor="gray"
                 cardTitle="当代轻奢(升级版)"
@@ -159,7 +168,7 @@ class Dashboard extends React.Component {
       case 1:
         return(
           <Grid container>
-            <ItemGrid xs={12} sm={12} md={6}>
+            <ItemGrid xs={12} sm={12} md={5}>
               <RegularCard
                 headerColor="gray"
                 cardTitle="当代轻奢(基础版)"
@@ -175,7 +184,12 @@ class Dashboard extends React.Component {
                 handleExpandClick={ handleExpandClick }
               />
             </ItemGrid>
-            <ItemGrid xs={12} sm={12} md={6}>
+            <ItemGrid xs={12} sm={12} md={1}>
+              <div className={classes.forward}>
+               <Forward style={{color: "#666"}}/>
+              </div>
+            </ItemGrid>
+            <ItemGrid xs={12} sm={12} md={5}>
               <RegularCard
                 headerColor="gray"
                 cardTitle="当代轻奢(升级版)"
@@ -196,7 +210,7 @@ class Dashboard extends React.Component {
       case 2:
         return(
           <Grid container>
-            <ItemGrid xs={12} sm={12} md={6}>
+            <ItemGrid xs={12} sm={12} md={5}>
               <RegularCard
                 headerColor="gray"
                 cardTitle="当代轻奢(基础版)"
@@ -212,7 +226,12 @@ class Dashboard extends React.Component {
                 handleExpandClick={ handleExpandClick }
               />
             </ItemGrid>
-            <ItemGrid xs={12} sm={12} md={6}>
+            <ItemGrid xs={12} sm={12} md={1}>
+              <div className={classes.forward}>
+               <Forward style={{color: "#666"}}/>
+              </div>
+            </ItemGrid>
+            <ItemGrid xs={12} sm={12} md={5}>
               <RegularCard
                 headerColor="gray"
                 cardTitle="当代轻奢(升级版)"
@@ -233,7 +252,7 @@ class Dashboard extends React.Component {
       case 3:
         return(
           <Grid container>
-            <ItemGrid xs={12} sm={12} md={6}>
+            <ItemGrid xs={12} sm={12} md={5}>
               <RegularCard
                 headerColor="gray"
                 cardTitle="当代轻奢(基础版)"
@@ -249,7 +268,12 @@ class Dashboard extends React.Component {
                 handleExpandClick={ handleExpandClick }
               />
             </ItemGrid>
-            <ItemGrid xs={12} sm={12} md={6}>
+            <ItemGrid xs={12} sm={12} md={1}>
+              <div className={classes.forward}>
+               <Forward style={{color: "#666"}}/>
+              </div>
+            </ItemGrid>
+            <ItemGrid xs={12} sm={12} md={5}>
               <RegularCard
                 headerColor="gray"
                 cardTitle="当代轻奢(升级版)"
@@ -270,7 +294,7 @@ class Dashboard extends React.Component {
       case 4:
         return(
           <Grid container>
-            <ItemGrid xs={12} sm={12} md={6}>
+            <ItemGrid xs={12} sm={12} md={5}>
               <RegularCard
                 headerColor="gray"
                 cardTitle="当代轻奢(基础版)"
@@ -286,7 +310,12 @@ class Dashboard extends React.Component {
                 handleExpandClick={ handleExpandClick }
               />
             </ItemGrid>
-            <ItemGrid xs={12} sm={12} md={6}>
+            <ItemGrid xs={12} sm={12} md={1}>
+              <div className={classes.forward}>
+               <Forward style={{color: "#666"}}/>
+              </div>
+            </ItemGrid>
+            <ItemGrid xs={12} sm={12} md={5}>
               <RegularCard
                 headerColor="gray"
                 cardTitle="当代轻奢(升级版)"
@@ -307,7 +336,7 @@ class Dashboard extends React.Component {
       case 5:
        return(
           <Grid container>
-            <ItemGrid xs={12} sm={12} md={6}>
+            <ItemGrid xs={12} sm={12} md={5}>
               <RegularCard
                 headerColor="gray"
                 cardTitle="当代轻奢(基础版)"
@@ -323,7 +352,12 @@ class Dashboard extends React.Component {
                 handleExpandClick={ handleExpandClick }
               />
             </ItemGrid>
-            <ItemGrid xs={12} sm={12} md={6}>
+            <ItemGrid xs={12} sm={12} md={1}>
+              <div className={classes.forward}>
+               <Forward style={{color: "#666"}}/>
+              </div>
+            </ItemGrid>
+            <ItemGrid xs={12} sm={12} md={5}>
               <RegularCard
                 headerColor="gray"
                 cardTitle="当代轻奢(升级版)"
