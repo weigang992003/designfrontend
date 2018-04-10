@@ -56,7 +56,16 @@ function UserProfile({ ...props }) {
                     </ItemGrid>
                     <ItemGrid xs={12} sm={12} md={12}>
                       <CustomInput
-                        labelText="房间号"
+                        labelText="房间号例如：**项目**期**号楼**号"
+                        id="mobile-address"
+                        formControlProps={{
+                          fullWidth: true
+                        }}
+                      />
+                    </ItemGrid>
+                    <ItemGrid xs={12} sm={12} md={12}>
+                      <CustomInput
+                        labelText="销售顾问"
                         id="mobile-address"
                         formControlProps={{
                           fullWidth: true
@@ -74,7 +83,7 @@ function UserProfile({ ...props }) {
               有疑问？
             </h1>
             <span>
-              我们随时提供帮助。<br />您可以通过以下方式联系我们: 400 xxx xxxx
+              我们随时提供帮助。<br />请联系销售顾问。
             </span>
           </ItemGrid>
         </Grid>
