@@ -108,7 +108,14 @@ const decorationStyle = {
   forward: {
     height: '500px',
     lineHeight: '500px',
-    textAlign: "center"}
+    textAlign: "center"},
+  styleDesc: {
+    fontSize: "13px",
+    color: '#666',
+    paddingLeft: '24px',
+    textAlign: 'center',
+    padding: '0 50px',
+  }
 };
 
 export default decorationStyle;

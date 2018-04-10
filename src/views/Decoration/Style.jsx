@@ -23,6 +23,7 @@ class Dashboard extends React.Component {
     selectedValue: "qingsheBase",
   };
   render() {
+    const {classes} = this.props
     return (
       <div>
         <Top
@@ -36,6 +37,7 @@ class Dashboard extends React.Component {
                 cardTitle="当代轻奢(基础版)"
                 image={QingSheBaseImg}
               />
+              <div className={classes.styleDesc}>注重硬装修手法的简洁，看似朴素的外表之下却常常折射出一种隐藏的贵族气质。</div>
             </Link>
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
@@ -44,6 +46,7 @@ class Dashboard extends React.Component {
                 cardTitle="当代轻奢(升级版)"
                 image={QingSheUpgradeImg}
               />
+              <div className={classes.styleDesc}>升级版更注重材料品质和装饰的细节，经过涂饰和抛光的木材、有丰富温馨的色彩和华美的织物，更突显主人对生活品质的追求。</div>
             </Link>
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
@@ -52,6 +55,7 @@ class Dashboard extends React.Component {
                 image={YazhiBaseImg}
                 cardTitle="当代雅致(基础版)"
               />
+              <div className={classes.styleDesc}>源于对现代极简主义风格的回归，简化的线条、粗犷的体积、自然的材质使人在精神上得到放松。</div>
             </Link>
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
@@ -60,6 +64,7 @@ class Dashboard extends React.Component {
                 cardTitle="当代雅致(升级版)"
                 image={YazhiUpgradeImg}
               />
+              <div className={classes.styleDesc}>升级版加强了文化品位的装饰风格，更注重线型的搭配和颜色的协调，注重文脉追求人情味。</div>
             </Link>
           </ItemGrid>
         </Grid>
