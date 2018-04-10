@@ -22,11 +22,31 @@ const styles = {
     padding: '0 70px 0 90px',
   },
   dudong: {
-    float: 'left',
-    width: '46%',
+    width: '200px',
     padding: '5px',
     border: 'solid 1px #eee',
-    height: '80px'
+  },
+  dudongbox: {
+    marginBottom: '15px',
+    float: 'left',
+    height: '260px',
+    textAlign: 'center',
+  },
+  dudongimg: {
+    height: '190px'
+  },
+  dudongdesc: {
+    width: '303px',
+    height: '45px',
+    background: '#c22',
+    color: '#fff',
+    float: 'left',
+    lineHeight: '45px',
+    paddingLeft: '20px',
+    fontSize: '14px',
+    "&:hover": {
+      background: '#a00',
+    }
   },
   white: {
     color: "#fff",
@@ -73,6 +93,7 @@ class Dashboard extends React.Component {
 
   render() {
     const { classes, button, dist } = this.props;
+    console.log(dist);
 
     return (
       <div>
@@ -87,56 +108,36 @@ class Dashboard extends React.Component {
           <DialogContent>
             <div className={classes.popup}>
               <div className={classes.huxing}>选择户型</div>
-              <div>
+              <Link to={dist} onClick={this.handleClose}>
                 <div className={classes.cangshan}>
-                  <img alt="藏山独栋" src={dudong1} className={classes.dudong}/>
-                  <img alt="藏山独栋" src={dudong2} className={classes.dudong}/>
+                  <div className={classes.dudongbox}>
+                    <div className={classes.dudongimg}>
+                      <img alt="藏山独栋" src={dudong1} className={classes.dudong}/>
+                    </div>
+                    <div className={classes.dudongdesc}>类独栋别墅户型</div>
+                  </div>
+                  <div className={classes.dudongbox}>
+                    <div className={classes.dudongimg}>
+                      <img alt="藏山独栋" src={dudong2} className={classes.dudong}/>
+                    </div>
+                    <div className={classes.dudongdesc}>独栋别墅户型</div>
+                  </div>
                 </div>
                 <div className={classes.cangshan}>
-                  <img alt="藏山别墅" src={bieshu1} className={classes.dudong}/>
-                  <img alt="藏山别墅" src={bieshu2} className={classes.dudong}/>
+                  <div className={classes.dudongbox}>
+                    <div className={classes.dudongimg}>
+                      <img alt="藏山别墅" src={bieshu1} className={classes.dudong}/>
+                    </div>
+                    <div className={classes.dudongdesc}>双拼别墅225户型</div>
+                  </div>
+                  <div className={classes.dudongbox}>
+                    <div className={classes.dudongimg}>
+                      <img alt="藏山别墅" src={bieshu2} className={classes.dudong}/>
+                    </div>
+                    <div className={classes.dudongdesc}>双拼别墅240户型</div>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <div className={classes.cangshan}>
-                  <RegularCard
-                    headerColor="red"
-                    classes={{cardTitle: classes.white, CardContent: {padding: '0px'}}}
-                    cardTitle="藏山独栋"
-                    content={
-                      <List component={Link} to={dist} onClick={this.handleClose}>
-                        <ListItem button className={classes.huxingItem}>
-                          <ListItemText classes={{primary: classes.dudongText}} primary="联排265平米户型" />
-                        </ListItem>
-                        <Divider light />
-                        <ListItem button className={classes.huxingItem}>
-                          <ListItemText classes={{primary: classes.dudongText}} primary="双拼270平米户型" />
-                        </ListItem>
-                        <Divider light />
-                      </List>
-                    }
-                  />
-                </div>
-                <div className={classes.cangshan}>
-                  <RegularCard
-                    headerColor="red"
-                    classes={{cardTitle: classes.white}}
-                    cardTitle="藏山别墅"
-                    content={
-                      <List component={Link} to={dist} onClick={this.handleClose}>
-                        <ListItem button className={classes.huxingItem}>
-                          <ListItemText classes={{primary: classes.dudongText}} primary="联排225平米户型" />
-                        </ListItem>
-                        <Divider />
-                        <ListItem button className={classes.huxingItem}>
-                          <ListItemText classes={{primary: classes.dudongText}} primary="联排240平米户型" />
-                        </ListItem>
-                        <Divider light />
-                      </List>
-                    }
-                  />
-                </div>
-              </div>
+              </Link>
             </div>
           </DialogContent>
         </Dialog>
