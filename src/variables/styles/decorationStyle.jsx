@@ -115,6 +115,12 @@ const decorationStyle = {
     paddingLeft: '24px',
     textAlign: 'center',
     padding: '0 50px',
+    display: 'flex',
+    alignItems: 'center',
+    width: '50%',
+  },
+  stylelink: {
+    display: 'flex',
   }
 };
 

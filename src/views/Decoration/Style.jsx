@@ -32,7 +32,7 @@ class Dashboard extends React.Component {
         />
         <Grid container style={{width: "100%"}}>
           <ItemGrid xs={12} sm={12} md={6}>
-            <Link to="/rooms/four/qingsheBase">
+            <Link to="/rooms/four/qingsheBase" className={classes.stylelink}>
               <ImageCard
                 cardTitle="当代轻奢(基础版)"
                 image={QingSheBaseImg}
@@ -41,7 +41,7 @@ class Dashboard extends React.Component {
             </Link>
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
-            <Link to="/rooms/four/qingsheBase">
+            <Link to="/rooms/four/qingsheBase" className={classes.stylelink}>
               <ImageCard
                 cardTitle="当代轻奢(升级版)"
                 image={QingSheUpgradeImg}
@@ -50,7 +50,7 @@ class Dashboard extends React.Component {
             </Link>
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
-            <Link to="/rooms/four/qingsheBase">
+            <Link to="/rooms/four/qingsheBase" className={classes.stylelink}>
               <ImageCard
                 image={YazhiBaseImg}
                 cardTitle="当代雅致(基础版)"
@@ -59,7 +59,7 @@ class Dashboard extends React.Component {
             </Link>
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
-            <Link to="/rooms/four/qingsheBase">
+            <Link to="/rooms/four/qingsheBase" className={classes.stylelink}>
               <ImageCard
                 cardTitle="当代雅致(升级版)"
                 image={YazhiUpgradeImg}
