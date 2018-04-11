@@ -15,10 +15,9 @@ class SimpleTable extends React.Component {
 
     return (
       <div>
-        <Top
-          title="最终方案"
-          subTitle="方案详细情况如下。"
-        />
+        <div style={{textAlign: 'center',padding: '25px 0 25px 17px',background: '#f7f7f7'}}>
+          <span style={{fontSize: '1.2em',color: '#000000',fontWeight: '300',display: 'block'}}>您的专属方案</span>
+        </div>
         <div className={classes.zuizhong}>
           <Table className={classes.table}>
             <TableHead className={classes.tableHeader}>
