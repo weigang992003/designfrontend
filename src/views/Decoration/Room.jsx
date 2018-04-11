@@ -50,52 +50,52 @@ function createData(name, calories, fat, carbs, protein) {
 
 const data1 = [
   createData('墙面', '乳胶漆+木饰面', 'qiangmian', [Mushimian]),
-  createData('天花', '乳胶漆', 'tianhua'),
+  createData('天花', '石膏板吊顶', 'tianhua'),
   createData('地面', '瓷砖+石材+木地板', 'dimian', [Shicai, Shimudiban]),
 ];
 const data2 = [
   createData('墙面', '石材+木饰面', 'qiangmian', [Shicai, Mushimian]),
-  createData('天花', '乳胶漆', 'tianhua'),
+  createData('天花', '石膏板吊顶', 'tianhua'),
   createData('地面', '瓷砖+石材+木地板', 'dimian', [Shicai, Shimudiban]),
 ];
 const data21 = [
   createData('墙面', '乳胶漆', 'qiangmian'),
-  createData('天花', '乳胶漆', 'tianhua'),
+  createData('天花', '石膏板吊顶', 'tianhua'),
   createData('地面', '木地板', 'dimian', [Shimudiban]),
 ];
 const data22 = [
-  createData('墙面', '壁纸', 'qiangmian', [Zhuyaobizhi, Bizhi]),
-  createData('天花', '乳胶漆', 'tianhua'),
+  createData('墙面', '壁纸', 'qiangmian', [Zhuyaobizhi]),
+  createData('天花', '石膏板吊顶', 'tianhua'),
   createData('地面', '木地板', 'dimian', [Shimudiban]),
 ];
 const data31 = [
   createData('墙面', '瓷砖', 'qiangmian', [Cizhuan]),
-  createData('天花', '乳胶漆', 'tianhua'),
+  createData('天花', '石膏板吊顶', 'tianhua'),
   createData('地面', '瓷砖', 'dimian', [Cizhuan]),
 ];
 const data32 = [
   createData('墙面', '石材', 'qiangmian', [Shicai]),
-  createData('天花', '乳胶漆', 'tianhua'),
+  createData('天花', '石膏板吊顶', 'tianhua'),
   createData('地面', '石材', 'dimian', [Shicai]),
 ];
 const data41 = [
   createData('墙面', '瓷砖', 'qiangmian', [Cizhuan]),
-  createData('天花', '乳胶漆', 'tianhua'),
+  createData('天花', '石膏板吊顶', 'tianhua'),
   createData('地面', '瓷砖', 'dimian', [Cizhuanhei]),
 ];
 const data42 = [
   createData('墙面', '石材', 'qiangmian', [Shicaibai]),
-  createData('天花', '乳胶漆', 'tianhua'),
+  createData('天花', '石膏板吊顶', 'tianhua'),
   createData('地面', '石材', 'dimian', [Shicaihei]),
 ];
 const data51 = [
   createData('墙面', '乳胶漆', 'qiangmian',),
-  createData('天花', '乳胶漆', 'tianhua'),
+  createData('天花', '石膏板吊顶', 'tianhua'),
   createData('地面', '木地板', 'dimian', [Shimudiban]),
 ];
 const data52 = [
   createData('墙面', '石材+木饰面', 'qiangmian', [Shicai, Mushimian]),
-  createData('天花', '乳胶漆', 'tianhua'),
+  createData('天花', '石膏板吊顶', 'tianhua'),
   createData('地面', '木地板', 'dimian', [Shimudiban]),
 ];
 class Dashboard extends React.Component {
