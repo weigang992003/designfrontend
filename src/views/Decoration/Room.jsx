@@ -415,7 +415,7 @@ class Dashboard extends React.Component {
             return (
               <Step key={label} {...props}>
                 <StepLabel {...labelProps}
-                  className={ classes.iconContainer }
+                  className={ index === this.state.activeStep ? classes.iconActive : classes.iconContainer }
                 >
                   {label}
                 </StepLabel>

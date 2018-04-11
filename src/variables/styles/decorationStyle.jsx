@@ -84,11 +84,13 @@ const decorationStyle = {
     }
   },
   iconContainer: {
-    "& svg[class*='active']": {
-      color: "#c22 !important",
-    },
     "& svg": {
       color: "rgba(0, 0, 0, 0.5)",
+    },
+  },
+  iconActive: {
+    "& svg": {
+      color: "#c22",
     },
   },
   radio: {
